@@ -1,4 +1,4 @@
-# sushinbagels
+# SushiNBagels
 
 ## Build Setup
 

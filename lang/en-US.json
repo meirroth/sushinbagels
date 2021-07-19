@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Homepage",
+    "orderNow": "Order Now",
+    "ourMenu": "Our Menu",
+    "gallery": "Gallery",
+    "ourStory": "Our Story",
+    "contact": "Contact"
+  },
+  "page": {
+    "index": {
+      "title": "Homepage",
+      "hero": {
+        "title": "Beyond Sushi",
+        "body": "",
+        "cta": "Explore Our Menu"
+      },
+      "story": {
+        "title": "We are Authentic",
+        "body": "A true blend of Asian/US food culture. We have assembled a world-class team of chefs, ingredients specialists, and quality-assurance professionals, unrivaled in the US.",
+        "cta": "Explore Our Story"
+      },
+      "services": {
+        "title": "Our Awesome Services",
+        "body": [
+          {
+            "title": "Quality Food",
+            "desc": "All our fish and vegetables we use are fresh and of the highest quality"
+          },
+          {
+            "title": "Super Tasty",
+            "desc": "We have heavily researched all pour ingredients to ensure that all our food is super tasty"
+          },
+          {
+            "title": "Fast Delivery",
+            "desc": "Our team of delivery men ensure that your food will arrive speedily to your destination of choice"
+          },
+          {
+            "title": "Kashrut",
+            "desc": "Though the challenges we have chosen the most stringent Kashrut to be able to serve all walks of life"
+          }
+        ]
+      },
+      "order": {
+        "title": "Simple Way To Order Your Food",
+        "body": "A true blend of Asian/US food culture. We have assembled a world-class team of chefs, ingredients specialists, and quality-assurance professionals, unrivaled in the US.",
+        "cta": ["Download the app", "Order online now"]
+      },
+      "testimonial": {
+        "title": "What Our Sushi Loving Customers Say About Us"
+      }
+    },
+    "gallery": {
+      "title": "Gallery",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "menu": {
+      "title": "Our Menu"
+    },
+    "story": {
+      "title": "Our Story",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo nec ultrices dui. Morbi tincidunt augue interdum velit euismod in pellentesque. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Urna nunc id cursus metus aliquam eleifend mi in nulla. Lobortis mattis aliquam faucibus purus in massa. Tortor at risus viverra adipiscing at in tellus integer. Nullam ac tortor vitae purus faucibus. Condimentum lacinia quis vel eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Cursus mattis molestie a iaculis at erat pellentesque. Nisi quis eleifend quam adipiscing vitae proin. Suspendisse potenti nullam ac tortor vitae. In nisl nisi scelerisque eu ultrices vitae auctor. Faucibus vitae aliquet nec ullamcorper sit amet risus. Arcu ac tortor dignissim convallis aenean et tortor at risus. Bibendum at varius vel pharetra. Fames ac turpis egestas integer eget. Mauris a diam maecenas sed enim ut sem. Urna duis convallis convallis tellus id interdum velit laoreet id."
+    }
+  },
+  "testimonials": [
+    {
+      "body": "“Delicious sushi! A rare find in this country with good hechsher! Ordered delivery came late but was worth the wait!”",
+      "name": "M.S."
+    },
+    {
+      "body": "",
+      "name": ""
+    },
+    {
+      "body": "",
+      "name": ""
+    },
+    {
+      "body": "",
+      "name": ""
+    },
+    {
+      "body": "",
+      "name": ""
+    }
+  ]
+}
