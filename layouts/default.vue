@@ -1,18 +1,18 @@
 <template>
   <div>
-    <Header />
+    <TheHeader />
     <Nuxt />
-    <Footer />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
+import TheHeader from '~/components/TheHeader.vue'
+import TheFooter from '~/components/TheFooter.vue'
 export default {
   components: {
-    Header,
-    Footer,
+    TheHeader,
+    TheFooter,
   },
   head() {
     return this.$nuxtI18nHead({ addSeoAttributes: true })
