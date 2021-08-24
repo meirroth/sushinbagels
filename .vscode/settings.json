@@ -1,6 +1,6 @@
 {
-  "i18n-ally.localesPaths": ["lang"],
   "npm.packageManager": "npm",
+  "i18n-ally.localesPaths": ["lang"],
   "i18n-ally.extract.keygenStyle": "camelCase",
   "i18n-ally.extract.keyMaxLength": 20,
   "i18n-ally.review.enabled": false,

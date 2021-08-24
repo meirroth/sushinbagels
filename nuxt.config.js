@@ -2,6 +2,9 @@ import en from './lang/en-US'
 import he from './lang/he-IL'
 
 export default {
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -20,6 +23,10 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    bodyAttrs: {
+      class: 'min-h-screen bg-black text-white antialiased',
+      // class: 'min-h-screen bg-white text-black antialiased',
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -28,11 +35,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/lightgallery.client.js', mode: 'client' }],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/tailwindcss',
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     [
@@ -43,17 +48,9 @@ export default {
         display: 'swap',
         stylePath: 'scss/_fonts.scss',
         families: {
-          Heebo: true,
-          Kalam: true,
+          Heebo: [400, 500, 600, 700],
+          Kalam: [400, 700],
         },
-      },
-    ],
-    [
-      // Robots.txt https://github.com/nuxt-community/robots-module
-      '@nuxtjs/robots',
-      {
-        UserAgent: '*',
-        Disallow: '/',
       },
     ],
     [
@@ -61,15 +58,26 @@ export default {
       '@nuxtjs/sitemap',
       {
         hostname: 'https://sushinbagels.com/',
+        i18n: true,
       },
     ],
+    ['@nuxtjs/svg'],
+    ['@teamnovu/nuxt-breaky'],
   ],
+
+  /**
+   * Tailwind CSS configuration
+   */
+  tailwindcss: {
+    cssPath: '~/assets/scss/tailwind.scss',
+    exposeConfig: true,
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     [
       // i18n https://i18n.nuxtjs.org
-      'nuxt-i18n',
+      '@nuxtjs/i18n',
       {
         locales: [
           {

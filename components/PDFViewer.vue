@@ -36,6 +36,7 @@ import pdfvuer from 'pdfvuer'
 import 'pdfjs-dist/build/pdf.worker.entry'
 
 export default {
+  name: 'PDFViewer',
   components: {
     pdf: pdfvuer,
   },

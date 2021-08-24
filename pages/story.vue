@@ -1,16 +1,50 @@
 <template>
-  <section class="container">
-    <div>
-      <h1>{{ $t('page.story.title') }}</h1>
-      <p>
-        {{ $t('page.story.body') }}
-      </p>
+  <main>
+    <Hero
+      :img="require('~/assets/images/sushi-1.jpg')"
+      :title="$t('page.story.title')"
+    />
+    <div class="container relative space-y-20">
+      <section id="our-goal" class="flex flex-col lg:flex-row justify-between">
+        <p class="leading-relaxed">
+          <b>{{ $t('page.story.ourGoal') }}</b> {{ $t('page.story.ourGoalIs') }}
+        </p>
+        <img
+          class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:ms-10"
+          src="~/assets/images/sushi-1.jpg"
+          alt=""
+        />
+      </section>
+      <section
+        id="our-journey"
+        class="flex flex-col-reverse lg:flex-row justify-between"
+      >
+        <img
+          class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:me-10"
+          src="~/assets/images/sushi-2.jpg"
+          alt=""
+        />
+        <p class="leading-relaxed">
+          <b>{{ $t('page.story.ourJourney') }}</b>
+          {{ $t('page.story.ourJourneyIs') }}
+        </p>
+      </section>
     </div>
-  </section>
+    <div class="w-full h-96 xl:max-h-650 xl:h-screen relative mt-20">
+      <img
+        src="~/assets/images/outside-shop.jpg"
+        class="absolute inset-0 object-cover w-full h-full"
+      />
+    </div>
+  </main>
 </template>
 
 <script>
+import Hero from '~/components/Hero.vue'
 export default {
+  components: {
+    Hero,
+  },
   head() {
     return {
       title: this.$t('page.story.title'),
