@@ -63,7 +63,6 @@ export default {
       },
     ],
     ['@nuxtjs/svg'],
-    ['@teamnovu/nuxt-breaky'],
   ],
 
   /**
@@ -71,7 +70,6 @@ export default {
    */
   tailwindcss: {
     cssPath: '~/assets/scss/tailwind.scss',
-    exposeConfig: true,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

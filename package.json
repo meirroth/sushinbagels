@@ -1,6 +1,6 @@
 {
   "name": "sushinbagels",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -27,7 +27,6 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg": "^0.1.12",
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "@teamnovu/nuxt-breaky": "^1.2.2",
     "autoprefixer": "^10.3.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -36,7 +35,7 @@
     "fibers": "^5.0.0",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
-    "sass": "^1.38.0",
+    "sass": "^1.38.1",
     "sass-loader": "^10.2.0",
     "tailwindcss": "^2.2.7",
     "tailwindcss-rtl": "^0.7.3"
