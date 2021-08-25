@@ -5,6 +5,8 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   cssPath: '~/assets/css/tailwind.css',
   mode: 'jit',
@@ -66,10 +68,33 @@ module.exports = {
       spacing: {
         '1/3': '33.333333%',
       },
+      scale: {
+        '-1': '-1',
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: { scale: ['direction'] },
   },
-  plugins: [require('tailwindcss-rtl')],
+  plugins: [
+    require('tailwindcss-rtl'),
+    require('tailwindcss-dir'),
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        '.rtl': {
+          direction: 'rtl',
+        },
+        '.ltr': {
+          direction: 'ltr',
+        },
+        '.dir': {
+          direction: 'inherit',
+        },
+      }
+
+      addUtilities(newUtilities, {
+        variants: ['responsive'],
+      })
+    }),
+  ],
 }

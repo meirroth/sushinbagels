@@ -5,30 +5,29 @@
       :img="require('~/assets/images/sushi-1.jpg')"
       :title="$t('page.index.hero.title')"
     >
-      <nuxt-link class="btn" :to="localePath('menu')">
+      <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
       </nuxt-link>
     </Hero>
-    <div class="relative space-y-20">
+    <div class="relative z-20 bg-gradient-to-t from-black via-black space-y-24">
       <section id="story">
         <div
           class="
             container
-            flex flex-col
-            space-y-6
+            flex flex-col-reverse
             lg:flex-row lg:items-center lg:space-y-0
           "
         >
-          <div class="w-full lg:w-5/12 pe-0 lg:pe-10 text-center lg:text-start">
-            <h2>{{ $t('page.index.story.title') }}</h2>
-            <p class="mt-4">
+          <div class="w-full lg:w-5/12 pe-0 lg:pe-16 text-center lg:text-start">
+            <h2 class="mb-10">{{ $t('page.index.story.title') }}</h2>
+            <p class="text-lg">
               {{ $t('page.index.story.body') }}
             </p>
-            <nuxt-link class="mt-6 btn" :to="localePath('story')">
+            <nuxt-link class="mt-10 btn" :to="localePath('story')">
               {{ $t('page.index.story.cta') }}
             </nuxt-link>
           </div>
-          <div class="w-full lg:w-7/12">
+          <div class="w-full lg:w-7/12 mb-8 lg:mb-0">
             <img
               class="object-contain w-full h-full"
               src="~/assets/images/sushi-plate-1.png"
@@ -39,9 +38,9 @@
       </section>
       <section id="services">
         <div class="container text-center">
-          <h2>{{ $t('page.index.services.title') }}</h2>
-          <div class="flex flex-row flex-wrap justify-center -mx-10">
-            <div v-for="i in 4" :key="i" class="p-10 sm:w-1/2 lg:w-1/4">
+          <h2 class="mb-10">{{ $t('page.index.services.title') }}</h2>
+          <div class="flex flex-row flex-wrap justify-center -mx-6">
+            <div v-for="i in 4" :key="i" class="p-6 w-full sm:w-1/2 xl:w-1/4">
               <div class="relative w-1/3 mx-auto mb-6 pb-1/3">
                 <img
                   class="absolute object-contain w-full h-full"
@@ -52,8 +51,10 @@
                   alt=""
                 />
               </div>
-              <h3>{{ $t(`page.index.services.body[${i - 1}].title`) }}</h3>
-              <p class="mt-4 text-xs">
+              <h3 class="my-6">
+                {{ $t(`page.index.services.body[${i - 1}].title`) }}
+              </h3>
+              <p class="text-sm">
                 {{ $t(`page.index.services.body[${i - 1}].desc`) }}
               </p>
             </div>
@@ -90,15 +91,15 @@
                 py-10
               "
             >
-              <h2>{{ $t('page.index.order.title') }}</h2>
+              <h2 class="mb-10">{{ $t('page.index.order.title') }}</h2>
               <p>{{ $t('page.index.order.body') }}</p>
               <div
                 class="flex flex-wrap justify-center lg:justify-start -mx-2.5"
               >
-                <a href="#" class="btn-alt mx-2.5">
+                <a href="#" class="btn-alt mt-10 mx-2.5">
                   {{ $t('page.index.order.cta[0]') }}
                 </a>
-                <a href="#" class="btn mx-2.5">
+                <a href="#" class="btn mt-10 mx-2.5">
                   {{ $t('page.index.order.cta[1]') }}
                 </a>
               </div>
@@ -113,7 +114,7 @@
       <section id="testimonial" class="relative pb-20">
         <div class="container">
           <div class="flex flex-col w-full lg:w-1/2 relative z-10">
-            <h2 class="text-center lg:text-start">
+            <h2 class="text-center lg:text-start mb-10">
               {{ $t('page.index.testimonial.title') }}
             </h2>
             <Testimonial
@@ -126,13 +127,14 @@
         <img
           class="
             absolute
-            right-0
+            end-0
             top-10
             xl:top-auto xl:bottom-0
             z-0
             w-9/12
             lg:w-1/2
             max-w-3xl
+            rtl:-scale-x-1
           "
           src="~/assets/images/sushi-hand.png"
           alt=""
@@ -152,15 +154,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.btn {
-  @apply inline-block mt-10 py-2 px-6 font-bold text-black hover:text-white text-lg bg-white hover:bg-transparent border-2 rounded-full shadow-white transition-colors ease-out;
-}
-.btn-alt {
-  @apply inline-block mt-10 py-2 px-6 font-bold text-white hover:text-black text-lg bg-transparent hover:bg-white border-2 rounded-full shadow-white transition-colors ease-out;
-}
-// .tabit-mockup {
-//   max-height: 850px;
-// }
-</style>

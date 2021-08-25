@@ -4,7 +4,7 @@
       :img="require('~/assets/images/sushi-3.jpg')"
       :title="$t('page.gallery.title')"
     />
-    <div class="relative container">
+    <div class="relative z-20 container">
       <section>
         <!-- masonry-grid md:masonry-2-col lg:masonry-3-col -->
         <div id="lightgallery" class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">

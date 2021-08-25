@@ -1,34 +1,61 @@
 <template>
-  <div class="header-wrap" :style="{ opacity, pointerEvents }">
+  <div
+    class="
+      fixed
+      top-0
+      left-0
+      w-full
+      text-white
+      z-20
+      transition-opacity
+      ease-out
+      duration-300
+    "
+    :style="{ opacity, pointerEvents }"
+  >
     <header class="py-6" aria-label="Site Header">
       <div class="container">
         <div class="max-w-8xl mx-auto">
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between ltr lg:dir">
             <nuxt-link class="flex items-center" :to="localePath('index')">
               <img src="~/assets/images/logo.svg" alt="SushiNBagels" />
             </nuxt-link>
             <nav class="hidden lg:block" aria-label="Site Navigation">
               <ul class="flex">
                 <li class="me-8">
-                  <a href="#" class="nav-link">{{ $t('nav.orderNow') }}</a>
+                  <a href="#" class="nav-link font-medium">{{
+                    $t('nav.orderNow')
+                  }}</a>
                 </li>
                 <li class="me-8">
-                  <nuxt-link class="nav-link" :to="localePath('menu')">
+                  <nuxt-link
+                    class="nav-link font-medium"
+                    :to="localePath('menu')"
+                  >
                     {{ $t('nav.ourMenu') }}
                   </nuxt-link>
                 </li>
                 <li class="me-8">
-                  <nuxt-link class="nav-link" :to="localePath('gallery')">
+                  <nuxt-link
+                    class="nav-link font-medium"
+                    :to="localePath('gallery')"
+                  >
                     {{ $t('nav.gallery') }}
                   </nuxt-link>
                 </li>
                 <li class="me-8">
-                  <nuxt-link class="nav-link" :to="localePath('story')">
+                  <nuxt-link
+                    class="nav-link font-medium"
+                    :to="localePath('story')"
+                  >
                     {{ $t('nav.ourStory') }}
                   </nuxt-link>
                 </li>
                 <li class="me-8">
-                  <nuxt-link class="nav-link" :to="localePath('contact')">
+                  <nuxt-link
+                    class="nav-link font-medium"
+                    :to="localePath('contact')"
+                  >
                     {{ $t('nav.contact') }}
                   </nuxt-link>
                 </li>
@@ -37,9 +64,35 @@
                 </li>
               </ul>
             </nav>
-            <div class="lg:hidden">
-              <button class="nav-btn" aria-label="Open site menu">Menu</button>
-            </div>
+            <button
+              class="nav-btn lg:hidden"
+              aria-label="Open site menu"
+              @click="toggleMobileNav()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                width="30"
+                height="30"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  class="icon-tabler"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 6h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 18h16" />
+                </g>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -47,7 +100,7 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import LangSwitcher from '~/components/LangSwitcher.vue'
 export default {
   name: 'TheHeader',
@@ -56,6 +109,7 @@ export default {
   },
   computed: {
     ...mapState(['scrolled']),
+
     pointerEvents() {
       const threshold = 120
       if (this.scrolled <= threshold * 3) return 'auto'
@@ -68,16 +122,13 @@ export default {
       return 1 - this.scrolled / (threshold * 3)
     },
   },
+  methods: {
+    ...mapActions(['toggleMobileNav']),
+  },
 }
 </script>
 <style lang="scss" scoped>
-.header-wrap {
-  @apply fixed top-0 left-0 w-full text-white z-20 transition-opacity ease-out duration-300;
-}
 .nav-btn {
-  @apply py-1 px-4 font-semibold  hover:text-black rounded-full border-2 border-white hover:bg-white transition-colors ease-out;
-}
-.nav-link {
-  @apply font-medium;
+  // @apply py-1 px-4 font-semibold  hover:text-black rounded-full border-2 border-white hover:bg-white transition-colors ease-out;
 }
 </style>
