@@ -5,11 +5,11 @@
         class="flex flex-wrap text-center lg:text-start space-y-4 lg:space-y-0"
       >
         <div class="w-full lg:w-2/5">
-          <h5 class="flex justify-center lg:justify-start pb-4">
+          <div class="flex justify-center lg:justify-start pb-4">
             <nuxt-link :to="localePath('index')">
               <img src="~/assets/images/logo.svg" alt="SushiNBagels" />
             </nuxt-link>
-          </h5>
+          </div>
           <ul>
             <li>
               <svg
