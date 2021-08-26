@@ -4,7 +4,7 @@
       :img="require('~/assets/images/sushi-4.jpg')"
       :title="$t('page.contact.title')"
     />
-    <div class="relative">
+    <div class="relative z-20">
       <section class="text-gray-400 body-font relative">
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div
@@ -130,7 +130,7 @@
             <h2 class="text-white text-lg mb-1 font-medium">
               Send us a message
             </h2>
-            <p class="leading-relaxed text-sm mb-5">
+            <p class="text-sm mb-5">
               Need additional information or have a question or comment? Please
               feel free to leave a message, And our beloved team will answer you
               as soon as possible!

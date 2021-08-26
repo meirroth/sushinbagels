@@ -1,12 +1,14 @@
-import en from './lang/en-US'
-import he from './lang/he-IL'
-
+const isProd = process.env.NODE_ENV === 'production'
 export default {
+  server: {
+    host: '192.168.1.20',
+    // host: !isProd ? '192.168.1.20' : 'localhost', // default: localhost
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  // ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -18,15 +20,38 @@ export default {
       return titleChunk ? `${titleChunk} - SushiNBagels` : 'SushiNBagels'
     },
     meta: [
-      { charset: 'utf-8' },
+      // { charset: 'utf-8' },
       { name: 'robots', content: 'noindex' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      // {
+      //   name: 'viewport',
+      //   content: 'width=device-width, initial-scale=1, viewport-fit=cover',
+      // },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    // link: [
+    //   {
+    //     rel: 'apple-touch-icon',
+    //     sizes: '180x180',
+    //     href: '/apple-touch-icon.png',
+    //   },
+    //   {
+    //     rel: 'icon',
+    //     type: 'image/png',
+    //     sizes: '32x32',
+    //     href: '/favicon-32x32.png',
+    //   },
+    //   {
+    //     rel: 'icon',
+    //     type: 'image/png',
+    //     sizes: '16x16',
+    //     href: '/favicon-16x16.png',
+    //   },
+    //   { rel: 'manifest', href: '/site.webmanifest', color: '#92c020' },
+    //   { rel: 'mask-icon', href: '/safari-pinned-tab.svg' },
+    //   { name: 'msapplication-TileColor', content: '#da532c' },
+    //   { name: 'theme-color', content: '#92c020' },
+    // ],
     bodyAttrs: {
-      class: 'min-h-screen bg-black text-white antialiased',
-      // class: 'min-h-screen bg-white text-black antialiased',
+      class: 'min-h-screen text-white leading-relaxed antialiased',
     },
   },
 
@@ -54,15 +79,27 @@ export default {
         },
       },
     ],
+
+    ['@nuxtjs/svg'],
     [
-      // Sitemap https://sitemap.nuxtjs.org/
-      '@nuxtjs/sitemap',
+      '@nuxtjs/pwa',
       {
-        hostname: 'https://sushinbagels.com/',
-        i18n: true,
+        meta: {
+          name: 'SushiNBagels',
+          author: 'Meir Roth',
+          description: 'Beyond Sushi',
+          theme_color: '#92c020',
+          viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
+        },
+        manifest: {
+          name: 'SushiNBagels',
+          short_name: 'SushiNBagels',
+          description: 'Beyond Sushi',
+          start_url: '/?pwa=1',
+        },
       },
     ],
-    ['@nuxtjs/svg'],
+    // ['@teamnovu/nuxt-breaky'],
   ],
 
   /**
@@ -70,6 +107,7 @@ export default {
    */
   tailwindcss: {
     cssPath: '~/assets/scss/tailwind.scss',
+    exposeConfig: !isProd,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -78,26 +116,40 @@ export default {
       // i18n https://i18n.nuxtjs.org
       '@nuxtjs/i18n',
       {
+        seo: false,
+        lazy: true,
+        langDir: 'lang/',
+        defaultLocale: 'en',
         locales: [
           {
             code: 'en',
             iso: 'en-US',
             name: 'English',
+            dir: 'ltr',
+            file: 'en-US.js',
           },
           {
             code: 'he',
             iso: 'he-IL',
             name: 'עברית',
             dir: 'rtl',
+            file: 'he-IL.js',
           },
         ],
-        seo: false,
-        defaultLocale: 'en',
-        routes: {},
         vueI18n: {
           fallbackLocale: 'en',
-          messages: { en, he },
         },
+        baseUrl: 'https://sushinbagels.com',
+      },
+    ],
+    [
+      // Sitemap https://sitemap.nuxtjs.org/
+      '@nuxtjs/sitemap',
+      {
+        hostname: isProd
+          ? 'https://sushinbagels.com'
+          : 'https://sushinbagels.meir.io',
+        i18n: true,
       },
     ],
     // protect email-addresses https://github.com/mmoollllee/nuxt-protected-mailto
@@ -110,6 +162,27 @@ export default {
     html: {
       minify: {
         decodeEntities: false,
+      },
+    },
+    // https://github.com/nuxt-community/tailwindcss-module/issues/361#issuecomment-903135510
+    postcss: {
+      order: 'presetEnvAndCssnanoLast',
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+        'postcss-focus-visible': {},
+        cssnano: isProd
+          ? {
+              preset: [
+                'default',
+                {
+                  discardComments: {
+                    removeAll: true,
+                  },
+                },
+              ],
+            }
+          : false, // disable cssnano when not in production
       },
     },
   },

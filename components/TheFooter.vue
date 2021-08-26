@@ -5,12 +5,11 @@
         class="flex flex-wrap text-center lg:text-start space-y-4 lg:space-y-0"
       >
         <div class="w-full lg:w-2/5">
-          <nuxt-link
-            class="flex justify-center lg:justify-start pb-4"
-            :to="localePath('index')"
-          >
-            <img src="~/assets/images/logo.svg" alt="SushiNBagels" />
-          </nuxt-link>
+          <div class="flex justify-center lg:justify-start pb-4">
+            <nuxt-link :to="localePath('index')">
+              <img src="~/assets/images/logo.svg" alt="SushiNBagels" />
+            </nuxt-link>
+          </div>
           <ul>
             <li>
               <svg
@@ -114,21 +113,12 @@
         </div>
         <div class="w-full lg:w-1/5">
           <h5 class="font-bold pb-2">{{ $t('footer.stayConnected') }}</h5>
-          <ul
-            class="
-              social
-              flex flex-row
-              justify-center
-              lg:justify-start
-              space-x-4
-              lg:space-x-0 lg:flex-col
-            "
-          >
+          <ul class="flex flex-row justify-center lg:justify-start lg:flex-col">
             <li>
               <a class="link text-0 lg:text-xs" href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon-tabler-brand-facebook inline-block me-1"
+                  class="icon-tabler-brand-facebook inline-block lg:me-1"
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -145,11 +135,11 @@
                 ><span>{{ $t('footer.facebook') }}</span></a
               >
             </li>
-            <li class="lg:mt-1">
+            <li class="lg:mt-1 mx-4 lg:mx-0">
               <a class="link text-0 lg:text-xs" href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon-tabler-brand-instagram inline-block me-1"
+                  class="icon-tabler-brand-instagram inline-block lg:me-1"
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -170,7 +160,7 @@
               <a class="link text-0 lg:text-xs" href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon-tabler-brand-whatsapp inline-block me-1"
+                  class="icon-tabler-brand-whatsapp inline-block lg:me-1"
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"

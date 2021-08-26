@@ -1,14 +1,30 @@
-.rtl {
-  direction: rtl;
+html {
+  @apply bg-black min-h-screen;
+  // min-height: -webkit-fill-available;
 }
-.ltr {
-  direction: ltr;
+
+main {
+  @apply focus:outline-none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-green;
 }
 
 header .nuxt-link-exact-active {
   @apply text-green;
 }
 
+.btn {
+  @apply inline-block py-2 px-6 font-bold text-black border-white hover:text-white text-lg bg-white hover:bg-transparent border-2 rounded-full shadow-white transition-colors ease-out;
+}
+.btn-alt {
+  @apply inline-block py-2 px-6 font-bold text-black border-green hover:text-green text-lg bg-green hover:bg-transparent border-2 rounded-full shadow-white transition-colors ease-out;
+}
 .nav-link {
   @apply relative transition-colors;
 

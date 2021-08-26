@@ -19,36 +19,32 @@
       }"
     >
       <div
-        class="h-full transition-transform ease-out duration-fast z-10"
+        class="h-full transition-transform ease-out duration-fast"
         :style="{
           transform: 'scale(' + imageScale + ')',
         }"
       >
         <img
           :src="img"
-          class="absolute inset-0 w-full h-full object-cover filter blur"
+          class="absolute inset-0 w-full h-full object-cover filter blur z-0"
         />
       </div>
-      <div class="absolute top-0 w-full h-1/2 bg-gradient-to-b from-gray-900" />
-      <div class="absolute bottom-0 w-full h-3/4 bg-gradient-to-t from-black" />
+      <div
+        class="absolute top-0 w-full h-1/2 bg-gradient-to-b from-gray-900 z-0"
+      />
+      <div
+        class="absolute bottom-0 w-full h-3/4 bg-gradient-to-t from-black z-0"
+      />
     </figure>
 
     <div
-      class="z-20 h-full transition-opacity ease-out duration-fast"
+      class="z-10 h-full transition-opacity ease-out duration-fast"
       :style="{ opacity: textOpacity, pointerEvents: textPointerEvents }"
     >
       <div class="absolute inset-0 w-full h-full">
         <div class="container h-full">
           <div
-            class="
-              flex flex-col
-              items-center
-              justify-center
-              text-center
-              2xl:max-w-6xl
-              h-full
-              mx-auto
-            "
+            class="flex flex-col items-center justify-center text-center h-full"
           >
             <h1 class="pt-16 text-white">
               {{ title }}

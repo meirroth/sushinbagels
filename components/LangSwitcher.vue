@@ -1,22 +1,21 @@
 <template>
-  <span class="lang-switcher">
-    <select v-if="$i18n.locales.length > 2" name="language">
-      <option
-        v-for="locale in $i18n.locales"
-        :key="locale.code"
-        :value="locale.code"
-        @change="handleLangChange()"
-      >
-        {{ locale.name }}
-      </option>
-    </select>
-    <nuxt-link
-      v-else-if="$i18n.locales.length === 2"
-      :to="switchLocalePath(showLocales[0].code)"
+  <select v-if="$i18n.locales.length > 2" class="lang-switcher" name="language">
+    <option
+      v-for="locale in $i18n.locales"
+      :key="locale.code"
+      :value="locale.code"
+      @change="handleLangChange()"
     >
-      {{ showLocales[0].name }}
-    </nuxt-link>
-  </span>
+      {{ locale.name }}
+    </option>
+  </select>
+  <nuxt-link
+    v-else-if="$i18n.locales.length === 2"
+    :to="switchLocalePath(showLocales[0].code)"
+    class="lang-switcher"
+  >
+    {{ showLocales[0].name }}
+  </nuxt-link>
 </template>
 
 <script>
