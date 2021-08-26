@@ -149,7 +149,7 @@ export default {
       '@nuxtjs/sitemap',
       {
         hostname: process.env.NUXT_ENV_VERCEL_URL
-          ? process.env.NUXT_ENV_VERCEL_URL
+          ? process.env.NUXT_ENV_VERCEL_URL.replace(/^\/+/, '')
           : 'https://sushinbagels.com',
         i18n: true,
       },
