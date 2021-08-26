@@ -3,6 +3,18 @@ html {
   // min-height: -webkit-fill-available;
 }
 
+main {
+  @apply focus:outline-none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-green;
+}
+
 header .nuxt-link-exact-active {
   @apply text-green;
 }

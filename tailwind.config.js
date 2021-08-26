@@ -74,7 +74,14 @@ module.exports = {
     },
   },
   variants: {
-    extend: { scale: ['direction'] },
+    extend: {
+      scale: ['direction'],
+      ringColor: ['focus-visible'],
+      ringOffsetColor: ['focus-visible'],
+      ringOffsetWidth: ['focus-visible'],
+      ringOpacity: ['focus-visible'],
+      ringWidth: ['focus-visible'],
+    },
   },
   plugins: [
     require('tailwindcss-rtl'),

@@ -1,4 +1,3 @@
-import { join } from 'path'
 const isProd = process.env.NODE_ENV === 'production'
 export default {
   server: {
@@ -169,8 +168,9 @@ export default {
     postcss: {
       order: 'presetEnvAndCssnanoLast',
       plugins: {
-        tailwindcss: join(__dirname, 'tailwind.config.js'),
+        tailwindcss: {},
         autoprefixer: {},
+        'postcss-focus-visible': {},
         cssnano: isProd
           ? {
               preset: [

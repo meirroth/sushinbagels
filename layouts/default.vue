@@ -46,7 +46,7 @@ export default {
   methods: {
     ...mapActions(['toggleMobileNav']),
     skipToContent() {
-      document.getElementsById('main').focus()
+      document.getElementById('main').focus()
     },
     handleScroll() {
       this.$store.commit('setScroll', window.scrollY)
