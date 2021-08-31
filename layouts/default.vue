@@ -35,6 +35,9 @@ export default {
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
   },
+  mounted() {
+    this.handleScroll()
+  },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
   },
