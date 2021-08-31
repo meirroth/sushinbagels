@@ -80,3 +80,7 @@ header .nuxt-link-exact-active {
 .link {
   @apply hover:text-green transition-colors ease-out;
 }
+
+svg.icon {
+  stroke-width: 1;
+}
