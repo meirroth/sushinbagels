@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="overflow-hidden">
     <Hero
       :img="require('~/assets/images/sushi-2.jpg')"
       :title="$t('page.menu.title')"
@@ -11,7 +11,7 @@
             ref="flipbook"
             v-slot="flipbook"
             :pages="pages"
-            class="flipbook w-full h-screen overflow-hidden"
+            class="flipbook w-full h-screen"
           >
             <div class="fixed inset-x-0 bottom-4 flex justify-center z-20 ltr">
               <div
