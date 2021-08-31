@@ -8,7 +8,6 @@ const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  cssPath: '~/assets/css/tailwind.css',
   mode: 'jit',
   purge: {
     enabled: process.env.NODE_ENV === 'production',

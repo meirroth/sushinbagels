@@ -44,7 +44,7 @@
           <button
             class="ml-auto group"
             title="Close menu"
-            @click="$emit('close')"
+            @click="$emit('closeMobileNav')"
           >
             <svg
               class="
@@ -114,10 +114,8 @@
 </template>
 
 <script>
-import LangSwitcher from '~/components/LangSwitcher.vue'
-
 export default {
-  components: { LangSwitcher },
+  name: 'TheMobileNav',
   props: {
     isOpen: {
       type: Boolean,

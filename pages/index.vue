@@ -145,12 +145,11 @@
 </template>
 
 <script>
-import Hero from '~/components/Hero.vue'
-import Testimonial from '~/components/Testimonial.vue'
 export default {
-  components: {
-    Hero,
-    Testimonial,
+  head() {
+    return {
+      title: null,
+    }
   },
 }
 </script>

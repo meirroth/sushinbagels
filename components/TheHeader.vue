@@ -67,7 +67,7 @@
             <button
               class="nav-btn lg:hidden"
               aria-label="Open site menu"
-              @click="toggleMobileNav()"
+              @click="$emit('openMobileNav')"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,16 +100,10 @@
   </div>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex'
-import LangSwitcher from '~/components/LangSwitcher.vue'
 export default {
   name: 'TheHeader',
-  components: {
-    LangSwitcher,
-  },
+  props: { scrolled: { default: 0, type: Number } },
   computed: {
-    ...mapState(['scrolled']),
-
     pointerEvents() {
       const threshold = 120
       if (this.scrolled <= threshold * 3) return 'auto'
@@ -121,9 +115,6 @@ export default {
       if (this.scrolled <= threshold) return 1 // only start transition once scrolled reaches threshold
       return 1 - this.scrolled / (threshold * 3)
     },
-  },
-  methods: {
-    ...mapActions(['toggleMobileNav']),
   },
 }
 </script>

@@ -106,7 +106,9 @@
               <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <div>
                   <h2 class="text-white tracking-widest text-xs">Email</h2>
-                  <Mailto mail="info@sushinbagels.com" />
+                  <a href="mailto:info@sushinbagels.com"
+                    >info@sushinbagels.com</a
+                  >
                 </div>
                 <div>
                   <h2 class="text-white tracking-widest text-xs mt-4">Phone</h2>
@@ -263,11 +265,7 @@
 </template>
 
 <script>
-import Hero from '~/components/Hero.vue'
 export default {
-  components: {
-    Hero,
-  },
   head() {
     return {
       title: this.$t('page.contact.title'),

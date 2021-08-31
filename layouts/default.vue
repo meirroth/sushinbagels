@@ -3,8 +3,11 @@
     <a href="#main" class="skip-link" @click="skipToContent()">
       Skip to content
     </a>
-    <TheHeader />
-    <TheMobileNav :is-open="isMobileNavOpen" @close="toggleMobileNav" />
+    <TheHeader :scrolled="scrolled" @openMobileNav="toggleMobileNav()" />
+    <TheMobileNav
+      :is-open="isMobileNavOpen"
+      @closeMobileNav="toggleMobileNav()"
+    />
     <Nuxt id="main" tab-index="-1" aria-label="Main Content" />
     <TheFooter />
   </div>
@@ -13,21 +16,13 @@
 <script>
 import { mapActions, mapState } from 'vuex'
 
-import TheHeader from '~/components/TheHeader.vue'
-import TheFooter from '~/components/TheFooter.vue'
-import TheMobileNav from '~/components/TheMobileNav.vue'
-
 export default {
   name: 'Default',
-  components: {
-    TheHeader,
-    TheFooter,
-    TheMobileNav,
-  },
   head() {
     return this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
   },
   computed: {
+    ...mapState(['scrolled']),
     ...mapState(['isMobileNavOpen']),
   },
   watch: {
@@ -39,6 +34,9 @@ export default {
   },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  mounted() {
+    this.handleScroll()
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
