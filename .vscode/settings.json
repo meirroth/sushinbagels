@@ -1,9 +1,16 @@
 {
-  "npm.packageManager": "npm",
+  "css.validate": true,
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "vetur.completion.tagCasing": "initial",
+  "tailwindCSS.emmetCompletions": true,
   "i18n-ally.localesPaths": ["lang"],
   "i18n-ally.extract.keygenStyle": "camelCase",
   "i18n-ally.extract.keyMaxLength": 20,
   "i18n-ally.review.enabled": false,
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.sortKeys": true
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.translate.engines": [],
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.enabledFrameworks": ["vue", "vscode"]
 }

@@ -1,10 +1,6 @@
 <template>
   <main>
-    <Hero
-      :full="true"
-      :img="require('~/assets/images/sushi-1.jpg')"
-      :title="$t('page.index.hero.title')"
-    >
+    <Hero :full="true" :img="require('~/assets/images/sushi-1.jpg')">
       <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
       </nuxt-link>
@@ -38,7 +34,7 @@
       </section>
       <section id="services">
         <div class="container text-center">
-          <h2 class="mb-10">{{ $t('page.index.services.title') }}</h2>
+          <!-- <h2 class="mb-10">{{ $t('page.index.services.title') }}</h2> -->
           <div class="flex flex-row flex-wrap justify-center -mx-6">
             <div v-for="i in 4" :key="i" class="p-6 w-full sm:w-1/2 xl:w-1/4">
               <div class="relative w-1/3 mx-auto mb-6 pb-1/3">
@@ -48,7 +44,7 @@
                     require('~/assets/images/' +
                       $t(`page.index.services.body[${i - 1}].icon`))
                   "
-                  alt=""
+                  :alt="$t(`page.index.services.body[${i - 1}].title`)"
                 />
               </div>
               <h3 class="my-6">
@@ -77,7 +73,7 @@
               <img
                 class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28"
                 src="~/assets/images/tabit-mockup.png"
-                alt=""
+                alt="Ordering app"
               />
             </div>
             <div
@@ -92,7 +88,6 @@
               "
             >
               <h2 class="mb-10">{{ $t('page.index.order.title') }}</h2>
-              <p>{{ $t('page.index.order.body') }}</p>
               <div
                 class="flex flex-wrap justify-center lg:justify-start -mx-2.5"
               >

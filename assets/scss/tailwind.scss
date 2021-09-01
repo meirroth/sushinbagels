@@ -3,17 +3,21 @@
 @tailwind utilities;
 
 @layer base {
+  h1 {
+    @apply text-5xl md:text-6xl font-bold;
+  }
   h1,
   h2 {
     @apply tracking-wide font-serif;
   }
-  h1 {
-    @apply text-5xl md:text-6xl font-bold;
-  }
   h2 {
-    @apply text-4xl md:text-5xl font-semibold;
+    @apply text-4xl md:text-5xl;
+  }
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold;
   }
   h3 {
-    @apply font-semibold;
   }
 }

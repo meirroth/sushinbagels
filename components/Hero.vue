@@ -46,7 +46,7 @@
           <div
             class="flex flex-col items-center justify-center text-center h-full"
           >
-            <h1 class="pt-16 text-white">
+            <h1 v-if="title" class="pt-16 text-white">
               {{ title }}
             </h1>
             <slot />
