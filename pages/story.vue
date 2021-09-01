@@ -14,21 +14,21 @@
             <b>{{ $t('page.story.ourGoal') }}</b>
             {{ $t('page.story.ourGoalIs') }}
           </p>
-          <img
+          <!-- <img
             class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:ms-10"
             src="~/assets/images/sushi-1.jpg"
             alt=""
-          />
+          /> -->
         </section>
         <section
           id="our-journey"
           class="flex flex-col-reverse lg:flex-row justify-between"
         >
-          <img
+          <!-- <img
             class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:me-10"
             src="~/assets/images/sushi-2.jpg"
             alt=""
-          />
+          /> -->
           <p>
             <b>{{ $t('page.story.ourJourney') }}</b>
             {{ $t('page.story.ourJourneyIs') }}
