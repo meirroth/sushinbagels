@@ -1,6 +1,6 @@
 {
   "name": "sushinbagels",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -41,6 +41,6 @@
     "tailwindcss": "^2.2.7",
     "tailwindcss-dir": "^4.0.0",
     "tailwindcss-rtl": "^0.7.3",
-    "vue-tabler-icons": "^2.1.0"
+    "vue-tabler-icons": "^1.12.1"
   }
 }
