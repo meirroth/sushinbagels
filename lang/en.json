@@ -1,14 +1,14 @@
 {
   "footer": {
-    "copy": "Created with",
-    "cravingSushi": "Craving Sushi",
     "facebook": "Facebook",
-    "findUs": "Find Us",
     "information": "Information",
-    "instagram": "Instagram",
-    "right": "by Meir Roth. All rights reserved",
     "stayConnected": "Stay Connected",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "cravingSushi": "Craving Sushi",
+    "copy": "Created with",
+    "findUs": "Find Us",
+    "right": "by Meir Roth. All rights reserved"
   },
   "nav": {
     "contact": "Contact",
@@ -20,27 +20,27 @@
   },
   "page": {
     "contact": {
-      "address": "Address",
+      "optional": "(Optional)",
       "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Cursus mattis molestie a iaculis at erat pellentesque. Nisi quis eleifend quam adipiscing vitae proin. Suspendisse potenti nullam ac tortor vitae. In nisl nisi scelerisque eu ultrices vitae auctor. Faucibus vitae aliquet nec ullamcorper sit amet risus. Arcu ac tortor dignissim convallis aenean et tortor at risus. Bibendum at varius vel pharetra. Fames ac turpis egestas integer eget. Mauris a diam maecenas sed enim ut sem. Urna duis convallis convallis tellus id interdum velit laoreet id.",
-      "directions": "Directions",
-      "email": "Email",
-      "formDesc": "Need additional information or have a question or comment? Please feel free to leave a message, And our beloved team will answer you as soon as possible",
-      "formTitle": "Send us a message",
-      "googleMaps": "Google Maps",
-      "hours": "Hours",
       "hours1": "Sun - Wed 11am–10pm",
       "hours2": "Thursday 11am–11pm",
       "hours3": "Saturday Night approx. 2 hours after nightfall – 00:30",
-      "mapAlt": "Store location map",
       "message": "Message",
-      "moovit": "Moovit",
       "name": "Name",
-      "optional": "(Optional)",
+      "mapAlt": "Store location map",
       "phone": "Phone",
+      "hours": "Hours",
+      "googleMaps": "Google Maps",
+      "directions": "Directions",
+      "moovit": "Moovit",
+      "address": "Address",
+      "formTitle": "Send us a message",
+      "formDesc": "Need additional information or have a question or comment? Please feel free to leave a message, And our beloved team will answer you as soon as possible",
+      "waze": "Waze",
       "submit": "Submit",
       "title": "Contact Us",
-      "waze": "Waze",
-      "yermiyahuStreet": "Yirmiyahu Street 68, Jerusalem, Israel"
+      "yermiyahuStreet": "Yirmiyahu Street 68, Jerusalem, Israel",
+      "email": "Email"
     },
     "gallery": {
       "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -106,7 +106,7 @@
       "title": "Our Story"
     }
   },
-  "page_index_hero_cta": "Explore our menu",
+  "page_index_hero_cta": "Explore our menu now!!",
   "sitename": "SushiNBagels",
   "testimonials": [
     {
