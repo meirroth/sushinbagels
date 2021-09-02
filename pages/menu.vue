@@ -11,9 +11,13 @@
             ref="flipbook"
             v-slot="flipbook"
             :pages="pages"
+            :zooms="[1, 2]"
             class="flipbook w-full h-screen"
           >
-            <div class="fixed inset-x-0 bottom-4 flex justify-center z-20 ltr">
+            <div
+              v-if="pages.length > 0"
+              class="fixed inset-x-0 bottom-4 flex justify-center z-20 ltr"
+            >
               <div
                 class="
                   flex
@@ -75,20 +79,6 @@
                   <ChevronRightIcon aria-hidden="true" />
                 </button>
                 <button
-                  :disabled="isDisabled(!flipbook.canZoomIn)"
-                  class="p-1 rounded transition-colors pointer-events-none"
-                  :class="{
-                    'hover:bg-gray-600 pointer-events-auto': flipbook.canZoomIn,
-                  }"
-                  title="Zoom in"
-                  aria-label="Zoom in"
-                  aria-haspopup="false"
-                  :aria-disabled="!flipbook.canZoomIn"
-                  @click="flipbook.zoomIn"
-                >
-                  <PlusIcon aria-hidden="true" />
-                </button>
-                <button
                   :disabled="isDisabled(!flipbook.canZoomOut)"
                   class="p-1 rounded transition-colors pointer-events-none"
                   :class="{
@@ -102,6 +92,20 @@
                   @click="flipbook.zoomOut"
                 >
                   <MinusIcon aria-hidden="true" />
+                </button>
+                <button
+                  :disabled="isDisabled(!flipbook.canZoomIn)"
+                  class="p-1 rounded transition-colors pointer-events-none"
+                  :class="{
+                    'hover:bg-gray-600 pointer-events-auto': flipbook.canZoomIn,
+                  }"
+                  title="Zoom in"
+                  aria-label="Zoom in"
+                  aria-haspopup="false"
+                  :aria-disabled="!flipbook.canZoomIn"
+                  @click="flipbook.zoomIn"
+                >
+                  <PlusIcon aria-hidden="true" />
                 </button>
               </div></div></Flipbook
         ></client-only>
@@ -128,56 +132,27 @@ export default {
   },
   data() {
     return {
-      pages: [
-        '/img/digital-menu-1-845x1199.jpg',
-        '/img/digital-menu-2-845x1199.jpg',
-        '/img/digital-menu-3-845x1199.jpg',
-        '/img/digital-menu-4-845x1199.jpg',
-        '/img/digital-menu-5-845x1199.jpg',
-        '/img/digital-menu-6-845x1199.jpg',
-        '/img/digital-menu-7-845x1199.jpg',
-        '/img/digital-menu-8-845x1199.jpg',
-      ],
+      pages: null,
     }
   },
-
   head() {
     return {
       title: this.$t('page.menu.title'),
     }
   },
   computed: {
-    /* pages () {
-      return 'something'
-    },
-    pagesHiRes () {
-      return 'something'
-    }, */
-    canFlipLeft() {
-      return this.$refs.flipbook.canFlipLeft
+    flipbookRef() {
+      return this.$refs.flipbook
     },
   },
-  mounted() {
-    // eslint-disable-next-line no-console
-    // console.log(this.$refs.flipbook)
-    this.$nextTick(function () {
-      this.$nextTick(function () {
-        // eslint-disable-next-line no-console
-        console.log(this.$refs.flipbook)
-        const flipbook = this.$refs.flipbook
-        window.addEventListener('keydown', function (ev) {
-          // return unless flipbook
-          if (ev.key === 37 && flipbook.canFlipLeft) {
-            flipbook.flipLeft()
-          }
-          if (ev.key === 39 && flipbook.canFlipRight) {
-            flipbook.flipRight()
-          }
-          // flipbook.flipLeft() if ev.keyCode == 37 and flipbook.canFlipLeft
-          // flipbook.flipRight() if ev.keyCode == 39 and flipbook.canFlipRight
-        })
-      })
-    })
+  beforeMount() {
+    this.pages = this.importImages(
+      require.context('~/assets/images/menu/', false, /\.jpg$/)
+    )
+    window.addEventListener('keydown', this.handleKeydown)
+  },
+  beforeDestroy() {
+    window.removeEventListener('keydown', this.handleKeydown)
   },
   methods: {
     formatCurrentPage(page) {
@@ -192,6 +167,19 @@ export default {
     },
     isDisabled(bool) {
       return bool ? true : null
+    },
+    importImages(r) {
+      const paths = []
+      r.keys().forEach((key) => paths.push(r(key)))
+      return paths
+    },
+    handleKeydown(ev) {
+      ev.key === 'ArrowLeft' &&
+        this.flipbookRef.canFlipLeft &&
+        this.flipbookRef.flipLeft()
+      ev.key === 'ArrowRight' &&
+        this.flipbookRef.canFlipRight &&
+        this.flipbookRef.flipRight()
     },
   },
 }
