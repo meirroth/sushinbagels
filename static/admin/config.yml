@@ -26,7 +26,6 @@ collections:
   - label: 'Site settings'
     name: 'site'
     i18n: true
-    files:
   - label: 'Info'
     name: 'info'
     file: 'lang'
