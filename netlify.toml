@@ -1,3 +1,6 @@
 [build]
-command = "nuxt build && nuxt export"
+command = "npm run generate"
 publish = "dist"
+
+[build.environment]
+NODE_VERSION = "13"
