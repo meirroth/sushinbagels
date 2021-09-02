@@ -5,7 +5,8 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-
+publish_mode: editorial_workflow
+logo_url: /icon.png
 # BETA i18n Support https://www.netlifycms.org/docs/beta-features/#i18n-support
 i18n:
   # Required and can be one of multiple_folders, multiple_files or single_file
@@ -24,23 +25,39 @@ i18n:
 collections:
   - label: 'Site settings'
     name: 'site'
+    i18n: true
     files:
       - label: 'Info'
         name: 'info'
-        file: 'content/site/info.json'
+        file: 'lang'
         format: 'json'
         editor:
           preview: false
         fields:
           - {
-              label: Site Name,
+              label: Site name,
               name: sitename,
               widget: string,
               hint: 'This is used for the site title',
             }
-          - {
-              label: Site Description,
-              name: sitedescription,
-              widget: string,
-              hint: 'This is used as descriptive text for links that link to this site',
-            }
+      # - label: 'Navigation'
+      #   name: 'nav'
+      #   file: 'lang'
+      #   format: 'json'
+      #   editor:
+      #     preview: false
+      #   fields:
+      #     - { widget: string, label: Homepage, name: home }
+      #     - { widget: string, label: Order Now, name: orderNow }
+      #     - { widget: string, label: Our Menu, name: ourMenu }
+      #     - { widget: string, label: Gallery, name: gallery }
+      #     - { widget: string, label: Our Story, name: ourStory }
+      #     - { widget: string, label: Contact, name: contact }
+      - label: 'Homepage'
+        name: 'home'
+        file: 'lang'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: Hero CTA, name: page_index_hero_cta, widget: string }

@@ -2,7 +2,7 @@
   <main>
     <Hero :full="true" :img="require('~/assets/images/sushi-1.jpg')">
       <nuxt-link class="btn mt-20" :to="localePath('menu')">
-        {{ $t('page.index.hero.cta') }}
+        {{ $t('page_index_hero_cta') }}
       </nuxt-link>
     </Hero>
     <div class="relative z-20 bg-gradient-to-t from-black via-black space-y-24">
