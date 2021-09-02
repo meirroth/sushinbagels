@@ -39,6 +39,7 @@ collections:
               widget: string,
               hint: 'This is used for the site title',
             }
+          - { label: Hero CTA, name: page_index_hero_cta, widget: string }
       # - label: 'Navigation'
       #   name: 'nav'
       #   file: 'lang'
@@ -52,11 +53,3 @@ collections:
       #     - { widget: string, label: Gallery, name: gallery }
       #     - { widget: string, label: Our Story, name: ourStory }
       #     - { widget: string, label: Contact, name: contact }
-      - label: 'Homepage'
-        name: 'home'
-        file: 'lang/en.json'
-        format: 'json'
-        editor:
-          preview: false
-        fields:
-          - { label: Hero CTA, name: page_index_hero_cta, widget: string }
