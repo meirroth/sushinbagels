@@ -1,3 +1,4 @@
+import * as SITE_INFO from './content/site/info.json'
 const isProd = process.env.NODE_ENV === 'production'
 export default {
   server: {
@@ -17,7 +18,9 @@ export default {
   head: {
     titleTemplate: (titleChunk) => {
       // If undefined or blank then we don't need the hyphen
-      return titleChunk ? `${titleChunk} - SushiNBagels` : 'SushiNBagels'
+      return titleChunk
+        ? `${titleChunk} - ${SITE_INFO.sitename}`
+        : SITE_INFO.sitename
     },
     meta: [{ name: 'robots', content: 'noindex' }],
     bodyAttrs: {
