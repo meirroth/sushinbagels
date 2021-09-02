@@ -5,7 +5,6 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-publish_mode: editorial_workflow
 logo_url: /icon.png
 # # BETA i18n Support https://www.netlifycms.org/docs/beta-features/#i18n-support
 # i18n:
