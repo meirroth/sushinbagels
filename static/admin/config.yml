@@ -7,57 +7,56 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 logo_url: /icon.png
-# BETA i18n Support https://www.netlifycms.org/docs/beta-features/#i18n-support
-i18n:
-  # Required and can be one of multiple_folders, multiple_files or single_file
-  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
-  # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
-  # single_file - persists a single file in `<folder>/<slug>.<extension>`
-  structure: multiple_files
+# # BETA i18n Support https://www.netlifycms.org/docs/beta-features/#i18n-support
+# i18n:
+#   # Required and can be one of multiple_folders, multiple_files or single_file
+#   # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+#   # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
+#   # single_file - persists a single file in `<folder>/<slug>.<extension>`
+#   structure: multiple_files
 
-  # Required - a list of locales to show in the editor UI
-  locales: [en, he]
+#   # Required - a list of locales to show in the editor UI
+#   locales: [en, he]
 
-  # Optional, defaults to the first item in locales.
-  # The locale to be used for fields validation and as a baseline for the entry.
-  default_locale: en
+#   # Optional, defaults to the first item in locales.
+#   # The locale to be used for fields validation and as a baseline for the entry.
+#   default_locale: en
 
 collections:
   - label: 'Site settings'
     name: 'site'
-    i18n: true
-  - label: 'Info'
-    name: 'info'
-    file: 'lang'
-    format: 'json'
-    i18n: true
-    editor:
-      preview: false
-    fields:
-      - {
-          label: Site name,
-          name: sitename,
-          widget: string,
-          hint: 'This is used for the site title',
-        }
-  # - label: 'Navigation'
-  #   name: 'nav'
-  #   file: 'lang'
-  #   format: 'json'
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - { widget: string, label: Homepage, name: home }
-  #     - { widget: string, label: Order Now, name: orderNow }
-  #     - { widget: string, label: Our Menu, name: ourMenu }
-  #     - { widget: string, label: Gallery, name: gallery }
-  #     - { widget: string, label: Our Story, name: ourStory }
-  #     - { widget: string, label: Contact, name: contact }
-  - label: 'Homepage'
-    name: 'home'
-    file: 'lang'
-    format: 'json'
-    editor:
-      preview: false
-    fields:
-      - { label: Hero CTA, name: page_index_hero_cta, widget: string }
+    files:
+      - label: 'Info'
+        name: 'info'
+        file: 'lang/en.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - {
+              label: Site name,
+              name: sitename,
+              widget: string,
+              hint: 'This is used for the site title',
+            }
+      # - label: 'Navigation'
+      #   name: 'nav'
+      #   file: 'lang'
+      #   format: 'json'
+      #   editor:
+      #     preview: false
+      #   fields:
+      #     - { widget: string, label: Homepage, name: home }
+      #     - { widget: string, label: Order Now, name: orderNow }
+      #     - { widget: string, label: Our Menu, name: ourMenu }
+      #     - { widget: string, label: Gallery, name: gallery }
+      #     - { widget: string, label: Our Story, name: ourStory }
+      #     - { widget: string, label: Contact, name: contact }
+      - label: 'Homepage'
+        name: 'home'
+        file: 'lang/en.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: Hero CTA, name: page_index_hero_cta, widget: string }
