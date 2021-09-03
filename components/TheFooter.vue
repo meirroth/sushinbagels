@@ -5,97 +5,120 @@
         class="flex flex-wrap text-center lg:text-start space-y-4 lg:space-y-0"
       >
         <div class="w-full lg:w-2/5">
-          <div class="flex justify-center lg:justify-start pb-4">
+          <div class="flex justify-center lg:justify-start mb-6">
             <nuxt-link :to="localePath('index')">
-              <img src="~/assets/images/logo.svg" alt="SushiNBagels" />
+              <img
+                src="~/assets/images/logo.svg"
+                alt="SushiNBagels"
+                class="h-8"
+              />
             </nuxt-link>
           </div>
           <ul>
-            <li>
-              <MailIcon size="20" class="inline-block me-1" />
-              <a class="link text-xs" href="mailto:info&#64;sushinbagels&com"
+            <li class="mb-4 text-sm">
+              <MailIcon size="20" class="inline-block me-1" /><a
+                class="link"
+                href="mailto:info&#64;sushinbagels&com"
                 >info&#64;sushinbagels.com</a
               >
             </li>
-            <li>
-              <MapPinIcon size="20" class="inline-block me-1" />
-              <a class="link text-xs" href="#">Yirmiyahu 68</a>
+            <li class="mb-4 text-sm">
+              <MapPinIcon size="20" class="inline-block me-1" /><a
+                class="link"
+                href="#"
+                >Yirmiyahu 68</a
+              >
             </li>
-            <li>
-              <PhoneIcon size="20" class="inline-block me-1" />
-              <a class="link text-xs" href="tel:+97225443111">02-544-3111</a>
+            <li class="text-sm">
+              <PhoneIcon size="20" class="inline-block me-1" /><a
+                class="link"
+                href="tel:+97225443111"
+                >02-544-3111</a
+              >
             </li>
           </ul>
         </div>
         <div class="w-full lg:w-1/5">
-          <h5 class="font-bold pb-2">{{ $t('footer.cravingSushi') }}</h5>
+          <h5 class="font-bold text-base mt-2 mb-6">
+            {{ $t('footer.cravingSushi') }}
+          </h5>
           <ul>
-            <li>
-              <nuxt-link class="link text-xs" :to="localePath('menu')">
+            <li class="mb-4 text-sm">
+              <nuxt-link class="link" :to="localePath('menu')">
                 {{ $t('nav.ourMenu') }}
               </nuxt-link>
             </li>
-            <li class="mt-1">
-              <a class="link text-xs" href="#">{{ $t('nav.orderNow') }}</a>
+            <li class="mb-4 text-sm">
+              <a class="link" href="#">{{ $t('nav.orderNow') }}</a>
             </li>
-            <li class="mt-1">
-              <nuxt-link class="link text-xs" :to="localePath('contact')">
+            <li class="text-sm">
+              <nuxt-link class="link" :to="localePath('contact')">
                 {{ $t('footer.findUs') }}
               </nuxt-link>
             </li>
           </ul>
         </div>
         <div class="w-full lg:w-1/5">
-          <h5 class="font-bold pb-2">{{ $t('footer.information') }}</h5>
+          <h5 class="font-bold text-base mt-2 mb-6">
+            {{ $t('footer.information') }}
+          </h5>
           <ul>
-            <li>
-              <nuxt-link class="link text-xs" :to="localePath('gallery')">
+            <li class="mb-4 text-sm">
+              <nuxt-link class="link" :to="localePath('gallery')">
                 {{ $t('nav.gallery') }}
               </nuxt-link>
             </li>
-            <li class="mt-1">
-              <nuxt-link class="link text-xs" :to="localePath('story')">
+            <li class="mb-4 text-sm">
+              <nuxt-link class="link" :to="localePath('story')">
                 {{ $t('nav.ourStory') }}
               </nuxt-link>
             </li>
-            <li class="mt-1">
-              <nuxt-link class="link text-xs" :to="localePath('contact')">
+            <li class="text-sm">
+              <nuxt-link class="link" :to="localePath('contact')">
                 {{ $t('nav.contact') }}
               </nuxt-link>
             </li>
           </ul>
         </div>
         <div class="w-full lg:w-1/5">
-          <h5 class="font-bold pb-2">{{ $t('footer.stayConnected') }}</h5>
+          <h5 class="font-bold text-base mt-2 mb-6">
+            {{ $t('footer.stayConnected') }}
+          </h5>
           <ul class="flex flex-row justify-center lg:justify-start lg:flex-col">
-            <li>
-              <a class="link text-0 lg:text-xs" href="#"
+            <li class="lg:mb-4 text-sm">
+              <a class="link" href="#"
                 ><BrandFacebookIcon
                   size="20"
-                  class="inline-block lg:me-1"
-                /><span>{{ $t('footer.facebook') }}</span></a
+                  class="inline-block lg:me-1 lg:text-white"
+                /><span class="hidden lg:inline-block">{{
+                  $t('footer.facebook')
+                }}</span></a
               >
             </li>
-            <li class="lg:mt-1 mx-4 lg:mx-0">
-              <a class="link text-0 lg:text-xs" href="#"
+            <li class="lg:mb-4 mx-6 lg:mx-0 text-sm">
+              <a class="link" href="#"
                 ><BrandInstagramIcon
                   size="20"
-                  class="inline-block lg:me-1"
-                /><span>{{ $t('footer.instagram') }}</span></a
+                  class="inline-block lg:me-1 lg:text-white"
+                /><span class="hidden lg:inline-block">{{
+                  $t('footer.instagram')
+                }}</span></a
               >
             </li>
-            <li class="lg:mt-1">
-              <a class="link text-0 lg:text-xs" href="#"
+            <li class="text-sm">
+              <a class="link" href="#"
                 ><BrandWhatsappIcon
                   size="20"
-                  class="inline-block lg:me-1"
-                /><span>{{ $t('footer.whatsapp') }}</span></a
+                  class="inline-block lg:me-1 lg:text-white"
+                /><span class="hidden lg:inline-block">{{
+                  $t('footer.whatsapp')
+                }}</span></a
               >
             </li>
           </ul>
         </div>
       </nav>
-      <p class="pt-10 text-center text-xs text-gray-400">
+      <p class="pt-10 text-center text-sm text-gray-400">
         {{ $t('footer.copy') }}
         <HeartIcon size="16" class="text-green inline-block" />
         {{ $t('footer.right') }}

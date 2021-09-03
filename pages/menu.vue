@@ -58,7 +58,7 @@
                 >
                   <ChevronLeftIcon aria-hidden="true" />
                 </button>
-                <span class="p-1"
+                <span class="p-1" aria-label="Current menu page"
                   >{{ formatCurrentPage(flipbook.page) }}&nbsp;of&nbsp;{{
                     flipbook.numPages
                   }}</span

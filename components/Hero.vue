@@ -1,5 +1,6 @@
 <template>
   <header
+    aria-label="Page Hero"
     class="sticky top-0 mb-6 md:mb-12"
     :class="full ? 'hero-full' : 'h-96'"
   >
@@ -17,6 +18,7 @@
       :style="{
         opacity: imageOpacity,
       }"
+      aria-hidden="true"
     >
       <div
         class="h-full transition-transform ease-out duration-fast"
