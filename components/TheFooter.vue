@@ -49,7 +49,11 @@
               </nuxt-link>
             </li>
             <li class="mb-4 text-sm">
-              <a class="link" href="#">{{ $t('nav.orderNow') }}</a>
+              <a
+                class="link"
+                href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
+                >{{ $t('nav.orderNow') }}</a
+              >
             </li>
             <li class="text-sm">
               <nuxt-link class="link" :to="localePath('contact')">

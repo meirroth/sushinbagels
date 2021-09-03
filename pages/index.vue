@@ -24,10 +24,12 @@
             </nuxt-link>
           </div>
           <div class="w-full lg:w-7/12 mb-8 lg:mb-0">
-            <img
-              class="object-contain w-full h-full"
-              src="~/assets/images/sushi-plate-1.png"
+            <nuxt-img
+              src="/img/404A7916-removebg-s.png"
+              width="1024"
+              quality="80"
               alt="Sushi plater"
+              class="object-contain w-full h-full"
             />
           </div>
         </div>
@@ -94,7 +96,12 @@
                 <a href="#" class="btn-alt mt-10 mx-2.5">
                   {{ $t('page.index.order.cta[0]') }}
                 </a>
-                <a href="#" class="btn mt-10 mx-2.5">
+                <a
+                  href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn mt-10 mx-2.5"
+                >
                   {{ $t('page.index.order.cta[1]') }}
                 </a>
               </div>

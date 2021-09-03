@@ -27,9 +27,13 @@
             <nav class="hidden lg:block" aria-label="Site Navigation">
               <ul class="flex">
                 <li class="me-8">
-                  <a href="#" class="nav-link font-medium">{{
-                    $t('nav.orderNow')
-                  }}</a>
+                  <a
+                    href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
+                    target="_blank"
+                    rel="noopener"
+                    class="nav-link font-medium"
+                    >{{ $t('nav.orderNow') }}</a
+                  >
                 </li>
                 <li class="me-8">
                   <nuxt-link

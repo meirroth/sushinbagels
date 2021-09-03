@@ -66,7 +66,13 @@
         <nav aria-label="Site Navigation" class="pb-8 text-center">
           <ul>
             <li>
-              <a href="#" class="mobile-nav-link">{{ $t('nav.orderNow') }}</a>
+              <a
+                href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
+                target="_blank"
+                rel="noopener"
+                class="mobile-nav-link"
+                >{{ $t('nav.orderNow') }}</a
+              >
             </li>
             <li>
               <nuxt-link class="mobile-nav-link" :to="localePath('menu')">

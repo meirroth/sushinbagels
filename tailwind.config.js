@@ -48,7 +48,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Heebo', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-      serif: ['Kalam', 'serif'],
+      serif: ['Kalam', 'Heebo', 'serif'],
     },
     maxHeight: {
       full: '100%',

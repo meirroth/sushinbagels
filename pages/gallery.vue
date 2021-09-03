@@ -9,7 +9,7 @@
         <!-- masonry-grid md:masonry-2-col lg:masonry-3-col -->
         <div id="lightgallery" class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           <a
-            v-for="image in images"
+            v-for="(image, i) in images"
             :key="image.src"
             :href="image.src"
             class="
@@ -26,6 +26,7 @@
           >
             <nuxt-img
               :src="image.thumb"
+              :loading="i > 9 ? 'lazy' : null"
               width="320"
               quality="80"
               class="absolute object-cover w-full h-full"
