@@ -58,7 +58,13 @@ export default {
         },
       },
     ],
-
+    [
+      '@nuxt/image',
+      {
+        provider: 'vercel',
+        // dir: 'static/img',
+      },
+    ],
     ['@nuxtjs/svg'],
     [
       '@nuxtjs/pwa',
