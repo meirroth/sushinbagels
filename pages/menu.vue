@@ -132,7 +132,7 @@ export default {
   },
   data() {
     return {
-      pages: null,
+      pages: [],
     }
   },
   head() {
@@ -146,9 +146,13 @@ export default {
     },
   },
   beforeMount() {
-    this.pages = this.importImages(
-      require.context('~/assets/images/menu/', false, /\.jpg$/)
-    )
+    const imgPaths = require
+      .context('~/static/img/menu/', false, /\.(png|jpg)$/)
+      .keys()
+    imgPaths.forEach((path) => {
+      const _path = path.replace('./', '/img/menu/')
+      this.pages.push(this.$img(_path, { width: 768, quality: 80 }))
+    })
     window.addEventListener('keydown', this.handleKeydown)
   },
   beforeDestroy() {
@@ -168,11 +172,11 @@ export default {
     isDisabled(bool) {
       return bool ? true : null
     },
-    importImages(r) {
-      const paths = []
-      r.keys().forEach((key) => paths.push(r(key)))
-      return paths
-    },
+    // importImages(r) {
+    //   const paths = []
+    //   r.keys().forEach((key) => paths.push(r(key)))
+    //   return paths
+    // },
     handleKeydown(ev) {
       ev.key === 'ArrowLeft' &&
         this.flipbookRef.canFlipLeft &&

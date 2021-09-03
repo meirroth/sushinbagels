@@ -54,10 +54,7 @@
       },
       "order": {
         "body": "",
-        "cta": [
-          "Download our app",
-          "Order online now"
-        ],
+        "cta": ["Download our app", "Order online now"],
         "title": "Simple Way To Order Your Food"
       },
       "services": {
@@ -78,7 +75,7 @@
             "title": "Customer Service"
           },
           {
-            "desc": "To ensure that everyone can get in on the fun, we chose the number one kashrut in the world, with no compromise in the taste of quality.",
+            "desc": "To ensure that everyone can get in on the fun, we chose the number one kashrut in the world, with no compromise in the taste or quality.",
             "icon": "kashrut.svg",
             "title": "Kashrut"
           }

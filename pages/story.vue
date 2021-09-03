@@ -35,12 +35,12 @@
           </p>
         </section>
       </div>
-      <div class="w-full h-96 xl:max-h-650 xl:h-screen relative mt-20">
+      <!-- <div class="w-full h-96 xl:max-h-650 xl:h-screen relative mt-20">
         <img
           src="~/assets/images/outside-shop.jpg"
           class="absolute inset-0 object-cover w-full h-full"
         />
-      </div>
+      </div> -->
     </div>
   </main>
 </template>

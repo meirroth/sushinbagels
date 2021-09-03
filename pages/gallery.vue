@@ -9,12 +9,28 @@
         <!-- masonry-grid md:masonry-2-col lg:masonry-3-col -->
         <div id="lightgallery" class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           <a
-            v-for="image in images"
+            v-for="(image, i) in images"
             :key="image.src"
             :href="image.src"
-            class="inline text-0 lg:hover:scale-105 transition-transform"
+            class="
+              relative
+              w-full
+              pb-2/3
+              inline
+              text-0
+              lg:hover:scale-105
+              transition-transform
+              rounded
+              overflow-hidden
+            "
           >
-            <img class="w-full rounded" :src="image.thumb" />
+            <nuxt-img
+              :src="image.thumb"
+              :loading="i > 9 ? 'lazy' : null"
+              width="320"
+              quality="80"
+              class="absolute object-cover w-full h-full"
+            />
           </a>
         </div>
       </section>
@@ -35,26 +51,20 @@ export default {
     }
   },
   beforeMount() {
-    const mImg = this.importImages(
-      require.context('@/assets/images/gallery/', false, /-m\.jpg$/)
-    )
-    const sImg = this.importImages(
-      require.context('@/assets/images/gallery/', false, /-s\.jpg$/)
-    )
-    for (let i = mImg.length - 1; i >= 0; i--) {
-      this.images.push({ src: mImg[i], thumb: sImg[i] })
+    const imgPaths = require
+      .context('~/static/img/gallery/', false, /\.(png|jpg)$/)
+      .keys()
+    for (let i = imgPaths.length - 1; i >= 0; i--) {
+      const _path = imgPaths[i].replace('./', '/img/gallery/')
+      this.images.push({
+        src: this.$img(_path, { width: 1536, quality: 80 }),
+        thumb: _path,
+      })
     }
   },
   mounted() {
     const el = document.getElementById('lightgallery')
     window.lightGallery(el, { download: false })
-  },
-  methods: {
-    importImages(r) {
-      const paths = []
-      r.keys().forEach((key) => paths.push(r(key)))
-      return paths
-    },
   },
 }
 </script>
