@@ -15,7 +15,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
-
+const throttle = require('lodash.throttle')
 export default {
   name: 'Default',
   head() {
@@ -27,19 +27,21 @@ export default {
   },
   watch: {
     $route() {
-      if (process.client && this.isMobileNavOpen && window.innerWidth < 1024) {
+      if (process.client && this.isMobileNavOpen) {
         this.toggleMobileNav()
       }
     },
   },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleResize)
   },
   mounted() {
     this.handleScroll()
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.handleResize)
   },
   methods: {
     ...mapActions(['toggleMobileNav']),
@@ -47,8 +49,16 @@ export default {
       document.getElementById('main').focus()
     },
     handleScroll() {
-      this.$store.commit('setScroll', window.scrollY)
+      if (window.scrollY < window.innerHeight) {
+        this.$store.commit('setScroll', window.scrollY)
+      }
     },
+    // https://www.digitalocean.com/community/tutorials/vuejs-lodash-throttle-debounce
+    handleResize: throttle(function () {
+      if (window.innerWidth >= 1024 && this.isMobileNavOpen) {
+        this.toggleMobileNav()
+      }
+    }, 1000),
   },
 }
 </script>

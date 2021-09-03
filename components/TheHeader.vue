@@ -18,7 +18,11 @@
         <div class="max-w-8xl mx-auto">
           <div class="flex items-center justify-between ltr lg:dir">
             <nuxt-link class="flex items-center" :to="localePath('index')">
-              <img src="~/assets/images/logo.svg" alt="SushiNBagels" />
+              <img
+                src="~/assets/images/logo.svg"
+                alt="SushiNBagels"
+                class="h-8"
+              />
             </nuxt-link>
             <nav class="hidden lg:block" aria-label="Site Navigation">
               <ul class="flex">
@@ -65,33 +69,21 @@
               </ul>
             </nav>
             <button
-              class="nav-btn lg:hidden"
+              class="lg:hidden group"
+              title="Open site menu"
               aria-label="Open site menu"
               @click="$emit('openMobileNav')"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
+              <Menu2Icon
+                size="30"
                 aria-hidden="true"
-                role="img"
-                width="30"
-                height="30"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  class="icon-tabler"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 6h16" />
-                  <path d="M4 12h16" />
-                  <path d="M4 18h16" />
-                </g>
-              </svg>
+                class="
+                  text-gray-200
+                  group-hover:text-green
+                  transition-colors
+                  ease-in-out
+                "
+              />
             </button>
           </div>
         </div>
@@ -100,8 +92,13 @@
   </div>
 </template>
 <script>
+import { Menu2Icon } from 'vue-tabler-icons'
+
 export default {
   name: 'TheHeader',
+  components: {
+    Menu2Icon,
+  },
   props: { scrolled: { default: 0, type: Number } },
   computed: {
     pointerEvents() {
@@ -118,8 +115,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-.nav-btn {
-  // @apply py-1 px-4 font-semibold  hover:text-black rounded-full border-2 border-white hover:bg-white transition-colors ease-out;
-}
-</style>

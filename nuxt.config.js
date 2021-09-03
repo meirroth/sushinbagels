@@ -147,6 +147,8 @@ export default {
     },
   },
 
-  loading: false,
+  // https://nuxtjs.org/docs/2.x/features/loading
+  loading: { color: '#92C020' },
+
   telemetry: false,
 }
