@@ -12,15 +12,23 @@
             v-for="image in images"
             :key="image.src"
             :href="image.src"
-            class="inline text-0 lg:hover:scale-105 transition-transform"
+            class="
+              relative
+              w-full
+              pb-2/3
+              inline
+              text-0
+              lg:hover:scale-105
+              transition-transform
+              rounded
+              overflow-hidden
+            "
           >
             <nuxt-img
               :src="image.thumb"
-              width="400"
-              height="300"
+              width="320"
               quality="80"
-              format="jpg"
-              class="w-full rounded"
+              class="absolute object-cover w-full h-full"
             />
           </a>
         </div>
@@ -48,7 +56,7 @@ export default {
     for (let i = imgPaths.length - 1; i >= 0; i--) {
       const _path = imgPaths[i].replace('./', '/img/gallery/')
       this.images.push({
-        src: this.$img(_path, { format: 'jpg', width: 1600, quality: 80 }),
+        src: this.$img(_path, { width: 1536, quality: 80 }),
         thumb: _path,
       })
     }
@@ -60,26 +68,26 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.masonry-grid {
-  column-count: 3;
-  column-gap: 10px;
-  column-width: 33.33333333333333%;
-  a {
-    font-size: 0;
-    display: block;
-    margin-bottom: 10px;
-  }
-  img {
-    width: 100%;
-    height: auto;
-  }
-  @media screen and (min-width: 480px) and (max-width: 727px) {
-    column-count: 2;
-    column-width: 50%;
-  }
-  @media screen and (max-width: 479px) {
-    column-count: 1;
-    column-width: 100%;
-  }
-}
+// .masonry-grid {
+//   column-count: 3;
+//   column-gap: 10px;
+//   column-width: 33.33333333333333%;
+//   a {
+//     font-size: 0;
+//     display: block;
+//     margin-bottom: 10px;
+//   }
+//   img {
+//     width: 100%;
+//     height: auto;
+//   }
+//   @media screen and (min-width: 480px) and (max-width: 727px) {
+//     column-count: 2;
+//     column-width: 50%;
+//   }
+//   @media screen and (max-width: 479px) {
+//     column-count: 1;
+//     column-width: 100%;
+//   }
+// }
 </style>

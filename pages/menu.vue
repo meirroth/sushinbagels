@@ -151,14 +151,7 @@ export default {
       .keys()
     imgPaths.forEach((path) => {
       const _path = path.replace('./', '/img/menu/')
-      this.pages.push(
-        this.$img(_path, {
-          format: 'jpg',
-          width: 845,
-          height: 1199,
-          quality: 80,
-        })
-      )
+      this.pages.push(this.$img(_path, { width: 768, quality: 80 }))
     })
     window.addEventListener('keydown', this.handleKeydown)
   },
