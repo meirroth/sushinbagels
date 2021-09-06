@@ -44,6 +44,6 @@
     "tailwindcss": "^2.2.7",
     "tailwindcss-dir": "^4.0.0",
     "tailwindcss-rtl": "^0.7.3",
-    "vue-tabler-icons": "^1.12.1"
+    "vue-tabler-icons": "^2.1.0"
   }
 }
