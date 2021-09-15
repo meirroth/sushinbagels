@@ -37,7 +37,7 @@ export default {
     window.addEventListener('resize', this.handleResize)
   },
   mounted() {
-    this.handleScroll()
+    this.$store.commit('setScroll', window.scrollY)
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)

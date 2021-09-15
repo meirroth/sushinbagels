@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero :full="true" :img="require('~/assets/images/sushi-1.jpg')">
+    <Hero :full="true" img="/img/sushi-1.jpg">
       <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
       </nuxt-link>
@@ -44,7 +44,8 @@
                   class="absolute object-contain w-full h-full"
                   :src="
                     require('~/assets/images/' +
-                      $t(`page.index.services.body[${i - 1}].icon`))
+                      $t(`page.index.services.body[${i - 1}].icon`) +
+                      '?data')
                   "
                   :alt="$t(`page.index.services.body[${i - 1}].title`)"
                 />
@@ -72,10 +73,11 @@
             "
           >
             <div class="w-full lg:w-1/2 flex justify-center">
-              <img
+              <nuxt-img
                 class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28"
-                src="~/assets/images/tabit-mockup.png"
+                src="/img/tabit-mockup.png"
                 alt="Ordering app"
+                width="768"
               />
             </div>
             <div
@@ -107,9 +109,10 @@
               </div>
             </div>
           </div>
-          <img
-            src="~/assets/images/banner-bg.jpg"
+          <nuxt-img
             class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
+            src="/img/banner-bg.jpg"
+            width="1980"
           />
         </div>
       </section>
@@ -119,14 +122,10 @@
             <h2 class="text-center lg:text-start mb-10">
               {{ $t('page.index.testimonial.title') }}
             </h2>
-            <Testimonial
-              class="lg:max-w-md mt-60 lg:mt-10"
-              :quote="$t('testimonials[0].body')"
-              :caption="$t('testimonials[0].name')"
-            />
+            <Testimonials class="lg:max-w-md mt-60 lg:mt-10" />
           </div>
         </div>
-        <img
+        <nuxt-img
           class="
             absolute
             end-0
@@ -138,8 +137,9 @@
             max-w-3xl
             rtl:-scale-x-1
           "
-          src="~/assets/images/sushi-hand.png"
+          src="/img/sushi-hand.png"
           alt=""
+          width="1024"
         />
       </section>
     </div>

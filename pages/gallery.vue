@@ -1,9 +1,6 @@
 <template>
   <main>
-    <Hero
-      :img="require('~/assets/images/sushi-3.jpg')"
-      :title="$t('page.gallery.title')"
-    />
+    <Hero img="/img/sushi-3.jpg" :title="$t('page.gallery.title')" />
     <div class="relative z-20 container">
       <section>
         <!-- masonry-grid md:masonry-2-col lg:masonry-3-col -->
@@ -57,7 +54,7 @@ export default {
     for (let i = imgPaths.length - 1; i >= 0; i--) {
       const _path = imgPaths[i].replace('./', '/img/gallery/')
       this.images.push({
-        src: this.$img(_path, { width: 1536, quality: 80 }),
+        src: this.$img(_path, { width: 1980, quality: 80 }),
         thumb: _path,
       })
     }

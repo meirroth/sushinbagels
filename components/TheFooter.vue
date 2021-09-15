@@ -7,11 +7,7 @@
         <div class="w-full lg:w-2/5">
           <div class="flex justify-center lg:justify-start mb-6">
             <nuxt-link :to="localePath('index')">
-              <img
-                src="~/assets/images/logo.svg"
-                alt="SushiNBagels"
-                class="h-8"
-              />
+              <Logo alt="SushiNBagels" class="h-8" />
             </nuxt-link>
           </div>
           <ul>
@@ -140,6 +136,8 @@ import {
   BrandWhatsappIcon,
   HeartIcon,
 } from 'vue-tabler-icons'
+import Logo from '~/assets/images/logo.svg?inline'
+
 export default {
   name: 'TheFooter',
   components: {
@@ -150,6 +148,7 @@ export default {
     BrandInstagramIcon,
     BrandWhatsappIcon,
     HeartIcon,
+    Logo,
   },
 }
 </script>
