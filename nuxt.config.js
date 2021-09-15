@@ -68,7 +68,7 @@ export default {
           md: 768,
           lg: 1024,
           xl: 1280,
-          xxl: 1980,
+          xxl: 1536,
         },
         // dir: 'static/img',
       },

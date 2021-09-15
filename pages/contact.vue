@@ -22,7 +22,7 @@
             class="absolute inset-0 z-0 object-cover w-full h-full"
             src="/img/location-map.jpg"
             :alt="$t('page.contact.mapAlt')"
-            width="1980"
+            width="1536"
           />
           <!-- <iframe
               title="map"
