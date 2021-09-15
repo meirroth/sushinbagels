@@ -88,17 +88,23 @@
           </h5>
           <ul class="flex flex-row justify-center lg:justify-start lg:flex-col">
             <li class="lg:mb-4 text-sm">
-              <a class="link" href="#"
+              <a class="link" href="https://www.facebook.com/sushinbagels/"
                 ><BrandFacebookIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"
+                  target="_blank"
+                  rel="noopener nofollow"
                 /><span class="hidden lg:inline-block">{{
                   $t('footer.facebook')
                 }}</span></a
               >
             </li>
             <li class="lg:mb-4 mx-6 lg:mx-0 text-sm">
-              <a class="link" href="#"
+              <a
+                class="link"
+                href="https://www.instagram.com/sushinbagels/"
+                target="_blank"
+                rel="noopener nofollow"
                 ><BrandInstagramIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"
@@ -108,7 +114,7 @@
               >
             </li>
             <li class="text-sm">
-              <a class="link" href="#"
+              <a class="link" href="#" target="_blank" rel="noopener nofollow"
                 ><BrandWhatsappIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"
