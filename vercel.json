@@ -33,7 +33,7 @@
       ]
     },
     {
-      "source": "\\.(gif|jpe?g|png|svg|webp)",
+      "source": ".(gif|jpe?g|png|svg|webp)",
       "headers": [
         {
           "key": "HELLO THIS IS AN IMAGE",
