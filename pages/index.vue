@@ -74,10 +74,11 @@
           >
             <div class="w-full lg:w-1/2 flex justify-center">
               <nuxt-img
-                class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28"
+                class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
                 src="/img/tabit-mockup.png"
                 alt="Ordering app"
                 width="768"
+                quality="80"
               />
             </div>
             <div
