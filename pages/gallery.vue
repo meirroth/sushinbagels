@@ -1,9 +1,6 @@
 <template>
   <main>
-    <Hero
-      :img="require('~/assets/images/sushi-3.jpg')"
-      :title="$t('page.gallery.title')"
-    />
+    <Hero img="/img/sushi-3.jpg" :title="$t('page.gallery.title')" />
     <div class="relative z-20 container">
       <section>
         <!-- masonry-grid md:masonry-2-col lg:masonry-3-col -->

@@ -18,11 +18,7 @@
         <div class="max-w-8xl mx-auto">
           <div class="flex items-center justify-between ltr lg:dir">
             <nuxt-link class="flex items-center" :to="localePath('index')">
-              <img
-                src="~/assets/images/logo.svg"
-                alt="SushiNBagels"
-                class="h-8"
-              />
+              <Logo alt="SushiNBagels" class="h-8" />
             </nuxt-link>
             <nav class="hidden lg:block" aria-label="Site Navigation">
               <ul class="flex">
@@ -30,7 +26,7 @@
                   <a
                     href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener nofollow"
                     class="nav-link font-medium"
                     >{{ $t('nav.orderNow') }}</a
                   >
@@ -97,10 +93,12 @@
 </template>
 <script>
 import { Menu2Icon } from 'vue-tabler-icons'
+import Logo from '~/assets/images/logo.svg?inline'
 
 export default {
   name: 'TheHeader',
   components: {
+    Logo,
     Menu2Icon,
   },
   props: { scrolled: { default: 0, type: Number } },

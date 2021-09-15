@@ -1,9 +1,6 @@
 <template>
   <main>
-    <Hero
-      :img="require('~/assets/images/sushi-4.jpg')"
-      :title="$t('page.contact.title')"
-    />
+    <Hero img="/img/sushi-4.jpg" :title="$t('page.contact.title')" />
     <div class="relative z-20">
       <section class="container flex lg:flex-nowrap flex-wrap">
         <div
@@ -21,10 +18,11 @@
             bg-gray-900
           "
         >
-          <img
+          <nuxt-img
             class="absolute inset-0 z-0 object-cover w-full h-full"
-            src="~/assets/images/location-map.jpg"
+            src="/img/location-map.jpg"
             :alt="$t('page.contact.mapAlt')"
+            width="1536"
           />
           <!-- <iframe
               title="map"
@@ -73,8 +71,12 @@
                   <h4 class="mb-2 text-sm">
                     {{ $t('page.contact.directions') }}
                   </h4>
-                  <div class="ltr">
-                    <a href="#" class="me-4"
+                  <div class="ltr flex">
+                    <a
+                      class="me-4 text-center"
+                      href="https://ul.waze.com/ul?place=ChIJs4LylmzXAhURyiITK_fxbhE&ll=31.79135090%2C35.20271420&navigate=yes"
+                      target="_blank"
+                      rel="noopener nofollow"
                       ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -93,7 +95,12 @@
                       </svg>
                       {{ $t('page.contact.waze') }}</a
                     >
-                    <a href="#" class="me-4">
+                    <a
+                      class="me-4 text-center"
+                      href="https://www.google.com/maps/dir/?api=1&destination=SushiNBagels,+Yirmiyahu+St+68,+Jerusalem"
+                      target="_blank"
+                      rel="noopener nofollow"
+                    >
                       <svg
                         width="21"
                         height="30"
@@ -130,9 +137,11 @@
                           </clipPath>
                         </defs>
                       </svg>
-                      {{ $t('page.contact.googleMaps') }}</a
+                      <span class="whitespace-nowrap">{{
+                        $t('page.contact.googleMaps')
+                      }}</span></a
                     >
-                    <a href="#"
+                    <a href="#" class="text-center"
                       ><svg
                         width="24"
                         height="30"

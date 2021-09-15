@@ -7,11 +7,7 @@
         <div class="w-full lg:w-2/5">
           <div class="flex justify-center lg:justify-start mb-6">
             <nuxt-link :to="localePath('index')">
-              <img
-                src="~/assets/images/logo.svg"
-                alt="SushiNBagels"
-                class="h-8"
-              />
+              <Logo alt="SushiNBagels" class="h-8" />
             </nuxt-link>
           </div>
           <ul>
@@ -23,10 +19,10 @@
               >
             </li>
             <li class="mb-4 text-sm">
-              <MapPinIcon size="20" class="inline-block me-1" /><a
+              <MapPinIcon size="20" class="inline-block me-1" /><nuxt-link
                 class="link"
-                href="#"
-                >Yirmiyahu 68</a
+                :to="localePath('contact')"
+                >Yirmiyahu 68</nuxt-link
               >
             </li>
             <li class="text-sm">
@@ -52,6 +48,8 @@
               <a
                 class="link"
                 href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
+                target="_blank"
+                rel="noopener nofollow"
                 >{{ $t('nav.orderNow') }}</a
               >
             </li>
@@ -90,17 +88,23 @@
           </h5>
           <ul class="flex flex-row justify-center lg:justify-start lg:flex-col">
             <li class="lg:mb-4 text-sm">
-              <a class="link" href="#"
+              <a class="link" href="https://www.facebook.com/sushinbagels/"
                 ><BrandFacebookIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"
+                  target="_blank"
+                  rel="noopener nofollow"
                 /><span class="hidden lg:inline-block">{{
                   $t('footer.facebook')
                 }}</span></a
               >
             </li>
             <li class="lg:mb-4 mx-6 lg:mx-0 text-sm">
-              <a class="link" href="#"
+              <a
+                class="link"
+                href="https://www.instagram.com/sushinbagels/"
+                target="_blank"
+                rel="noopener nofollow"
                 ><BrandInstagramIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"
@@ -110,7 +114,7 @@
               >
             </li>
             <li class="text-sm">
-              <a class="link" href="#"
+              <a class="link" href="#" target="_blank" rel="noopener nofollow"
                 ><BrandWhatsappIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"
@@ -124,7 +128,11 @@
       </nav>
       <p class="pt-10 text-center text-sm text-gray-400">
         {{ $t('footer.copy') }}
-        <HeartIcon size="16" class="text-green inline-block" />
+        <HeartIcon
+          size="16"
+          class="text-green inline-block"
+          aria-label="Love"
+        />
         {{ $t('footer.right') }}
       </p>
     </div>
@@ -140,6 +148,8 @@ import {
   BrandWhatsappIcon,
   HeartIcon,
 } from 'vue-tabler-icons'
+import Logo from '~/assets/images/logo.svg?inline'
+
 export default {
   name: 'TheFooter',
   components: {
@@ -150,6 +160,7 @@ export default {
     BrandInstagramIcon,
     BrandWhatsappIcon,
     HeartIcon,
+    Logo,
   },
 }
 </script>

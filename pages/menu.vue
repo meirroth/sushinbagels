@@ -1,9 +1,6 @@
 <template>
   <main class="overflow-hidden">
-    <Hero
-      :img="require('~/assets/images/sushi-2.jpg')"
-      :title="$t('page.menu.title')"
-    />
+    <Hero img="/img/sushi-2.jpg" :title="$t('page.menu.title')" />
     <div class="z-20">
       <section class="min-h-screen">
         <client-only>

@@ -1,9 +1,6 @@
 <template>
   <main>
-    <Hero
-      :img="require('~/assets/images/sushi-1.jpg')"
-      :title="$t('page.story.title')"
-    />
+    <Hero img="/img/sushi-1.jpg" :title="$t('page.story.title')" />
     <div class="relative z-20 bg-gradient-to-t from-black via-black">
       <div class="container space-y-20">
         <section
