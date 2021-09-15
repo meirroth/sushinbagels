@@ -1,0 +1,45 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/order",
+      "destination": "https://www.tabitorder.com/?siteName=sushinbagel#/start",
+      "permanent": false
+    },
+    { "source": "/about", "destination": "/story", "permanent": true },
+    { "source": "/he/about", "destination": "/he/story", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        }
+      ]
+    },
+    {
+      "source": "\\.(gif|jpe?g|png|svg|webp)",
+      "headers": [
+        {
+          "key": "HELLO THIS IS AN IMAGE",
+          "value": "TRUE"
+        }
+      ]
+    }
+  ]
+}
