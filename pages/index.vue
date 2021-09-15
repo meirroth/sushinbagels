@@ -112,7 +112,8 @@
           <nuxt-img
             class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
             src="/img/banner-bg.jpg"
-            width="1980"
+            width="1024"
+            quality="80"
           />
         </div>
       </section>
@@ -140,6 +141,7 @@
           src="/img/sushi-hand.png"
           alt=""
           width="1024"
+          quality="80"
         />
       </section>
     </div>
