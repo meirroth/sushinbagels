@@ -33,7 +33,7 @@
       ]
     },
     {
-      "source": ".(gif|jpe?g|png|svg|webp)",
+      "source": "_vercel/image/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
