@@ -36,8 +36,8 @@
       "source": ".(gif|jpe?g|png|svg|webp)",
       "headers": [
         {
-          "key": "HELLO THIS IS AN IMAGE",
-          "value": "TRUE"
+          "key": "Cache-Control",
+          "value": "public, max-age=15638400"
         }
       ]
     }
