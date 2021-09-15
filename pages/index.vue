@@ -102,7 +102,7 @@
                 <a
                   href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener nofollow"
                   class="btn mt-10 mx-2.5"
                 >
                   {{ $t('page.index.order.cta[1]') }}

@@ -69,7 +69,7 @@
               <a
                 href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
                 target="_blank"
-                rel="noopener"
+                rel="noopener nofollow"
                 class="mobile-nav-link"
                 >{{ $t('nav.orderNow') }}</a
               >

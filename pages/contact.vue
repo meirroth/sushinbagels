@@ -72,7 +72,11 @@
                     {{ $t('page.contact.directions') }}
                   </h4>
                   <div class="ltr flex">
-                    <a href="#" class="me-4 text-center"
+                    <a
+                      class="me-4 text-center"
+                      href="https://ul.waze.com/ul?place=ChIJs4LylmzXAhURyiITK_fxbhE&ll=31.79135090%2C35.20271420&navigate=yes"
+                      target="_blank"
+                      rel="noopener nofollow"
                       ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -91,7 +95,12 @@
                       </svg>
                       {{ $t('page.contact.waze') }}</a
                     >
-                    <a href="#" class="me-4 text-center">
+                    <a
+                      class="me-4 text-center"
+                      href="https://www.google.com/maps/dir/?api=1&destination=SushiNBagels,+Yirmiyahu+St+68,+Jerusalem"
+                      target="_blank"
+                      rel="noopener nofollow"
+                    >
                       <svg
                         width="21"
                         height="30"

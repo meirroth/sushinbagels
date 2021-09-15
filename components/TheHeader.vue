@@ -26,7 +26,7 @@
                   <a
                     href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener nofollow"
                     class="nav-link font-medium"
                     >{{ $t('nav.orderNow') }}</a
                   >

@@ -19,10 +19,10 @@
               >
             </li>
             <li class="mb-4 text-sm">
-              <MapPinIcon size="20" class="inline-block me-1" /><a
+              <MapPinIcon size="20" class="inline-block me-1" /><nuxt-link
                 class="link"
-                href="#"
-                >Yirmiyahu 68</a
+                :to="localePath('contact')"
+                >Yirmiyahu 68</nuxt-link
               >
             </li>
             <li class="text-sm">
@@ -48,6 +48,8 @@
               <a
                 class="link"
                 href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
+                target="_blank"
+                rel="noopener nofollow"
                 >{{ $t('nav.orderNow') }}</a
               >
             </li>
@@ -120,7 +122,11 @@
       </nav>
       <p class="pt-10 text-center text-sm text-gray-400">
         {{ $t('footer.copy') }}
-        <HeartIcon size="16" class="text-green inline-block" />
+        <HeartIcon
+          size="16"
+          class="text-green inline-block"
+          aria-label="Love"
+        />
         {{ $t('footer.right') }}
       </p>
     </div>
