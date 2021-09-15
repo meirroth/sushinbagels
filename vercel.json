@@ -36,8 +36,8 @@
       "source": "_vercel/image/(.*)",
       "headers": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=15638400"
+          "key": "x-x",
+          "value": "666"
         }
       ]
     }
