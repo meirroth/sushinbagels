@@ -32,7 +32,7 @@ export const actions = {
         console.debug(response)
 
         if (response.data.status === 'OK')
-          commit('SET_REVIEWS', response.data.results.reviews)
+          commit('SET_REVIEWS', response.data.result.reviews)
         else console.debug(response.data.status, response.data.error_message) // Google API error message
       })
       .catch((err) => {
