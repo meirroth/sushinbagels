@@ -11,7 +11,7 @@
 
 [[redirects]]
   from = "/api/reviews"
-  to = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJs4LylmzXAhURyiITK_fxbhE&fields=reviews&key=AIzaSyC50AdbvjDp9gwBrfi_TgmjcBkC80L7faM"
+  to = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJs4LylmzXAhURyiITK_fxbhE"
   status = 200
 
 [[redirects]]
