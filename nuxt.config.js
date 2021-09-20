@@ -127,7 +127,12 @@ export default {
         baseUrl: 'https://sushinbagels.com',
       },
     ],
-    ['@nuxtjs/axios'],
+    [
+      '@nuxtjs/axios',
+      {
+        baseURL: '/',
+      },
+    ],
     [
       // Sitemap https://sitemap.nuxtjs.org/
       '@nuxtjs/sitemap',
