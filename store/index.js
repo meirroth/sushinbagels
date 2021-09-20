@@ -22,12 +22,15 @@ export const actions = {
   },
   async loadReviews({ commit }) {
     await this.$axios
-      .get(`/api/places?fields=reviews&key=${process.env.PLACES_API_KEY}`, {
-        headers: {
-          'content-type': 'application/json; charset=UTF-8',
-          Accept: 'application/json; charset=UTF-8',
-        },
-      })
+      .get(
+        `https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJs4LylmzXAhURyiITK_fxbhE&fields=reviews&key=${process.env.PLACES_API_KEY}`,
+        {
+          headers: {
+            'content-type': 'application/json; charset=UTF-8',
+            Accept: 'application/json; charset=UTF-8',
+          },
+        }
+      )
       .then((response) => {
         console.debug(response)
 
