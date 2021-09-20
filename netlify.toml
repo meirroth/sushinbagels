@@ -10,7 +10,7 @@
   skip_processing = true
 
 [[redirects]]
-  from = "/api/reviews"
+  from = "/api/places"
   to = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJs4LylmzXAhURyiITK_fxbhE"
   status = 200
 
