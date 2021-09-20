@@ -27,7 +27,7 @@ export const actions = {
           'content-type': 'application/json',
           Accept: 'application/json',
         },
-        data: {},
+        // data: {},
       })
       .then((response) => {
         console.log(JSON.stringify(response))

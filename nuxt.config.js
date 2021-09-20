@@ -61,7 +61,7 @@ export default {
     [
       '@nuxt/image',
       {
-        provider: 'vercel',
+        provider: 'netlify',
         screens: {
           xs: 320,
           sm: 640,
