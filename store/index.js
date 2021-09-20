@@ -31,9 +31,9 @@ export const actions = {
       .then((response) => {
         console.debug(response)
 
-        if (response.status === 'OK')
-          commit('SET_REVIEWS', response.results.reviews)
-        else console.debug(response.status, response.error_message) // Google API error message
+        if (response.data.status === 'OK')
+          commit('SET_REVIEWS', response.data.results.reviews)
+        else console.debug(response.data.status, response.data.error_message) // Google API error message
       })
       .catch((err) => {
         console.debug(err) // Axios entire error message
