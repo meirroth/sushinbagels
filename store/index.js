@@ -24,20 +24,19 @@ export const actions = {
     await this.$axios
       .get('/api/reviews', {
         headers: {
-          'content-type': 'application/json',
-          Accept: 'application/json',
+          'content-type': 'application/json; charset=UTF-8',
+          Accept: 'application/json; charset=UTF-8',
         },
-        // data: {},
       })
       .then((response) => {
-        console.log(JSON.stringify(response))
+        console.debug(response)
 
-        if (response.data.status === 'OK')
-          commit('SET_REVIEWS', response.data.results.reviews)
-        else console.log(response.data.status, response.data.error_message) // Google API error message
+        if (response.status === 'OK')
+          commit('SET_REVIEWS', response.results.reviews)
+        else console.debug(response.status, response.error_message) // Google API error message
       })
       .catch((err) => {
-        console.log(err) // Axios entire error message
+        console.debug(err) // Axios entire error message
       })
   },
 }
