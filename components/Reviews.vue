@@ -10,14 +10,15 @@
       leave-to-class="opacity-0 translate -translate-x-full"
     >
       <blockquote
-        :key="testimonials[current].name"
+        v-if="reviews"
+        :key="reviews[current].text"
         class="transition-all duration-500 absolute w-full px-8"
       >
         <p class="mb-4 text-black text-lg">
-          {{ testimonials[current].body }}
+          {{ reviews[current].text }}
         </p>
         <span class="title-font font-medium text-gray-900">{{
-          testimonials[current].name
+          reviews[current].author_name
         }}</span>
       </blockquote>
     </transition>
@@ -26,27 +27,32 @@
 <script>
 import QuateIcon from '~/assets/images/quate.svg?inline'
 export default {
-  name: 'Testimonials',
+  name: 'Reviews',
   components: {
     QuateIcon,
   },
+  props: {
+    reviews: {
+      type: Array,
+      default: null, // this.$t('reviews')
+    },
+  },
   data() {
     return {
-      testimonials: this.$t('testimonials'),
       current: 0,
     }
   },
   mounted() {
-    setInterval(this.cycleTestimonials, 6000)
+    setInterval(this.cycleReviews, 6000)
   },
   beforeDestroy() {
-    clearInterval(this.cycleTestimonials)
+    clearInterval(this.cycleReviews)
   },
   methods: {
     // eslint-disable-next-line object-shorthand
-    cycleTestimonials: function () {
+    cycleReviews: function () {
       this.current++
-      if (this.current === this.testimonials.length - 1) {
+      if (this.current === this.reviews?.length - 1) {
         this.current = 0
       }
     },

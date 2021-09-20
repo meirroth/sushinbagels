@@ -124,7 +124,7 @@
             <h2 class="text-center lg:text-start mb-10">
               {{ $t('page.index.testimonial.title') }}
             </h2>
-            <Testimonials class="lg:max-w-md mt-60 lg:mt-10" />
+            <Reviews :reviews="reviews" class="lg:max-w-md mt-60 lg:mt-10" />
           </div>
         </div>
         <nuxt-img
@@ -150,10 +150,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   head() {
     return {
       title: null,
+    }
+  },
+  computed: mapState(['reviews']),
+  mounted() {
+    if (this.reviews === null) {
+      this.$store.dispatch('loadReviews')
     }
   },
 }

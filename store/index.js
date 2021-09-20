@@ -1,7 +1,9 @@
 export const state = () => ({
   scrolled: 0,
   isMobileNavOpen: false,
+  reviews: null,
 })
+
 export const mutations = {
   setScroll(state, scrollY) {
     state.scrolled = scrollY
@@ -9,16 +11,39 @@ export const mutations = {
   TOGGLE_MOBILE_NAV(state) {
     state.isMobileNavOpen = !state.isMobileNavOpen
   },
+  SET_REVIEWS(state, reviews) {
+    state.reviews = reviews
+  },
 }
-
-// actions
+// Actions
 export const actions = {
   toggleMobileNav({ commit }) {
     commit('TOGGLE_MOBILE_NAV')
+  },
+  async loadReviews({ commit }) {
+    await this.$axios
+      .get('/api/reviews', {
+        headers: {
+          'content-type': 'application/json',
+          Accept: 'application/json',
+        },
+        data: {},
+      })
+      .then((response) => {
+        console.log(JSON.stringify(response))
+
+        if (response.data.status === 'OK')
+          commit('SET_REVIEWS', response.data.results.reviews)
+        else console.log(response.data.status, response.data.error_message) // Google API error message
+      })
+      .catch((err) => {
+        console.log(err) // Axios entire error message
+      })
   },
 }
 
 // Getters
 export const getters = {
   isMobileNavOpen: (state) => state.isMobileNavOpen,
+  getReviews: (state) => state.reviews,
 }

@@ -114,7 +114,11 @@
               >
             </li>
             <li class="text-sm">
-              <a class="link" href="#" target="_blank" rel="noopener nofollow"
+              <a
+                class="link"
+                href="https://wa.me/+97225443111?text=היי"
+                target="_blank"
+                rel="noopener nofollow"
                 ><BrandWhatsappIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"

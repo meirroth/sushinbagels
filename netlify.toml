@@ -1,0 +1,45 @@
+# Settings in the [build] context are global and are applied to all contexts
+# unless otherwise overridden by more specific contexts.
+[build]
+  base = ""
+  publish = "dist"
+  command = "npm run generate"
+  environment = { NODE_VERSION = "13" }
+
+[build.processing]
+  skip_processing = true
+
+[[redirects]]
+  from = "/api/reviews"
+  to = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJs4LylmzXAhURyiITK_fxbhE&fields=reviews&key=AIzaSyC50AdbvjDp9gwBrfi_TgmjcBkC80L7faM"
+
+[[redirects]]
+  from = "/order"
+  to = "https://www.tabitorder.com/?siteName=sushinbagel#/start"
+[[redirects]]
+  from = "/about"
+  to = "/story"
+[[redirects]]
+  from = "/he/about"
+  to = "/he/story"
+
+[[redirects]]
+  from = "/products*"
+  to = "/menu"
+[[redirects]]
+  from = "/he/products*"
+  to = "/he/menu"
+[[redirects]]
+  from = "/collections*"
+  to = "/menu"
+[[redirects]]
+  from = "/he/collections*"
+  to = "/he/menu"
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"

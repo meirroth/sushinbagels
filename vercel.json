@@ -8,7 +8,15 @@
       "permanent": false
     },
     { "source": "/about", "destination": "/story", "permanent": true },
-    { "source": "/he/about", "destination": "/he/story", "permanent": true }
+    { "source": "/he/about", "destination": "/he/story", "permanent": true },
+    { "source": "/collections*", "destination": "/menu", "permanent": true },
+    {
+      "source": "/he/collections*",
+      "destination": "/he/menu",
+      "permanent": true
+    },
+    { "source": "/products*", "destination": "/menu", "permanent": true },
+    { "source": "/he/products*", "destination": "/he/menu", "permanent": true }
   ],
   "headers": [
     {

@@ -127,6 +127,7 @@ export default {
         baseUrl: 'https://sushinbagels.com',
       },
     ],
+    ['@nuxtjs/axios'],
     [
       // Sitemap https://sitemap.nuxtjs.org/
       '@nuxtjs/sitemap',
@@ -136,6 +137,11 @@ export default {
       },
     ],
   ],
+
+  env: {
+    PLACES_API: process.env.PLACES_API,
+    PLACES_API_KEY: process.env.PLACES_API_KEY,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
