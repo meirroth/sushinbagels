@@ -1,12 +1,6 @@
 # Settings in the [build] context are global and are applied to all contexts
 # unless otherwise overridden by more specific contexts.
 [build]
-#  base = ""
-#  publish = "dist"
-#  command = "npm run generate"
-#  environment = { NODE_VERSION = "13" }
-
-[context.netlify-dev]
   base = ""
   publish = "dist"
   command = '''
@@ -14,8 +8,16 @@
     npm run generate'''
   environment = { NODE_VERSION = "13" }
 
-[build.processing]
-#  skip_processing = true
+[build.processing.css]
+  bundle = false
+  minify = false
+[build.processing.js]
+  bundle = false
+  minify = false
+[build.processing.html]
+  pretty_urls = true
+[build.processing.images]
+  compress = true
 
 [[redirects]]
   from = "/api/places"
