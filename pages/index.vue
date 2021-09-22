@@ -27,7 +27,6 @@
             <nuxt-img
               src="/img/404A7916-removebg-s.png"
               width="1024"
-              quality="80"
               alt="Sushi plater"
               class="object-contain w-full h-full"
             />
@@ -78,7 +77,6 @@
                 src="/img/tabit-mockup.png"
                 alt="Ordering app"
                 width="768"
-                quality="80"
               />
             </div>
             <div
@@ -114,7 +112,6 @@
             class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
             src="/img/banner-bg.jpg"
             width="1024"
-            quality="80"
           />
         </div>
       </section>
@@ -142,7 +139,6 @@
           src="/img/sushi-hand.png"
           alt=""
           width="1024"
-          quality="80"
         />
       </section>
     </div>

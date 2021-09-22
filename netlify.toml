@@ -1,17 +1,25 @@
 # Settings in the [build] context are global and are applied to all contexts
 # unless otherwise overridden by more specific contexts.
 [build]
+#  base = ""
+#  publish = "dist"
+#  command = "npm run generate"
+#  environment = { NODE_VERSION = "13" }
+
+[context.netlify-dev]
   base = ""
   publish = "dist"
-  command = "npm run generate"
+  command = '''
+    sed -i "s|PLACES_API_KEY|$PLACES_API_KEY|g" netlify.toml && \
+    npm run generate'''
   environment = { NODE_VERSION = "13" }
 
 [build.processing]
-  skip_processing = true
+#  skip_processing = true
 
 [[redirects]]
   from = "/api/places"
-  to = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJs4LylmzXAhURyiITK_fxbhE&fields=reviews&key=AIzaSyC50AdbvjDp9gwBrfi_TgmjcBkC80L7faM"
+  to = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJs4LylmzXAhURyiITK_fxbhE&fields=reviews&key=PLACES_API_KEY"
   status = 200
 
 [[redirects]]

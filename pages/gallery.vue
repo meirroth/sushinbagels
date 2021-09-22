@@ -25,7 +25,6 @@
               :src="image.thumb"
               :loading="i > 9 ? 'lazy' : null"
               width="320"
-              quality="80"
               class="absolute object-cover w-full h-full"
             />
           </a>
@@ -54,7 +53,7 @@ export default {
     for (let i = imgPaths.length - 1; i >= 0; i--) {
       const _path = imgPaths[i].replace('./', '/img/gallery/')
       this.images.push({
-        src: this.$img(_path, { width: 1536, quality: 80 }),
+        src: this.$img(_path, { width: 1536 }),
         thumb: _path,
       })
     }

@@ -29,7 +29,6 @@
         <nuxt-img
           :src="img"
           width="1536"
-          quality="80"
           alt=""
           class="absolute inset-0 w-full h-full object-cover filter blur z-0"
         />
