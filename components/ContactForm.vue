@@ -1,6 +1,6 @@
 <template>
   <form
-    name="contact"
+    name="Contact Us"
     method="POST"
     data-netlify="true"
     netlify-honeypot="bot-field"

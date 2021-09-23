@@ -8,17 +8,6 @@
     npm run generate'''
   environment = { NODE_VERSION = "13" }
 
-[build.processing.css]
-  bundle = false
-  minify = false
-[build.processing.js]
-  bundle = false
-  minify = false
-[build.processing.html]
-  pretty_urls = true
-[build.processing.images]
-  compress = true
-
 [[redirects]]
   from = "/api/places*"
   to = "https://maps.googleapis.com/maps/api/place/details/json?fields=rating,reviews,user_ratings_total&placeid=ChIJs4LylmzXAhURyiITK_fxbhE&key=PLACES_API_KEY:splat"
