@@ -141,7 +141,7 @@ export default {
       // Sitemap https://sitemap.nuxtjs.org/
       '@nuxtjs/sitemap',
       {
-        hostname: process.env.baseUrl,
+        hostname: 'https://sushinbagels.com',
         i18n: true,
       },
     ],
