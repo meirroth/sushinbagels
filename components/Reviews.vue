@@ -17,16 +17,11 @@
         @mouseleave="startInterval()" -->
         <div class="flex justify-between mb-4">
           <div class="flex me-2">
-            <div class="font-sans w-12 h-12 me-4">
-              <Avatar
-                :username="placeData.reviews[current].author_name"
-                :custom-style="{
-                  fontFamily: 'inherit',
-                  height: '100%',
-                  width: '100%',
-                }"
-              />
-            </div>
+            <Avatar
+              :username="placeData.reviews[current].author_name"
+              shape="circle"
+              class="me-4"
+            />
             <div>
               <div
                 class="inline-block title-font font-medium text-gray-900 mb-1"
@@ -64,7 +59,7 @@
       class="absolute bottom-8 inset-x-8 text-end"
     >
       <a
-        href="https://search.google.com/local/writereview?placeid=ChIJs4LylmzXAhURyiITK_fxbhE"
+        href="https://www.google.com/maps/place/SushiNBagels/@31.7913509,35.2027142,17z/data=!4m7!3m6!1s0x1502d76c96f282b3:0x116ef1f72b1322ca!8m2!3d31.7913509!4d35.2027142!9m1!1b1"
         target="_blank"
         rel="noopener noreferrer"
         class="text-indigo-900"
@@ -83,14 +78,12 @@
 <script>
 import { ArrowRightIcon } from 'vue-tabler-icons'
 import { startCase, toLower } from 'lodash'
-import Avatar from 'vue-avatar'
 import QuateIcon from '~/static/img/quate.svg?inline'
 export default {
   name: 'Reviews',
   components: {
     ArrowRightIcon,
     QuateIcon,
-    Avatar,
   },
   props: {
     placeData: {

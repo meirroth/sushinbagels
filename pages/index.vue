@@ -24,7 +24,7 @@
             </nuxt-link>
           </div>
           <div class="w-full lg:w-7/12 mb-8 lg:mb-0">
-            <nuxt-img
+            <Statically
               src="/img/404A7916-removebg-s.png"
               width="1024"
               alt="Sushi plater"
@@ -72,11 +72,11 @@
             "
           >
             <div class="w-full lg:w-1/2 flex justify-center">
-              <nuxt-img
-                class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
+              <Statically
                 src="/img/tabit-mockup.png"
-                alt="Ordering app"
                 width="768"
+                alt="Ordering app"
+                class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
               />
             </div>
             <div
@@ -108,10 +108,10 @@
               </div>
             </div>
           </div>
-          <nuxt-img
-            class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
+          <Statically
             src="/img/banner-bg.jpg"
             width="1024"
+            class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
           />
         </div>
       </section>
@@ -127,7 +127,10 @@
             />
           </div>
         </div>
-        <nuxt-img
+        <Statically
+          src="/img/sushi-hand.png"
+          width="1024"
+          alt=""
           class="
             absolute
             end-0
@@ -139,9 +142,6 @@
             max-w-3xl
             rtl:-scale-x-1
           "
-          src="/img/sushi-hand.png"
-          alt=""
-          width="1024"
         />
       </section>
     </div>

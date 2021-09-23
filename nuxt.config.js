@@ -128,29 +128,30 @@ export default {
         vueI18n: {
           fallbackLocale: 'en',
         },
-        baseUrl: 'https://sushinbagels.com',
+        baseUrl: process.env.baseUrl,
       },
     ],
     [
       '@nuxtjs/axios',
       {
-        baseURL: '/',
+        baseURL: process.env.baseUrl,
       },
     ],
     [
       // Sitemap https://sitemap.nuxtjs.org/
       '@nuxtjs/sitemap',
       {
-        hostname: 'https://sushinbagels.com',
+        hostname: process.env.baseUrl,
         i18n: true,
       },
     ],
   ],
 
-  // env: {
-  //   PLACES_API: process.env.PLACES_API,
-  //   PLACES_API_KEY: process.env.PLACES_API_KEY,
-  // },
+  env: {
+    // PLACES_API: process.env.PLACES_API,
+    // PLACES_API_KEY: process.env.PLACES_API_KEY,
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

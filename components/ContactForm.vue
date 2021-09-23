@@ -1,5 +1,16 @@
 <template>
-  <form name="contact" netlify>
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    data-netlify-recaptcha="true"
+  >
+    <p class="hidden">
+      <label
+        >Don’t fill this out if you’re human: <input name="bot-field"
+      /></label>
+    </p>
     <div class="relative mb-4">
       <label for="name" class="leading-7 text-sm text-gray-400">{{
         $t('page.contact.name')
@@ -7,6 +18,7 @@
       <input
         id="name"
         type="text"
+        required
         name="name"
         class="
           w-full
@@ -33,6 +45,7 @@
       <input
         id="email"
         type="email"
+        required
         name="email"
         class="
           w-full
@@ -86,6 +99,7 @@
       <textarea
         id="message"
         name="message"
+        required
         class="
           w-full
           bg-gray-800
@@ -106,7 +120,9 @@
         "
       ></textarea>
     </div>
+    <div data-netlify-recaptcha="true"></div>
     <button
+      type="submit"
       class="
         text-black
         bg-gray-300

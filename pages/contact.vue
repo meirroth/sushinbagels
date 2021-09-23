@@ -18,11 +18,11 @@
             bg-gray-900
           "
         >
-          <nuxt-img
-            class="absolute inset-0 z-0 object-cover w-full h-full"
+          <Statically
             src="/img/location-map.jpg"
-            :alt="$t('page.contact.mapAlt')"
             width="1536"
+            :alt="$t('page.contact.mapAlt')"
+            class="absolute inset-0 z-0 object-cover w-full h-full"
           />
           <div class="relative w-auto mt-80 py-6 rounded shadow-md bg-gray-900">
             <div class="px-6 mb-6">

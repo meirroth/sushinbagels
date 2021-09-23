@@ -26,7 +26,7 @@
           transform: 'scale(' + imageScale + ')',
         }"
       >
-        <nuxt-img
+        <Statically
           :src="img"
           width="1536"
           alt=""

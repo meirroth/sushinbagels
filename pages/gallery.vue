@@ -21,10 +21,10 @@
               overflow-hidden
             "
           >
-            <nuxt-img
+            <Statically
               :src="image.thumb"
-              :loading="i > 9 ? 'lazy' : null"
               width="320"
+              :loading="i > 9 ? 'lazy' : null"
               class="absolute object-cover w-full h-full"
             />
           </a>
