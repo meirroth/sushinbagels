@@ -46,8 +46,8 @@ export default {
       this.format && params.push(`f=${this.format}`)
       this.quality !== 85 && params.push(`q=${this.quality}`)
       const allParams = params.length ? params.join() : ''
-      console.log('allParams ', allParams)
-      if (process.env.DEPLOY_PRIME_URL) {
+
+      if (process.env.NETLIFY) {
         srcURL = `https://cdn.statically.io/img/${
           process.env.DEPLOY_PRIME_URL.replace(/^https?:\/\//, '').split('/')[0]
         }/`
@@ -57,15 +57,10 @@ export default {
         }
 
         // domain/f=format,w=width,h=height,q=:percentage/path
-        console.log('srcURL + this.src ', srcURL + this.src)
         return srcURL + this.src
       }
 
       // /path?f=format,w=width,h=height,q=:percentage
-      console.log(
-        "srcURL + this.src + '?' + allParams",
-        srcURL + this.src + '?' + allParams
-      )
       return srcURL + this.src + '?' + allParams
     },
   },

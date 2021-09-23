@@ -1,5 +1,11 @@
 <template>
   <main>
+    <p class="fixed block bottom-0 mx-auto p-4 z-40 bg-gray-800 bg-opacity-80">
+      URL: {{ URL }}, <br />
+      DEPLOY_URL: {{ DEPLOY_URL }}, <br />
+      DEPLOY_PRIME_URL: {{ DEPLOY_PRIME_URL }}, <br />
+      DEPLOY_ID: {{ DEPLOY_ID }}, <br />
+    </p>
     <Hero :full="true" img="/img/sushi-1.jpg">
       <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
@@ -151,6 +157,14 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
+  data() {
+    return {
+      URL: process.env.URL,
+      DEPLOY_URL: process.env.DEPLOY_URL,
+      DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
+      DEPLOY_ID: process.env.DEPLOY_ID,
+    }
+  },
   head() {
     return {
       title: null,
