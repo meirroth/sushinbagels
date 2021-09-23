@@ -42,7 +42,7 @@
                 <img
                   class="absolute object-contain w-full h-full"
                   :src="
-                    require('~/assets/images/' +
+                    require('~/static/img/' +
                       $t(`page.index.services.body[${i - 1}].icon`) +
                       '?data')
                   "
@@ -115,13 +115,16 @@
           />
         </div>
       </section>
-      <section id="testimonial" class="relative pb-20">
+      <section id="reviews" class="relative pb-20">
         <div class="container">
           <div class="flex flex-col w-full lg:w-1/2 relative z-10">
             <h2 class="text-center lg:text-start mb-10">
-              {{ $t('page.index.testimonial.title') }}
+              {{ $t('page.index.reviews.title') }}
             </h2>
-            <Reviews :reviews="reviews" class="lg:max-w-md mt-60 lg:mt-10" />
+            <Reviews
+              :place-data="placeData"
+              class="lg:max-w-md mt-60 lg:mt-10"
+            />
           </div>
         </div>
         <nuxt-img
@@ -146,18 +149,17 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
   head() {
     return {
       title: null,
     }
   },
-  computed: mapState(['reviews']),
+  computed: mapGetters(['placeData']),
   mounted() {
-    if (this.reviews === null) {
-      this.$store.dispatch('loadReviews')
-    }
+    // if (this.placeData === null) {}
+    this.$store.dispatch('loadPlaceData')
   },
 }
 </script>

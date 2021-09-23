@@ -93,7 +93,7 @@
 </template>
 <script>
 import { Menu2Icon } from 'vue-tabler-icons'
-import Logo from '~/assets/images/logo.svg?inline'
+import Logo from '~/static/img/logo.svg?inline'
 
 export default {
   name: 'TheHeader',

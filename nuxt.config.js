@@ -50,8 +50,11 @@ export default {
       '@nuxtjs/google-fonts',
       {
         download: true,
+        outputDir: '~',
+        fontsDir: 'static/fonts',
+        stylePath: 'assets/scss/_fonts.scss',
+        fontsPath: '/fonts',
         display: 'swap',
-        stylePath: 'scss/_fonts.scss',
         families: {
           Heebo: [400, 500, 600, 700],
           Kalam: [400, 700],
@@ -74,6 +77,7 @@ export default {
       },
     ],
     ['@nuxtjs/svg'],
+    // Nuxt PWA https://pwa.nuxtjs.org/icon
     [
       '@nuxtjs/pwa',
       {
@@ -143,10 +147,10 @@ export default {
     ],
   ],
 
-  env: {
-    PLACES_API: process.env.PLACES_API,
-    PLACES_API_KEY: process.env.PLACES_API_KEY,
-  },
+  // env: {
+  //   PLACES_API: process.env.PLACES_API,
+  //   PLACES_API_KEY: process.env.PLACES_API_KEY,
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

@@ -87,8 +87,10 @@
         "cta": "Explore our story",
         "title": "Our Amazing Journey"
       },
-      "testimonial": {
-        "title": "What Our Sushi Loving Customers Say About Us"
+      "reviews": {
+        "title": "What Our Sushi Loving Customers Say About Us",
+        "viewAll": "View all",
+        "onGoogle": "on Google"
       },
       "title": "Homepage"
     },
