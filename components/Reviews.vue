@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="placeData"
-    class="bg-white rounded shadow-white overflow-hidden relative h-60 py-8"
+    class="bg-gray-800 rounded overflow-hidden relative h-60 py-8"
   >
     <transition
       enter-class="opacity-0 translate-x-full"
@@ -24,7 +24,7 @@
             />
             <div>
               <div
-                class="inline-block title-font font-medium text-gray-900 mb-1"
+                class="inline-block title-font font-medium text-gray-200 mb-1"
               >
                 {{ capitalize(placeData.reviews[current].author_name) }}
               </div>
@@ -40,7 +40,7 @@
                 :star-size="18"
                 active-color="#fbbc04"
                 inactive-color="#E8EAED"
-                class="text-gray-600 text-sm leading-4"
+                class="text-gray-300 text-sm leading-4"
               />
             </div>
           </div>
@@ -49,7 +49,7 @@
             class="block w-8 h-8 ms-8 mb-4 text-green rtl:-scale-x-1"
           />
         </div>
-        <p class="mb-4 text-black text-lg">
+        <p class="mb-4 text-gray-100 text-lg">
           {{ placeData.reviews[current].text }}
         </p>
       </blockquote>
@@ -62,7 +62,7 @@
         href="https://www.google.com/maps/place/SushiNBagels/@31.7913509,35.2027142,17z/data=!4m7!3m6!1s0x1502d76c96f282b3:0x116ef1f72b1322ca!8m2!3d31.7913509!4d35.2027142!9m1!1b1"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-indigo-900"
+        class="text-green group"
         >{{
           $t('page.index.reviews.viewAll') +
           ' ' +
@@ -70,7 +70,14 @@
           ' ' +
           $t('page.index.reviews.onGoogle')
         }}
-        <ArrowRightIcon class="inline-block rtl:-scale-x-1" aria-hidden="true"
+        <ArrowRightIcon
+          class="
+            inline-block
+            rtl:-scale-x-1
+            group-hover:-me-2 group-hover:ms-2
+            transition-all
+          "
+          aria-hidden="true"
       /></a>
     </div>
   </div>

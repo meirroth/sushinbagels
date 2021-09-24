@@ -19,7 +19,19 @@ export default {
       // If undefined or blank then we don't need the hyphen
       return titleChunk ? `${titleChunk} - SushiNBagels` : 'SushiNBagels'
     },
-    meta: [{ name: 'robots', content: 'noindex' }],
+    meta: [
+      { charset: 'utf-8' },
+      isProd ? {} : { name: 'robots', content: 'noindex' },
+      {
+        rel: 'dns-prefetch',
+        href: 'https://cdn.statically.io/',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://cdn.statically.io/',
+        crossorigin: '',
+      },
+    ],
     bodyAttrs: {
       class: 'min-h-screen text-white leading-relaxed antialiased',
     },
@@ -61,24 +73,9 @@ export default {
         },
       },
     ],
-    [
-      '@nuxt/image',
-      {
-        provider: 'netlify',
-        screens: {
-          xs: 320,
-          sm: 640,
-          md: 768,
-          lg: 1024,
-          xl: 1280,
-          xxl: 1536,
-        },
-        // dir: 'static/img',
-      },
-    ],
     ['@nuxtjs/svg'],
-    // Nuxt PWA https://pwa.nuxtjs.org/icon
     [
+      // Nuxt PWA https://pwa.nuxtjs.org/icon
       '@nuxtjs/pwa',
       {
         meta: {
@@ -96,7 +93,6 @@ export default {
         },
       },
     ],
-    // ['@teamnovu/nuxt-breaky'],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -147,10 +143,15 @@ export default {
     ],
   ],
 
-  // env: {
-  //   PLACES_API: process.env.PLACES_API,
-  //   PLACES_API_KEY: process.env.PLACES_API_KEY,
-  // },
+  env: {
+    NETLIFY: process.env.NETLIFY,
+    URL: process.env.URL,
+    DEPLOY_URL: process.env.DEPLOY_URL,
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
+    DEPLOY_ID: process.env.DEPLOY_ID,
+    // PLACES_API: process.env.PLACES_API,
+    // PLACES_API_KEY: process.env.PLACES_API_KEY,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -177,7 +178,7 @@ export default {
   },
 
   // https://nuxtjs.org/docs/2.x/features/loading
-  loading: { color: '#92C020' },
+  loading: { color: '#92C020', throttle: 400 },
 
   telemetry: false,
 }

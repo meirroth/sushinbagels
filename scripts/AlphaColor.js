@@ -62,4 +62,4 @@ class AlphaColor {
   }
 }
 
-module.exports = AlphaColor
+export default AlphaColor

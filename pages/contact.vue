@@ -156,7 +156,7 @@
           <h3 class="text-xl mb-4">
             {{ $t('page.contact.formTitle') }}
           </h3>
-          <p class="text-sm mb-6">
+          <p class="text-sm mb-10">
             {{ $t('page.contact.formDesc') }}
           </p>
           <ContactForm />
