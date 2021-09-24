@@ -131,13 +131,20 @@
         </div>
       </nav>
       <p class="pt-10 text-center text-sm text-gray-400">
-        {{ $t('footer.copy') }}
+        {{ $t('footer.createdWith') }}
         <HeartIcon
           size="16"
           class="text-green inline-block"
-          aria-label="Love"
+          :aria-label="$t('footer.love')"
         />
-        {{ $t('footer.right') }}
+        {{ $t('footer.by') }}
+        <a
+          href="https://meirroth.net/"
+          target="_blank"
+          rel="noopener"
+          class="link"
+          >{{ $t('footer.MeirRoth') }}</a
+        >. {{ $t('footer.allRightsReserved') }}
       </p>
     </div>
   </footer>

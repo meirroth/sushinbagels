@@ -24,7 +24,6 @@
             <Statically
               :src="image.thumb"
               width="432"
-              height="288"
               :loading="i > 9 ? 'lazy' : null"
               class="absolute object-cover w-full h-full"
             />

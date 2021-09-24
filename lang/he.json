@@ -1,12 +1,15 @@
 {
   "footer": {
-    "copy": "Created with",
+    "createdWith": "Created with",
+    "love": "love",
+    "by": "by",
+    "MeirRoth": "Meir Roth",
+    "allRightsReserved": "All rights reserved",
     "cravingSushi": "השתוקקות לסושי",
     "facebook": "פייסבוק",
     "findUs": "מצא אותנו",
     "information": "מידע",
     "instagram": "אינסטגרם",
-    "right": "by Meir Roth. All rights reserved",
     "stayConnected": "הישארו מחוברים",
     "whatsapp": "וואטסאפ"
   },
