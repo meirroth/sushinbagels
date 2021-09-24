@@ -1,0 +1,60 @@
+{
+  "html_attributions": [],
+  "result": {
+    "rating": 5,
+    "reviews": [
+      {
+        "author_name": "Michal",
+        "author_url": "https://www.google.com/maps/contrib/113549040465646799374/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GgDJGbGbYSDqVxHs9u9qy4E431cj8hjVsIMGL4RYlE=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "מקום קטן וחמוד אוכל ממש טעים נהנינו מאוד",
+        "time": 1626974220
+      },
+      {
+        "author_name": "Aharon Eidelman",
+        "author_url": "https://www.google.com/maps/contrib/106597225345407647597/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/AATXAJx-CvVSNjDVMyqxDSXK5RafrSm3LHTln4ltYM0h=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "סושי הכי טרי וטעים שאני יכול לזכור",
+        "time": 1626967773
+      },
+      {
+        "author_name": "מוטי אלבז",
+        "author_url": "https://www.google.com/maps/contrib/114858557266768902905/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/AATXAJyMyL6Gd1heuOez0Uc5PRRray5roBLkzXqLcuGN=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "לפני חודש",
+        "text": "סושי ברמה גבוהה\nחומי גלם טריים\nבהחלט נחזור שוב ושוב",
+        "time": 1628678297
+      },
+      {
+        "author_name": "שולם לישנר",
+        "author_url": "https://www.google.com/maps/contrib/104679941268665751295/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/AATXAJwU5HMIbnajQWZy21Ghiu9BGKT9mLURwqVZpu6_=s128-c0x00000000-cc-rp-mo-ba2",
+        "rating": 5,
+        "relative_time_description": "לפני חודש",
+        "text": "הסושי בכשרות מהודרת (העדה החרדית) היחיד בירושלים מחירים סבירים, מאוד טעים ויש שירות משלוחים",
+        "time": 1627924722
+      },
+      {
+        "author_name": "Shira Bibas",
+        "author_url": "https://www.google.com/maps/contrib/105139782167660616654/reviews",
+        "language": "iw",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GgPYvrP-iBURm0v2PoxanuqZerpvV95sh51lAgvyg0=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "לפני חודש",
+        "text": "לקחנו ארוחת סושי, היה מעולה! כל הירקות טריים, היה טופינג קראנצ'י ולמטה אורז. מאד מומלץ",
+        "time": 1627552037
+      }
+    ],
+    "user_ratings_total": 43
+  },
+  "status": "OK"
+}

@@ -19,7 +19,43 @@ export default {
       // If undefined or blank then we don't need the hyphen
       return titleChunk ? `${titleChunk} - SushiNBagels` : 'SushiNBagels'
     },
-    meta: [{ name: 'robots', content: 'noindex' }],
+    meta: [
+      isProd ? {} : { name: 'robots', content: 'noindex' },
+      {
+        rel: 'dns-prefetch',
+        href: 'https://cdn.statically.io/',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://cdn.statically.io/',
+        crossorigin: '',
+      },
+      isProd
+        ? {
+            rel: 'dns-prefetch',
+            href: 'https://umami.meir.io/',
+          }
+        : {},
+      isProd
+        ? {
+            rel: 'preconnect',
+            href: 'https://umami.meir.io/',
+            crossorigin: '',
+          }
+        : {},
+    ],
+    script: [
+      isProd
+        ? {
+            hid: 'umami',
+            async: true,
+            defer: true,
+            src: 'https://umami.meir.io/t.js',
+            'data-website-id': '3a64289e-7ed6-4b39-b1ff-cce4f2687481',
+            'data-domains': 'sushinbagels.com',
+          }
+        : {},
+    ],
     bodyAttrs: {
       class: 'min-h-screen text-white leading-relaxed antialiased',
     },
@@ -50,31 +86,20 @@ export default {
       '@nuxtjs/google-fonts',
       {
         download: true,
+        outputDir: '~',
+        fontsDir: 'static/fonts',
+        stylePath: 'assets/scss/_fonts.scss',
+        fontsPath: '/fonts',
         display: 'swap',
-        stylePath: 'scss/_fonts.scss',
         families: {
           Heebo: [400, 500, 600, 700],
           Kalam: [400, 700],
         },
       },
     ],
-    [
-      '@nuxt/image',
-      {
-        provider: 'vercel',
-        screens: {
-          xs: 320,
-          sm: 640,
-          md: 768,
-          lg: 1024,
-          xl: 1280,
-          xxl: 1536,
-        },
-        // dir: 'static/img',
-      },
-    ],
     ['@nuxtjs/svg'],
     [
+      // Nuxt PWA https://pwa.nuxtjs.org/icon
       '@nuxtjs/pwa',
       {
         meta: {
@@ -92,7 +117,6 @@ export default {
         },
       },
     ],
-    // ['@teamnovu/nuxt-breaky'],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -128,6 +152,12 @@ export default {
       },
     ],
     [
+      '@nuxtjs/axios',
+      {
+        baseURL: '/',
+      },
+    ],
+    [
       // Sitemap https://sitemap.nuxtjs.org/
       '@nuxtjs/sitemap',
       {
@@ -136,6 +166,16 @@ export default {
       },
     ],
   ],
+
+  env: {
+    NETLIFY: process.env.NETLIFY,
+    URL: process.env.URL,
+    DEPLOY_URL: process.env.DEPLOY_URL,
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
+    DEPLOY_ID: process.env.DEPLOY_ID,
+    // PLACES_API: process.env.PLACES_API,
+    // PLACES_API_KEY: process.env.PLACES_API_KEY,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -162,7 +202,7 @@ export default {
   },
 
   // https://nuxtjs.org/docs/2.x/features/loading
-  loading: { color: '#92C020' },
+  loading: { color: '#92C020', throttle: 400 },
 
   telemetry: false,
 }

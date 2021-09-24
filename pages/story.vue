@@ -11,20 +11,22 @@
             <b>{{ $t('page.story.ourGoal') }}</b>
             {{ $t('page.story.ourGoalIs') }}
           </p>
-          <!-- <img
+          <!-- <Statically
+            src="/img/sushi-1.jpg"
+            width="432"
+            loading="lazy"
             class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:ms-10"
-            src="~/assets/images/sushi-1.jpg"
-            alt=""
           /> -->
         </section>
         <section
           id="our-journey"
           class="flex flex-col-reverse lg:flex-row justify-between"
         >
-          <!-- <img
+          <!-- <Statically
+            src="/img/sushi-2.jpg"
+            width="432"
+            loading="lazy"
             class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:me-10"
-            src="~/assets/images/sushi-2.jpg"
-            alt=""
           /> -->
           <p>
             <b>{{ $t('page.story.ourJourney') }}</b>
@@ -33,8 +35,10 @@
         </section>
       </div>
       <!-- <div class="w-full h-96 xl:max-h-650 xl:h-screen relative mt-20">
-        <img
-          src="~/assets/images/outside-shop.jpg"
+        <Statically
+          src="/img/outside-shop.jpg"
+          width="1536"
+          loading="lazy"
           class="absolute inset-0 object-cover w-full h-full"
         />
       </div> -->

@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const userAgent = navigator.userAgent.toLowerCase()
+      const isIOS =
+        userAgent.indexOf('iphone') !== -1 ||
+        userAgent.indexOf('ipad') !== -1 ||
+        userAgent.indexOf('ipod') !== -1
+      const isAndroid = userAgent.indexOf('android') !== -1
+      var url = 'https://www.tabitorder.com/?siteName=sushinbagel#/start'
+      if (isIOS || isAndroid) {
+        url = isIOS
+          ? 'https://apps.apple.com/il/app/tabit-%D7%98%D7%90%D7%91%D7%99%D7%98/id1463575038'
+          : 'https://play.google.com/store/apps/details?id=app.tabit.il_prd'
+      }
+      window.location.replace(url)
+    })
+  </script>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      font-size: 10px;
+    }
+
+    html,
+    body {
+      height: 100%;
+      position: relative;
+    }
+
+    html {
+      background-color: #111;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font: 400 1.6rem/1.6 "Heebo", Helvetica, Arial, sans-serif;
+      color: #fafafa;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    main {
+      position: relative;
+      flex-grow: 10;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    main li {
+      text-align: center;
+      list-style: none;
+      padding: 10px;
+    }
+
+    main a {
+      text-decoration: none;
+      color: #92C020;
+    }
+
+    main a:hover {
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <ul>
+      <li><a href="https://play.google.com/store/apps/details?id=app.tabit.il_prd" target="_blank"
+          rel="noopener noreferrer">Download Tabit for Android</a></li>
+      <li><a href="https://apps.apple.com/il/app/tabit-%D7%98%D7%90%D7%91%D7%99%D7%98/id1463575038" target="_blank"
+          rel="noopener noreferrer">Download Tabit for iOS</a></li>
+      <li><a href="https://www.tabitorder.com/?siteName=sushinbagel#/start" target="_blank"
+          rel="noopener noreferrer">Order
+          Online</a></li>
+    </ul>
+  </main>
+</body>
+
+</html>

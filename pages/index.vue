@@ -24,10 +24,9 @@
             </nuxt-link>
           </div>
           <div class="w-full lg:w-7/12 mb-8 lg:mb-0">
-            <nuxt-img
+            <Statically
               src="/img/404A7916-removebg-s.png"
               width="1024"
-              quality="80"
               alt="Sushi plater"
               class="object-contain w-full h-full"
             />
@@ -43,7 +42,7 @@
                 <img
                   class="absolute object-contain w-full h-full"
                   :src="
-                    require('~/assets/images/' +
+                    require('~/static/img/' +
                       $t(`page.index.services.body[${i - 1}].icon`) +
                       '?data')
                   "
@@ -73,12 +72,11 @@
             "
           >
             <div class="w-full lg:w-1/2 flex justify-center">
-              <nuxt-img
-                class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
+              <Statically
                 src="/img/tabit-mockup.png"
-                alt="Ordering app"
                 width="768"
-                quality="80"
+                alt="Ordering app"
+                class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
               />
             </div>
             <div
@@ -96,7 +94,11 @@
               <div
                 class="flex flex-wrap justify-center lg:justify-start -mx-2.5"
               >
-                <a href="#" class="btn-alt mt-10 mx-2.5">
+                <a
+                  href="/app.html"
+                  target="_blank"
+                  class="btn-alt mt-10 mx-2.5"
+                >
                   {{ $t('page.index.order.cta[0]') }}
                 </a>
                 <a
@@ -110,24 +112,29 @@
               </div>
             </div>
           </div>
-          <nuxt-img
-            class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
+          <Statically
             src="/img/banner-bg.jpg"
             width="1024"
-            quality="80"
+            class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
           />
         </div>
       </section>
-      <section id="testimonial" class="relative pb-20">
+      <section id="reviews" class="relative pb-20">
         <div class="container">
           <div class="flex flex-col w-full lg:w-1/2 relative z-10">
             <h2 class="text-center lg:text-start mb-10">
-              {{ $t('page.index.testimonial.title') }}
+              {{ $t('page.index.reviews.title') }}
             </h2>
-            <Testimonials class="lg:max-w-md mt-60 lg:mt-10" />
+            <Reviews
+              :place-data="placeData"
+              class="lg:max-w-md mt-60 lg:mt-10"
+            />
           </div>
         </div>
-        <nuxt-img
+        <Statically
+          src="/img/sushi-hand.png"
+          width="1024"
+          alt=""
           class="
             absolute
             end-0
@@ -139,10 +146,6 @@
             max-w-3xl
             rtl:-scale-x-1
           "
-          src="/img/sushi-hand.png"
-          alt=""
-          width="1024"
-          quality="80"
         />
       </section>
     </div>
@@ -150,11 +153,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   head() {
     return {
       title: null,
     }
+  },
+  computed: mapGetters(['placeData']),
+  mounted() {
+    // if (this.placeData === null) {}
+    this.$store.dispatch('loadPlaceData')
   },
 }
 </script>

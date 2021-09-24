@@ -15,7 +15,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
-const throttle = require('lodash.throttle')
+const throttle = require('lodash/throttle')
 export default {
   name: 'Default',
   head() {

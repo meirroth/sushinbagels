@@ -1,0 +1,60 @@
+{
+  "html_attributions": [],
+  "result": {
+    "rating": 5,
+    "reviews": [
+      {
+        "author_name": "Michael Ehrentreu",
+        "author_url": "https://www.google.com/maps/contrib/107715173040831877164/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/AATXAJwlWMYVXXvjN5C4okPVzPg5Rg9vJlSagvyJalrV=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "in the last week",
+        "text": "Best I've tasted!\nGreat service!\nHighly recommend",
+        "time": 1632080783
+      },
+      {
+        "author_name": "aron david moskovits",
+        "author_url": "https://www.google.com/maps/contrib/117439096747460446290/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GghZxXwSAd9g02yrEQJQ6anmTnzQHUdw1Rb15YH7w=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a month ago",
+        "text": "The best sushi 🍣😋 and service",
+        "time": 1628753522
+      },
+      {
+        "author_name": "chaim greenwald",
+        "author_url": "https://www.google.com/maps/contrib/116893803154773740318/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/AATXAJwbOilazwYhoSG1ZHHbziB49dk_Mc4YqFDLT58S=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "8 months ago",
+        "text": "Amazing sushi. Fair price. What could be better...",
+        "time": 1609416678
+      },
+      {
+        "author_name": "Cellular Israel Mail",
+        "author_url": "https://www.google.com/maps/contrib/110867503342509877677/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GiTEEodxgPJqnTQuCWz1CWhILdcMX7fp5QE0e_iaA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "8 months ago",
+        "text": "best sushi, best service, best prices,",
+        "time": 1609417177
+      },
+      {
+        "author_name": "David Zedd",
+        "author_url": "https://www.google.com/maps/contrib/112909818654690297198/reviews",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/AATXAJxXAcUGqhvsz9y2VS8ayiPLEMx4x1tijhJMOH9e=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "Great sushi\nFavorite bagels",
+        "time": 1624209682
+      }
+    ],
+    "user_ratings_total": 43
+  },
+  "status": "OK"
+}
