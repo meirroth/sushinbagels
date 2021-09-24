@@ -1,12 +1,5 @@
 <template>
   <main>
-    <p class="fixed block bottom-0 mx-auto p-4 z-40 bg-gray-800 bg-opacity-80">
-      NETLIFY: {{ NETLIFY }},<br />
-      URL: {{ URL }},<br />
-      DEPLOY_URL: {{ DEPLOY_URL }},<br />
-      DEPLOY_PRIME_URL: {{ DEPLOY_PRIME_URL }},<br />
-      DEPLOY_ID: {{ DEPLOY_ID }},<br />
-    </p>
     <Hero :full="true" img="/img/sushi-1.jpg">
       <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
@@ -101,7 +94,7 @@
               <div
                 class="flex flex-wrap justify-center lg:justify-start -mx-2.5"
               >
-                <a href="#" class="btn-alt mt-10 mx-2.5">
+                <a href="/app" target="_blank" class="btn-alt mt-10 mx-2.5">
                   {{ $t('page.index.order.cta[0]') }}
                 </a>
                 <a
@@ -158,15 +151,6 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  data() {
-    return {
-      NETLIFY: process.env.NETLIFY,
-      URL: process.env.URL,
-      DEPLOY_URL: process.env.DEPLOY_URL,
-      DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
-      DEPLOY_ID: process.env.DEPLOY_ID,
-    }
-  },
   head() {
     return {
       title: null,
