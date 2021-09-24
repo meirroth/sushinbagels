@@ -74,7 +74,8 @@
             <div class="w-full lg:w-1/2 flex justify-center">
               <Statically
                 src="/img/tabit-mockup.png"
-                width="768"
+                width="460"
+                loading="lazy"
                 alt="Ordering app"
                 class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
               />
@@ -114,6 +115,7 @@
           </div>
           <Statically
             src="/img/banner-bg.jpg"
+            loading="lazy"
             width="1024"
             class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
           />
@@ -134,6 +136,7 @@
         <Statically
           src="/img/sushi-hand.png"
           width="1024"
+          loading="lazy"
           alt=""
           class="
             absolute
