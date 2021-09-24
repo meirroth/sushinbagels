@@ -1,12 +1,15 @@
 {
   "footer": {
-    "copy": "Created with",
+    "createdWith": "Created with",
+    "love": "love",
+    "by": "by",
+    "MeirRoth": "Meir Roth",
+    "allRightsReserved": "All rights reserved",
     "cravingSushi": "Craving Sushi",
     "facebook": "Facebook",
     "findUs": "Find Us",
     "information": "Information",
     "instagram": "Instagram",
-    "right": "by Meir Roth. All rights reserved",
     "stayConnected": "Stay Connected",
     "whatsapp": "WhatsApp"
   },
@@ -87,8 +90,10 @@
         "cta": "Explore our story",
         "title": "Our Amazing Journey"
       },
-      "testimonial": {
-        "title": "What Our Sushi Loving Customers Say About Us"
+      "reviews": {
+        "title": "What Our Sushi Loving Customers Say About Us",
+        "viewAll": "View all",
+        "onGoogle": "on Google"
       },
       "title": "Homepage"
     },
@@ -103,7 +108,7 @@
       "title": "Our Story"
     }
   },
-  "testimonials": [
+  "reviews": [
     {
       "body": "Delicious sushi! A rare find in this country with good hechsher! Ordered delivery came late but was worth the wait!",
       "name": "M.S."

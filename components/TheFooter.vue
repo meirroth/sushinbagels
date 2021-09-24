@@ -114,7 +114,11 @@
               >
             </li>
             <li class="text-sm">
-              <a class="link" href="#" target="_blank" rel="noopener nofollow"
+              <a
+                class="link"
+                href="https://wa.me/+97225443111?text=היי"
+                target="_blank"
+                rel="noopener nofollow"
                 ><BrandWhatsappIcon
                   size="20"
                   class="inline-block lg:me-1 lg:text-white"
@@ -127,13 +131,20 @@
         </div>
       </nav>
       <p class="pt-10 text-center text-sm text-gray-400">
-        {{ $t('footer.copy') }}
+        {{ $t('footer.createdWith') }}
         <HeartIcon
           size="16"
           class="text-green inline-block"
-          aria-label="Love"
+          :aria-label="$t('footer.love')"
         />
-        {{ $t('footer.right') }}
+        {{ $t('footer.by') }}
+        <a
+          href="https://meirroth.net/"
+          target="_blank"
+          rel="noopener"
+          class="link"
+          >{{ $t('footer.MeirRoth') }}</a
+        >. {{ $t('footer.allRightsReserved') }}
       </p>
     </div>
   </footer>
@@ -148,7 +159,7 @@ import {
   BrandWhatsappIcon,
   HeartIcon,
 } from 'vue-tabler-icons'
-import Logo from '~/assets/images/logo.svg?inline'
+import Logo from '~/static/img/logo.svg?inline'
 
 export default {
   name: 'TheFooter',

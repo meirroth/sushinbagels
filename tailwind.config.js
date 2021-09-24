@@ -71,6 +71,9 @@ module.exports = {
       scale: {
         '-1': '-1',
       },
+      minHeight: {
+        32: '8rem',
+      },
     },
   },
   variants: {

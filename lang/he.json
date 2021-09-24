@@ -1,12 +1,15 @@
 {
   "footer": {
-    "copy": "Created with",
+    "createdWith": "Created with",
+    "love": "love",
+    "by": "by",
+    "MeirRoth": "Meir Roth",
+    "allRightsReserved": "All rights reserved",
     "cravingSushi": "השתוקקות לסושי",
     "facebook": "פייסבוק",
     "findUs": "מצא אותנו",
     "information": "מידע",
     "instagram": "אינסטגרם",
-    "right": "by Meir Roth. All rights reserved",
     "stayConnected": "הישארו מחוברים",
     "whatsapp": "וואטסאפ"
   },
@@ -84,8 +87,10 @@
         "cta": "הסיפור שלנו",
         "title": "המסע המדהים שלנו"
       },
-      "testimonial": {
-        "title": "מה הלקוחות האוהבים שלנו בסושי אומרים עלינו"
+      "reviews": {
+        "title": "מה הלקוחות האוהבים שלנו בסושי אומרים עלינו",
+        "viewAll": "הצג את כל",
+        "onGoogle": "ב- Google"
       },
       "title": "דף הבית"
     },
@@ -100,7 +105,7 @@
       "title": "הסיפור שלנו"
     }
   },
-  "testimonials": [
+  "reviews": [
     {
       "body": "Delicious sushi! A rare find in this country with good hechsher! Ordered delivery came late but was worth the wait!",
       "name": "M.S."

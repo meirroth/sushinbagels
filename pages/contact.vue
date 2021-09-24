@@ -18,24 +18,12 @@
             bg-gray-900
           "
         >
-          <nuxt-img
-            class="absolute inset-0 z-0 object-cover w-full h-full"
+          <Statically
             src="/img/location-map.jpg"
-            :alt="$t('page.contact.mapAlt')"
             width="1536"
+            :alt="$t('page.contact.mapAlt')"
+            class="absolute inset-0 z-0 object-cover w-full h-full"
           />
-          <!-- <iframe
-              title="map"
-              class="absolute inset-0"
-              style="filter: grayscale(1) contrast(1.2) opacity(0.16)"
-              marginheight="0"
-              marginwidth="0"
-              scrolling="no"
-              src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=SushiNBagels+(SushiNBagels)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-              width="100%"
-              height="100%"
-              frameborder="0"
-            ></iframe> -->
           <div class="relative w-auto mt-80 py-6 rounded shadow-md bg-gray-900">
             <div class="px-6 mb-6">
               <h4 class="mb-2 text-sm">{{ $t('page.contact.hours') }}</h4>
@@ -141,7 +129,7 @@
                         $t('page.contact.googleMaps')
                       }}</span></a
                     >
-                    <a href="#" class="text-center"
+                    <!-- <a href="#" class="text-center"
                       ><svg
                         width="24"
                         height="30"
@@ -157,7 +145,7 @@
                         />
                       </svg>
                       {{ $t('page.contact.moovit') }}
-                    </a>
+                    </a> -->
                   </div>
                 </div>
               </div>
@@ -168,130 +156,10 @@
           <h3 class="text-xl mb-4">
             {{ $t('page.contact.formTitle') }}
           </h3>
-          <p class="text-sm mb-6">
+          <p class="text-sm mb-10">
             {{ $t('page.contact.formDesc') }}
           </p>
-          <div class="relative mb-4">
-            <label for="name" class="leading-7 text-sm text-gray-400">{{
-              $t('page.contact.name')
-            }}</label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              class="
-                w-full
-                bg-gray-800
-                rounded
-                border border-gray-700
-                focus:ring-2 focus:ring-green
-                text-base
-                outline-none
-                text-gray-100
-                py-1
-                px-3
-                leading-8
-                transition-colors
-                duration-200
-                ease-in-out
-              "
-            />
-          </div>
-          <div class="relative mb-4">
-            <label for="email" class="leading-7 text-sm text-gray-400">{{
-              $t('page.contact.email')
-            }}</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              class="
-                w-full
-                bg-gray-800
-                rounded
-                border border-gray-700
-                focus:ring-2 focus:ring-green
-                text-base
-                outline-none
-                text-gray-100
-                py-1
-                px-3
-                leading-8
-                transition-colors
-                duration-200
-                ease-in-out
-              "
-            />
-          </div>
-          <div class="relative mb-4">
-            <label for="phone" class="leading-7 text-sm text-gray-400"
-              >{{ $t('page.contact.phone') }}
-              <span>{{ $t('page.contact.optional') }}</span></label
-            >
-            <input
-              id="phone"
-              type="phone"
-              name="phone"
-              class="
-                w-full
-                bg-gray-800
-                rounded
-                border border-gray-700
-                focus:ring-2 focus:ring-green
-                text-base
-                outline-none
-                text-gray-100
-                py-1
-                px-3
-                leading-8
-                transition-colors
-                duration-200
-                ease-in-out
-              "
-            />
-          </div>
-          <div class="relative mb-4">
-            <label for="message" class="leading-7 text-sm text-gray-400">{{
-              $t('page.contact.message')
-            }}</label>
-            <textarea
-              id="message"
-              name="message"
-              class="
-                w-full
-                bg-gray-800
-                rounded
-                border border-gray-700
-                focus:ring-2 focus:ring-green
-                h-32
-                text-base
-                outline-none
-                text-gray-100
-                py-1
-                px-3
-                resize-none
-                leading-6
-                transition-colors
-                duration-200
-                ease-in-out
-              "
-            ></textarea>
-          </div>
-          <button
-            class="
-              text-black
-              bg-gray-300
-              font-bold
-              border-0
-              py-2
-              px-6
-              hover:bg-gray-200
-              rounded
-              text-lg
-            "
-          >
-            {{ $t('page.contact.submit') }}
-          </button>
+          <ContactForm />
         </div>
       </section>
     </div>

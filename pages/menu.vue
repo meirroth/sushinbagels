@@ -119,6 +119,7 @@ import {
   MinusIcon,
   DownloadIcon,
 } from 'vue-tabler-icons'
+import StaticallyPath from '~/scripts/StaticallyPath'
 export default {
   components: {
     ChevronLeftIcon,
@@ -148,7 +149,12 @@ export default {
       .keys()
     imgPaths.forEach((path) => {
       const _path = path.replace('./', '/img/menu/')
-      this.pages.push(this.$img(_path, { width: 768, quality: 80 }))
+      this.pages.push(
+        StaticallyPath({
+          src: _path,
+          width: 768,
+        })
+      )
     })
     window.addEventListener('keydown', this.handleKeydown)
   },

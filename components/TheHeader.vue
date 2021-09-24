@@ -27,9 +27,20 @@
                     href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
                     target="_blank"
                     rel="noopener nofollow"
-                    class="nav-link font-medium"
-                    >{{ $t('nav.orderNow') }}</a
-                  >
+                    class="nav-link font-medium group"
+                    >{{ $t('nav.orderNow') }}
+                    <ExternalLinkIcon
+                      size="16"
+                      class="
+                        group-hover:opacity-80
+                        opacity-0
+                        transition-opacity
+                        inline
+                        absolute
+                        -right-5
+                        h-full
+                      "
+                  /></a>
                 </li>
                 <li class="me-8">
                   <nuxt-link
@@ -92,14 +103,15 @@
   </div>
 </template>
 <script>
-import { Menu2Icon } from 'vue-tabler-icons'
-import Logo from '~/assets/images/logo.svg?inline'
+import { Menu2Icon, ExternalLinkIcon } from 'vue-tabler-icons'
+import Logo from '~/static/img/logo.svg?inline'
 
 export default {
   name: 'TheHeader',
   components: {
     Logo,
     Menu2Icon,
+    ExternalLinkIcon,
   },
   props: { scrolled: { default: 0, type: Number } },
   computed: {

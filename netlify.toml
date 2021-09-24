@@ -1,0 +1,63 @@
+# Settings in the [build] context are global and are applied to all contexts
+# unless otherwise overridden by more specific contexts.
+[build]
+  base = ""
+  publish = "dist"
+  command = '''
+    sed -i "s|PLACES_API_KEY|$PLACES_API_KEY|g" netlify.toml && \
+    npm run generate'''
+  environment = { NODE_VERSION = "13" }
+
+[[redirects]]
+  from = "/api/places*"
+  to = "https://maps.googleapis.com/maps/api/place/details/json?fields=rating,reviews,user_ratings_total&placeid=ChIJs4LylmzXAhURyiITK_fxbhE&key=PLACES_API_KEY:splat"
+  status = 200
+
+[[redirects]]
+  from = "/order"
+  to = "https://www.tabitorder.com/?siteName=sushinbagel#/start"
+[[redirects]]
+  from = "/about"
+  to = "/story"
+[[redirects]]
+  from = "/he/about"
+  to = "/he/story"
+
+[[redirects]]
+  from = "/products*"
+  to = "/menu"
+[[redirects]]
+  from = "/he/products*"
+  to = "/he/menu"
+[[redirects]]
+  from = "/collections*"
+  to = "/menu"
+[[redirects]]
+  from = "/he/collections*"
+  to = "/he/menu"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31556926"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
