@@ -159,7 +159,9 @@
           <p class="text-sm mb-10">
             {{ $t('page.contact.formDesc') }}
           </p>
-          <ContactForm />
+          <client-only>
+            <ContactForm />
+          </client-only>
         </div>
       </section>
     </div>
