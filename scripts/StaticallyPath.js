@@ -18,6 +18,11 @@ const StaticallyPath = ({
       process.env.DEPLOY_PRIME_URL.replace(/^https?:\/\//, '').split('/')[0]
     }/`
 
+    srcURL = srcURL.replace(
+      'main--sushinbagels.netlify.app',
+      'sushinbagels.com'
+    )
+
     if (allParams !== '') {
       srcURL += `${allParams}`
     }
