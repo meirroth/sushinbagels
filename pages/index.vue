@@ -94,7 +94,11 @@
               <div
                 class="flex flex-wrap justify-center lg:justify-start -mx-2.5"
               >
-                <a href="/app" target="_blank" class="btn-alt mt-10 mx-2.5">
+                <a
+                  href="/app.html"
+                  target="_blank"
+                  class="btn-alt mt-10 mx-2.5"
+                >
                   {{ $t('page.index.order.cta[0]') }}
                 </a>
                 <a
