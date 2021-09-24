@@ -20,7 +20,6 @@ export default {
       return titleChunk ? `${titleChunk} - SushiNBagels` : 'SushiNBagels'
     },
     meta: [
-      { charset: 'utf-8' },
       isProd ? {} : { name: 'robots', content: 'noindex' },
       {
         rel: 'dns-prefetch',
@@ -31,6 +30,31 @@ export default {
         href: 'https://cdn.statically.io/',
         crossorigin: '',
       },
+      isProd
+        ? {
+            rel: 'dns-prefetch',
+            href: 'https://umami.meir.io/',
+          }
+        : {},
+      isProd
+        ? {
+            rel: 'preconnect',
+            href: 'https://umami.meir.io/',
+            crossorigin: '',
+          }
+        : {},
+    ],
+    script: [
+      isProd
+        ? {
+            hid: 'umami',
+            async: true,
+            defer: true,
+            src: 'https://umami.meir.io/t.js',
+            'data-website-id': '3a64289e-7ed6-4b39-b1ff-cce4f2687481',
+            'data-domains': 'sushinbagels.com',
+          }
+        : {},
     ],
     bodyAttrs: {
       class: 'min-h-screen text-white leading-relaxed antialiased',
