@@ -169,6 +169,7 @@ export default {
 
   env: {
     NETLIFY: process.env.NETLIFY,
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
     // PLACES_API: process.env.PLACES_API,
     // PLACES_API_KEY: process.env.PLACES_API_KEY,
   },
