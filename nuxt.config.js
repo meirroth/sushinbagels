@@ -167,6 +167,12 @@ export default {
     ],
   ],
 
+  env: {
+    NETLIFY: process.env.NETLIFY,
+    // PLACES_API: process.env.PLACES_API,
+    // PLACES_API_KEY: process.env.PLACES_API_KEY,
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
