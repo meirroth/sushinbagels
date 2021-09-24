@@ -36,7 +36,7 @@ export const actions = {
         }
       )
       .then((response) => {
-        console.debug(response)
+        // console.debug(response)
 
         if (response.data.status === 'OK') {
           commit('SET_PLACE_DATA', response.data.result)
