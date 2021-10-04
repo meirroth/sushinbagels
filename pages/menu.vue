@@ -175,11 +175,6 @@ export default {
     isDisabled(bool) {
       return bool ? true : null
     },
-    // importImages(r) {
-    //   const paths = []
-    //   r.keys().forEach((key) => paths.push(r(key)))
-    //   return paths
-    // },
     handleKeydown(ev) {
       ev.key === 'ArrowLeft' &&
         this.flipbookRef.canFlipLeft &&

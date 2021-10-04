@@ -29,10 +29,12 @@
       "email": "דוא\"ל",
       "formDesc": "זקוקים למידע נוסף או שיש לכם שאלה או הערה? אנא אל תהסס להשאיר הודעה, והצוות האהוב שלנו יענה לך בהקדם האפשרי",
       "formTitle": "שלח לנו הודעה",
+      "googleMaps": "מפות ‪Google‬‏",
       "hours": "שעות",
       "hours1": "ראשון - רביעי 11:00–22:00",
       "hours2": "חמישי 11:00–23:00",
       "hours3": "מוצאי שבת כ. שעתיים לאחר צאת הכוכבים - 00:30",
+      "mapAlt": "Store location map",
       "message": "הודעה",
       "moovit": "Moovit",
       "name": "שם",
@@ -40,6 +42,7 @@
       "phone": "טלפון",
       "submit": "שלח",
       "title": "צור קשר",
+      "waze": "Waze",
       "yermiyahuStreet": "רחוב ירמיהו 68, ירושלים, ישראל"
     },
     "gallery": {
@@ -89,8 +92,8 @@
       },
       "reviews": {
         "title": "מה הלקוחות האוהבים שלנו בסושי אומרים עלינו",
-        "viewAll": "הצג את כל",
-        "onGoogle": "ב- Google"
+        "viewAll": "הצג",
+        "onGoogle": "ביקורות ב- Google"
       },
       "title": "דף הבית"
     },
@@ -104,27 +107,5 @@
       "ourJourneyIs": "took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut.",
       "title": "הסיפור שלנו"
     }
-  },
-  "reviews": [
-    {
-      "body": "Delicious sushi! A rare find in this country with good hechsher! Ordered delivery came late but was worth the wait!",
-      "name": "M.S."
-    },
-    {
-      "body": "",
-      "name": ""
-    },
-    {
-      "body": "",
-      "name": ""
-    },
-    {
-      "body": "",
-      "name": ""
-    },
-    {
-      "body": "",
-      "name": ""
-    }
-  ]
+  }
 }

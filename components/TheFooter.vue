@@ -130,11 +130,8 @@
           </ul>
         </div>
       </nav>
-      <div class="pt-10 text-sm text-gray-400 text-center">
-        <p>
-          © {{ new Date().getFullYear() }} SushiNBagel a product of David
-          Ehrentreu
-        </p>
+      <div class="pt-10 text-sm text-gray-400 text-center ltr">
+        <p>© {{ year }} SushiNBagel a product of David Ehrentreu</p>
         <p class="pt-4">
           {{ $t('footer.createdWith') }}
           <span class="sr-only">{{ $t('footer.love') }}</span>
@@ -179,6 +176,12 @@ export default {
     BrandWhatsappIcon,
     HeartIcon,
     Logo,
+  },
+  data() {
+    return { year: 2021 }
+  },
+  mounted() {
+    this.year = new Date().getFullYear()
   },
 }
 </script>

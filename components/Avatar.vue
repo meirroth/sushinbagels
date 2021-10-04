@@ -45,7 +45,7 @@ export default {
       type: Boolean,
     },
     size: {
-      type: Number,
+      type: [Number, String],
       default: 50,
     },
     shape: {
