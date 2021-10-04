@@ -106,6 +106,13 @@
       "ourJourney": "Our journey",
       "ourJourneyIs": "took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut.",
       "title": "Our Story"
+    },
+    "error": {
+      "title": "Page not found",
+      "subTitle": "Well, this is embarrassing...",
+      "body": "Looks like the page you're looking for isn't here. Could be our fault, could be yours. If you found a broken link somewhere, please {action} so we can fix it!",
+      "action": "let us know",
+      "email": "mailto:info@sushinbagels.com?subject=I found a broken link!&body=Hi,%0D%0A%0D%0AI found a broken link on your site. The page was supposed to be at sushinbagels.com"
     }
   }
 }
