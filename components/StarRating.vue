@@ -1,9 +1,9 @@
 <template>
   <div
     :class="[
-      'vue-star-rating',
+      'flex items-end',
       { 'vue-star-rating-rtl': rtl },
-      { 'vue-star-rating-inline': inline },
+      { 'inline-flex': inline },
     ]"
   >
     <div class="sr-only">
@@ -11,15 +11,11 @@
         <span>Rated {{ selectedRating }} stars out of {{ maxRating }}</span>
       </slot>
     </div>
-
-    <div class="vue-star-rating" @mouseleave="resetRating">
+    <div class="flex items-end">
       <span
         v-for="n in maxRating"
         :key="n"
-        :class="[
-          { 'vue-star-rating-pointer': !readOnly },
-          'vue-star-rating-star',
-        ]"
+        class="inline-block"
         :style="{ 'margin-right': margin + 'px' }"
       >
         <star
@@ -35,11 +31,6 @@
           :border-width="borderWidth"
           :rounded-corners="roundedCorners"
           :rtl="rtl"
-          :glow="glow"
-          :glow-color="glowColor"
-          :animate="animate"
-          @star-selected="setRating($event, true)"
-          @star-mouse-move="setRating"
         />
       </span>
       <span
@@ -93,10 +84,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    readOnly: {
-      type: Boolean,
-      default: false,
-    },
     textClass: {
       type: String,
       default: '',
@@ -133,29 +120,7 @@ export default {
       type: Number,
       default: null,
     },
-    glow: {
-      type: Number,
-      default: 0,
-    },
-    glowColor: {
-      type: String,
-      default: '#fff',
-    },
-    clearable: {
-      type: Boolean,
-      default: false,
-    },
-    activeOnClick: {
-      type: Boolean,
-      default: false,
-    },
-    animate: {
-      type: Boolean,
-      default: false,
-    },
   },
-  emits: ['update:rating', 'hover:rating'],
-
   data() {
     return {
       step: 0,
@@ -189,11 +154,6 @@ export default {
       return new Array(this.maxRating).fill(this.activeColor)
     },
     currentActiveColor() {
-      if (!this.activeOnClick) {
-        return this.currentRating > 0
-          ? this.activeColors[Math.ceil(this.currentRating) - 1]
-          : this.inactiveColor
-      }
       return this.selectedRating > 0
         ? this.activeColors[Math.ceil(this.selectedRating) - 1]
         : this.inactiveColor
@@ -212,11 +172,6 @@ export default {
       return new Array(this.maxRating).fill(borderColor)
     },
     currentActiveBorderColor() {
-      if (!this.activeOnClick) {
-        return this.currentRating > 0
-          ? this.activeBorderColors[Math.ceil(this.currentRating) - 1]
-          : this.borderColor
-      }
       return this.selectedRating > 0
         ? this.activeBorderColors[Math.ceil(this.selectedRating) - 1]
         : this.borderColor
@@ -226,13 +181,6 @@ export default {
       return Math.min(this.maxRating, Math.ceil(this.currentRating * inv) / inv)
     },
   },
-  watch: {
-    rating(val) {
-      this.currentRating = val
-      this.selectedRating = val
-      this.createStars(this.shouldRound)
-    },
-  },
   created() {
     this.step = this.increment * 100
     this.currentRating = this.rating
@@ -240,36 +188,6 @@ export default {
     this.createStars(this.roundStartRating)
   },
   methods: {
-    setRating($event, persist) {
-      if (!this.readOnly) {
-        const position = this.rtl
-          ? (100 - $event.position) / 100
-          : $event.position / 100
-        this.currentRating = ($event.id + position - 1).toFixed(2)
-        this.currentRating =
-          this.currentRating > this.maxRating
-            ? this.maxRating
-            : this.currentRating
-        if (persist) {
-          this.createStars(true, true)
-          this.selectedRating =
-            this.clearable && this.currentRating === this.selectedRating
-              ? 0
-              : this.currentRating
-          this.$emit('update:rating', this.selectedRating)
-          this.ratingSelected = true
-        } else {
-          this.createStars(true, !this.activeOnClick)
-          this.$emit('hover:rating', this.currentRating)
-        }
-      }
-    },
-    resetRating() {
-      if (!this.readOnly) {
-        this.currentRating = this.selectedRating
-        this.createStars(this.shouldRound)
-      }
-    },
     createStars(round = true, applyFill = true) {
       this.currentRating = round ? this.roundedRating : this.currentRating
       for (let i = 0; i < this.maxRating; i++) {
@@ -290,22 +208,8 @@ export default {
 }
 </script>
 <style scoped>
-.vue-star-rating-star {
-  display: inline-block;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.vue-star-rating-pointer {
-  cursor: pointer;
-}
-
-.vue-star-rating {
-  display: flex;
-  align-items: flex-end;
-}
-
-.vue-star-rating-inline {
-  display: inline-flex;
+.vue-star-rating-rtl {
+  direction: rtl;
 }
 
 .vue-star-rating-rating-text {
@@ -313,21 +217,8 @@ export default {
   margin-right: 7px;
 }
 
-.vue-star-rating-rtl {
-  direction: rtl;
-}
-
 .vue-star-rating-rtl .vue-star-rating-rating-text {
   margin-right: 10px;
   direction: rtl;
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }
 </style>

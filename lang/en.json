@@ -93,7 +93,7 @@
       "reviews": {
         "title": "What Our Sushi Loving Customers Say About Us",
         "viewAll": "View all",
-        "onGoogle": "on Google"
+        "onGoogle": "reviews on Google"
       },
       "title": "Homepage"
     },
@@ -106,28 +106,13 @@
       "ourJourney": "Our journey",
       "ourJourneyIs": "took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut.",
       "title": "Our Story"
+    },
+    "error": {
+      "title": "Page not found",
+      "subTitle": "Well, this is embarrassing...",
+      "body": "Looks like the page you're looking for isn't here. Could be our fault, could be yours.{br}If you found a broken link somewhere, please {action} so we can fix it!",
+      "action": "let us know",
+      "email": "mailto:info@sushinbagels.com?subject=I found a broken link!&body=Hi,%0D%0A%0D%0AI found a broken link on your site. The page was supposed to be at sushinbagels.com"
     }
-  },
-  "reviews": [
-    {
-      "body": "Delicious sushi! A rare find in this country with good hechsher! Ordered delivery came late but was worth the wait!",
-      "name": "M.S."
-    },
-    {
-      "body": "Really nice owner, good customer service and yum sushi!",
-      "name": "S.K."
-    },
-    {
-      "body": "best sushi, best service, best prices!",
-      "name": "C.I."
-    },
-    {
-      "body": "הגיע מהר, טעים ופשוט מושלם!",
-      "name": "M.B."
-    },
-    {
-      "body": "Excellent. Very tasty and generous portions. Will be ordering again soon 😀",
-      "name": "T.M."
-    }
-  ]
+  }
 }

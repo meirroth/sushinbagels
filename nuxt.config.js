@@ -198,6 +198,11 @@ export default {
     },
   },
 
+  // https://nuxtjs.org/docs/directory-structure/nuxt-config/#generate
+  generate: {
+    fallback: true,
+  },
+
   // https://nuxtjs.org/docs/2.x/features/loading
   loading: { color: '#92C020', throttle: 400 },
 

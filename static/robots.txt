@@ -1,2 +1,9 @@
 User-agent: *
-Disallow: /
+Disallow: /app.html
+Disallow: /img
+
+User-agent: *
+Allow: /img/menu
+Allow: /img/gallery
+
+Sitemap: https://sushinbagels.com/sitemap.xml

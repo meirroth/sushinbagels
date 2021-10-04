@@ -1,16 +1,9 @@
 <template>
   <svg
-    :class="[
-      'vue-star-rating-star',
-      { 'vue-star-rating-star-rotate': shouldAnimate },
-    ]"
+    class="overflow-visible"
     :height="starSize"
     :width="starSize"
     :viewBox="viewBox"
-    @mousemove="mouseMoving"
-    @click="selected"
-    @touchstart="touchStart"
-    @touchend="touchEnd"
   >
     <linearGradient :id="grad" x1="0" x2="100%" y1="0" y2="0">
       <stop
@@ -28,28 +21,6 @@
         "
       />
     </linearGradient>
-
-    <filter
-      :id="glowId"
-      height="130%"
-      width="130%"
-      filterUnits="userSpaceOnUse"
-    >
-      <feGaussianBlur :stdDeviation="glow" result="coloredBlur" />
-      <feMerge>
-        <feMergeNode in="coloredBlur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <polygon
-      v-show="glowColor && glow > 0 && fill > 0"
-      :points="starPointsToString"
-      :fill="gradId"
-      :stroke="glowColor"
-      :filter="'url(#' + glowId + ')'"
-      :stroke-width="border"
-    />
 
     <polygon
       :points="starPointsToString"
@@ -114,26 +85,11 @@ export default {
       type: Boolean,
       default: false,
     },
-    glow: {
-      type: Number,
-      default: 0,
-    },
-    glowColor: {
-      type: String,
-      default: null,
-      required: false,
-    },
-    animate: {
-      type: Boolean,
-      default: false,
-    },
   },
-  emits: ['star-mouse-move', 'star-selected'],
   data() {
     return {
       starPoints: [19.8, 2.2, 6.6, 43.56, 39.6, 17.16, 0, 17.16, 33, 43.56],
       grad: '',
-      glowId: '',
       isStarActive: true,
     }
   },
@@ -174,9 +130,6 @@ export default {
     viewBox() {
       return '0 0 ' + this.maxSize + ' ' + this.maxSize
     },
-    shouldAnimate() {
-      return this.animate && this.isStarActive
-    },
     strokeLinejoin() {
       return this.roundedCorners ? 'round' : 'miter'
     },
@@ -185,44 +138,8 @@ export default {
     this.starPoints = this.points.length ? this.points : this.starPoints
     this.calculatePoints()
     this.grad = this.getRandomId()
-    this.glowId = this.getRandomId()
   },
   methods: {
-    mouseMoving($event) {
-      if ($event.touchAction !== 'undefined') {
-        this.$emit('star-mouse-move', {
-          event: $event,
-          position: this.getPosition($event),
-          id: this.starId,
-        })
-      }
-    },
-    touchStart() {
-      this.$nextTick(() => {
-        this.isStarActive = true
-      })
-    },
-    touchEnd() {
-      this.$nextTick(() => {
-        this.isStarActive = false
-      })
-    },
-    getPosition($event) {
-      // calculate position in percentage.
-      const starWidth = (92 / 100) * this.size
-      const offset = this.rtl
-        ? Math.min($event.offsetX, 45)
-        : Math.max($event.offsetX, 1)
-      const position = Math.round((100 / starWidth) * offset)
-
-      return Math.min(position, 100)
-    },
-    selected($event) {
-      this.$emit('star-selected', {
-        id: this.starId,
-        position: this.getPosition($event),
-      })
-    },
     getRandomId() {
       return Math.random().toString(36).substring(7)
     },
@@ -241,18 +158,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.vue-star-rating-star {
-  overflow: visible !important;
-}
-
-.vue-star-rating-star-rotate {
-  transition: all 0.25s;
-}
-
-.vue-star-rating-star-rotate:hover {
-  transition: transform 0.25s;
-  transform: rotate(-15deg) scale(1.3);
-}
-</style>

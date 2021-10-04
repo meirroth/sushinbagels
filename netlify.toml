@@ -27,10 +27,16 @@
   from = "/products*"
   to = "/menu"
 [[redirects]]
+  from = "/en/products*"
+  to = "/menu"
+[[redirects]]
   from = "/he/products*"
   to = "/he/menu"
 [[redirects]]
   from = "/collections*"
+  to = "/menu"
+[[redirects]]
+  from = "/en/collections*"
   to = "/menu"
 [[redirects]]
   from = "/he/collections*"

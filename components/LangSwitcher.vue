@@ -1,5 +1,5 @@
 <template>
-  <select v-if="$i18n.locales.length > 2" class="lang-switcher" name="language">
+  <!-- <select v-if="$i18n.locales.length > 2" class="lang-switcher" name="language">
     <option
       v-for="locale in $i18n.locales"
       :key="locale.code"
@@ -8,9 +8,9 @@
     >
       {{ locale.name }}
     </option>
-  </select>
+  </select> -->
   <nuxt-link
-    v-else-if="$i18n.locales.length === 2"
+    v-if="$i18n.locales.length === 2"
     :to="switchLocalePath(showLocales[0].code)"
     class="lang-switcher"
   >
