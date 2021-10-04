@@ -4,7 +4,7 @@
       ><h1 class="pt-16 text-white text-8xl">404</h1></Hero
     >
     <div class="relative z-20">
-      <section class="container text-center max-w-2xl mb-24">
+      <section class="container text-center mb-24">
         <div v-if="error.statusCode === 404">
           <!-- <Statically
           src="/img/404.png"
@@ -17,10 +17,11 @@
           <i18n path="page.error.body" tag="p">
             <template #action>
               <a :href="$t('page.error.email') + currentURL" class="link"
-                ><MailIcon aria-hidden="true" class="inline" />
+                ><MailIcon size="20" aria-hidden="true" class="inline-block" />
                 {{ $t('page.error.action') }}</a
               >
             </template>
+            <template #br><br /></template>
           </i18n>
         </div>
         <div v-else>
