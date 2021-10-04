@@ -130,22 +130,29 @@
           </ul>
         </div>
       </nav>
-      <p class="pt-10 text-center text-sm text-gray-400">
-        {{ $t('footer.createdWith') }}
-        <HeartIcon
-          size="16"
-          class="text-green inline-block"
-          :aria-label="$t('footer.love')"
-        />
-        {{ $t('footer.by') }}
-        <a
-          href="https://meirroth.net/"
-          target="_blank"
-          rel="noopener"
-          class="link"
-          >{{ $t('footer.MeirRoth') }}</a
-        >. {{ $t('footer.allRightsReserved') }}
-      </p>
+      <div class="pt-10 text-sm text-gray-400 text-center">
+        <p>
+          © {{ new Date().getFullYear() }} SushiNBagel a product of David
+          Ehrentreu
+        </p>
+        <p class="pt-4">
+          {{ $t('footer.createdWith') }}
+          <span class="sr-only">{{ $t('footer.love') }}</span>
+          <HeartIcon
+            size="16"
+            class="text-green inline-block"
+            :aria-hidden="true"
+          />
+          {{ $t('footer.by') }}
+          <a
+            href="https://meirroth.net/"
+            target="_blank"
+            rel="noopener"
+            class="link"
+            >{{ $t('footer.MeirRoth') }}</a
+          >
+        </p>
+      </div>
     </div>
   </footer>
 </template>

@@ -28,7 +28,7 @@
                 "
               >
                 <a
-                  href="/pdf/digital-menu.pdf"
+                  href="/pdf/digital-menu-1.1.pdf"
                   download="SushiNBagels-Menu"
                   target="_blank"
                   class="p-1 rounded hover:bg-gray-600 transition-colors"
@@ -55,11 +55,9 @@
                 >
                   <ChevronLeftIcon aria-hidden="true" />
                 </button>
-                <span class="p-1" aria-label="Current menu page"
-                  >{{ formatCurrentPage(flipbook.page) }}&nbsp;of&nbsp;{{
-                    flipbook.numPages
-                  }}</span
-                >
+                <span class="p-1" aria-label="Current menu page">{{
+                  formatCurrentPage(flipbook.page, flipbook.numPages)
+                }}</span>
                 <button
                   :disabled="isDisabled(!flipbook.canFlipRight)"
                   class="p-1 rounded transition-colors pointer-events-none"
@@ -162,15 +160,17 @@ export default {
     window.removeEventListener('keydown', this.handleKeydown)
   },
   methods: {
-    formatCurrentPage(page) {
+    formatCurrentPage(page, total) {
       let currentPage = page
+      // when there are two pages displayed side by side
       if (
+        page !== total &&
         document.documentElement.clientWidth >
-        document.documentElement.clientHeight
+          document.documentElement.clientHeight
       ) {
         currentPage += '-' + (page + 1)
       }
-      return currentPage
+      return currentPage + ' of ' + total
     },
     isDisabled(bool) {
       return bool ? true : null
