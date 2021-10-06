@@ -16,7 +16,7 @@
           <Statically
             src="/img/sushi-roll-2.png"
             width="1280"
-            hight="298"
+            height="298"
             alt="Sushi roll"
             class="pb-24 w-full max-w-screen-xl mx-auto"
           />
@@ -71,7 +71,7 @@
               <Statically
                 src="/img/tabit-mockup.png"
                 width="468"
-                hight="850"
+                height="850"
                 loading="lazy"
                 alt="Ordering app"
                 class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
