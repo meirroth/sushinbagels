@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero img="/img/sushi-3.jpg" :title="$t('page.gallery.title')" />
+    <Hero img="/img/hero-bg-gallery.jpg" :title="$t('page.gallery.title')" />
     <div class="relative z-20 container">
       <section>
         <!-- masonry-grid md:masonry-2-col lg:masonry-3-col -->
@@ -43,9 +43,12 @@ export default {
     }
   },
   head() {
-    return {
-      title: this.$t('page.gallery.title'),
-    }
+    return this.$createSeo('gallery', [
+      {
+        name: 'og:image',
+        content: '/img/hero-bg-gallery.jpg',
+      },
+    ])
   },
   beforeMount() {
     const imgPaths = require

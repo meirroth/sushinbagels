@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero img="/img/sushi-4.jpg"
+    <Hero img="/img/hero-bg-error.jpg"
       ><h1 class="pt-16 text-white text-8xl">404</h1></Hero
     >
     <div class="relative z-20">

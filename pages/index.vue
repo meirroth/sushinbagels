@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero :full="true" img="/img/sushi-1.jpg">
+    <Hero :full="true" img="/img/hero-bg-home.jpg">
       <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
       </nuxt-link>
@@ -161,6 +161,12 @@ export default {
   head() {
     return {
       title: null,
+      ...this.$createSeo('index', [
+        {
+          name: 'og:image',
+          content: '/img/hero-bg-home.jpg',
+        },
+      ]),
     }
   },
   computed: mapGetters(['placeData']),

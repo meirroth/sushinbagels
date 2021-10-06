@@ -1,6 +1,6 @@
 <template>
   <main class="overflow-hidden">
-    <Hero img="/img/sushi-2.jpg" :title="$t('page.menu.title')" />
+    <Hero img="/img/hero-bg-menu.jpg" :title="$t('page.menu.title')" />
     <div class="z-20">
       <section class="min-h-screen">
         <client-only>
@@ -132,9 +132,12 @@ export default {
     }
   },
   head() {
-    return {
-      title: this.$t('page.menu.title'),
-    }
+    return this.$createSeo('menu', [
+      {
+        name: 'og:image',
+        content: '/img/hero-bg-menu.jpg',
+      },
+    ])
   },
   computed: {
     flipbookRef() {

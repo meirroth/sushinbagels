@@ -43,7 +43,7 @@
       "submit": "Submit",
       "title": "Contact Us",
       "waze": "Waze",
-      "yermiyahuStreet": "Yirmiyahu Street 68, Jerusalem, Israel"
+      "yermiyahuStreet": "Yirmiyahu St 68, Jerusalem, Israel"
     },
     "gallery": {
       "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -113,6 +113,55 @@
       "body": "Looks like the page you're looking for isn't here. Could be our fault, could be yours.{br}If you found a broken link somewhere, please {action} so we can fix it!",
       "action": "let us know",
       "email": "mailto:info@sushinbagels.com?subject=I found a broken link!&body=Hi,%0D%0A%0D%0AI found a broken link on your site. The page was supposed to be at sushinbagels.com"
+    }
+  },
+  "seo": {
+    "global": {
+      "keywords": "Sushi, Bagels, healthy, food, fish, tasty, hungry, fresh, delivery, Jerusalem, romema, kosher, eidah hachareidis"
+    },
+    "index": {
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "Your home for the tastiest sushi & Bagels in romema Jerusalem under the hashgocha of the Eidah Hachareidis"
+        }
+      ]
+    },
+    "menu": {
+      "title": "Our Menu",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "Explore our colorful and tasty menu with all different amazing types of rolls and delicacies"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Gallery",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "Check out our amazing photos of our own sushi and its creation"
+        }
+      ]
+    },
+    "story": {
+      "title": "Our Story",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "Our journey takes us around the world and back, read more to find out"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "Want to order or find out more, get in touch"
+        }
+      ]
     }
   }
 }
