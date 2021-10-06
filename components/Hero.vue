@@ -30,7 +30,8 @@
           :src="img"
           width="1536"
           alt=""
-          class="absolute inset-0 w-full h-full object-cover filter blur z-0"
+          class="absolute inset-0 w-full h-full object-cover filter z-0"
+          :class="full ? 'blur-sm' : 'blur'"
         />
       </div>
       <div
