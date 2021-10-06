@@ -23,8 +23,8 @@
   },
   "page": {
     "contact": {
+      "title": "צור קשר",
       "address": "כתובת",
-      "body": "כתב או מדעי ברוכים זכויות, בדף גם עזרה מדויקים ביוטכנולוגיה. הנדסת בעברית והנדסה על זאת, אם קבלו הנדסת כתב, מיזמי ניהול ביולוגיה בה עזה. ויש קודמות ואמנות ייִדיש ב. מדע על יידיש ובמתן ביולוגיה, של כתב עסקים רוסית קישורים, אל ארץ נפלו לציין ניהול. המלצת אווירונאוטיקה בה שמו. והנדסה ויקימדיה שתי על, אל צ'ט פולנית בויקיפדיה, אל מדע הבהרה כלליים.",
       "directions": "הוראות הגעה",
       "email": "דוא\"ל",
       "formDesc": "זקוקים למידע נוסף או שיש לכם שאלה או הערה? אנא אל תהסס להשאיר הודעה, והצוות האהוב שלנו יענה לך בהקדם האפשרי",
@@ -41,15 +41,14 @@
       "optional": "(אופציונאלי)",
       "phone": "טלפון",
       "submit": "שלח",
-      "title": "צור קשר",
       "waze": "Waze",
       "yermiyahuStreet": "רחוב ירמיהו 68, ירושלים, ישראל"
     },
     "gallery": {
-      "body": "או תנך דרכה המשפט שיתופית. בה בחירות תיקונים כלל, תקשורת לאחרונה הגולשות צעד אל. כלל על אחרים והגולשים, המקובל בלשנות אם עוד. קרן תוכל עמוד ובמתן אל, קבלו פולנית כלל ב. לשון חבריכם לרפובליקה את קרן, לחבר ובמתן אתה אל. גם ארץ ניהול קלאסיים ויקיפדיה.",
       "title": "גלריה"
     },
     "index": {
+      "title": "סושי ובייגלים הכי טעימים בירושלים",
       "hero": {
         "body": "",
         "cta": "התפריט שלנו",
@@ -94,18 +93,17 @@
         "title": "מה הלקוחות האוהבים שלנו בסושי אומרים עלינו",
         "viewAll": "הצג",
         "onGoogle": "ביקורות ב- Google"
-      },
-      "title": "דף הבית"
+      }
     },
     "menu": {
       "title": "התפריט שלנו"
     },
     "story": {
+      "title": "הסיפור שלנו",
       "ourGoal": "Our goal",
       "ourGoalIs": "was to create the freshest & tastiest sushi with the strictest kashrut requirements. We chose the most stringent kashrus ‘Eidah Hacharedit’ from Jerusalem and started our journey to create amazing sushi le’mehadrin.",
       "ourJourney": "Our journey",
-      "ourJourneyIs": "took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut.",
-      "title": "הסיפור שלנו"
+      "ourJourneyIs": "took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut."
     },
     "error": {
       "title": "עמוד לא נמצא",
@@ -120,6 +118,7 @@
       "keywords": "סושי, בייגל, רעב, אוכל, דגים, טרי, משלוח, ירושלים, רוממה, כשר, מהדרין, עידה החרדית, טעים, סושי מהדרין, סושי עידה החרדית"
     },
     "index": {
+      "title": "סושי ובייגלים הכי טעימים בירושלים",
       "meta": [
         {
           "name": ["description", "og:description"],
@@ -162,9 +161,6 @@
           "content": "רוצים לדעת יותר על הסושי שלנו, מעוניינים בהזמנה גדולה, או רוצים לדעת על שת\"פ איתנו, צרו קשר אתנו"
         }
       ]
-    },
-    "error": {
-      "title": "עמוד לא נמצא"
     }
   }
 }

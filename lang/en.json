@@ -23,8 +23,8 @@
   },
   "page": {
     "contact": {
+      "title": "Contact Us",
       "address": "Address",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Cursus mattis molestie a iaculis at erat pellentesque. Nisi quis eleifend quam adipiscing vitae proin. Suspendisse potenti nullam ac tortor vitae. In nisl nisi scelerisque eu ultrices vitae auctor. Faucibus vitae aliquet nec ullamcorper sit amet risus. Arcu ac tortor dignissim convallis aenean et tortor at risus. Bibendum at varius vel pharetra. Fames ac turpis egestas integer eget. Mauris a diam maecenas sed enim ut sem. Urna duis convallis convallis tellus id interdum velit laoreet id.",
       "directions": "Directions",
       "email": "Email",
       "formDesc": "Need additional information or have a question or comment? Please feel free to leave a message, And our beloved team will answer you as soon as possible",
@@ -41,15 +41,14 @@
       "optional": "(Optional)",
       "phone": "Phone",
       "submit": "Submit",
-      "title": "Contact Us",
       "waze": "Waze",
       "yermiyahuStreet": "Yirmiyahu St 68, Jerusalem, Israel"
     },
     "gallery": {
-      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "title": "Gallery"
     },
     "index": {
+      "title": "The tastiest sushi & bagels in Jerusalem",
       "hero": {
         "body": "",
         "cta": "Explore our menu",
@@ -61,6 +60,7 @@
         "title": "Simple Way To Order Your Food"
       },
       "services": {
+        "title": "Our Awesome Services",
         "body": [
           {
             "desc": "We only use the freshest and highest quality ingredients.",
@@ -82,8 +82,7 @@
             "icon": "kashrut.svg",
             "title": "Kashrut"
           }
-        ],
-        "title": "Our Awesome Services"
+        ]
       },
       "story": {
         "body": "A story taking us to Japan and back. A blend of the freshest & tastiest ingredients with the strictest level of kashrut. Find out more about our amazing sushi!",
@@ -94,18 +93,17 @@
         "title": "What Our Sushi Loving Customers Say About Us",
         "viewAll": "View all",
         "onGoogle": "reviews on Google"
-      },
-      "title": "Homepage"
+      }
     },
     "menu": {
       "title": "Our Menu"
     },
     "story": {
+      "title": "Our Story",
       "ourGoal": "Our goal",
       "ourGoalIs": "was to create the freshest & tastiest sushi with the strictest kashrut requirements. We chose the most stringent kashrus ‘Eidah Hacharedit’ from Jerusalem and started our journey to create amazing sushi le’mehadrin.",
       "ourJourney": "Our journey",
-      "ourJourneyIs": "took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut.",
-      "title": "Our Story"
+      "ourJourneyIs": "took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut."
     },
     "error": {
       "title": "Page not found",

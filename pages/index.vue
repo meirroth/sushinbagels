@@ -3,7 +3,7 @@
     <Hero
       :full="true"
       img="/img/storefront.jpg"
-      title="The tastiest sushi & bagels in Jerusalem"
+      :title="$t('page.index.title')"
     >
       <div class="pb-20"></div>
       <!-- <nuxt-link class="btn mt-20" :to="localePath('menu')">
