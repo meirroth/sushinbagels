@@ -65,6 +65,7 @@ export default {
           telephone: '+972 2-544-3111',
           url: 'https://sushinbagels.com/',
           menu: 'https://sushinbagels.com/menu',
+          priceRange: '6 ILS - 55 ILS',
           acceptsReservations: 'true',
           address: {
             '@type': 'PostalAddress',
