@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero :full="true" img="/img/hero-bg-home.jpg">
+    <Hero :full="true" img="/img/hero-bg-home-alt.jpg">
       <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
       </nuxt-link>
@@ -114,7 +114,7 @@
             </div>
           </div>
           <Statically
-            src="/img/banner-bg.jpg"
+            src="/img/sushi-banner-bg.jpg"
             loading="lazy"
             width="1024"
             class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
@@ -127,10 +127,7 @@
             <h2 class="text-center lg:text-start mb-10">
               {{ $t('page.index.reviews.title') }}
             </h2>
-            <Reviews
-              :place-data="placeData"
-              class="lg:max-w-md mt-60 lg:mt-10"
-            />
+            <Reviews class="lg:max-w-md mt-60 lg:mt-10" />
           </div>
         </div>
         <Statically
@@ -156,7 +153,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
   head() {
     return {
@@ -169,9 +165,7 @@ export default {
       ]),
     }
   },
-  computed: mapGetters(['placeData']),
   mounted() {
-    // if (this.placeData === null) {}
     this.$store.dispatch('loadPlaceData')
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-800 rounded overflow-hidden relative h-60 py-8">
-    <div v-if="placeData">
+    <div v-if="reviews">
       <transition
         enter-class="opacity-0 translate-x-full"
         enter-to-class="opacity-100"
@@ -8,13 +8,13 @@
         leave-to-class="opacity-0 translate -translate-x-full"
       >
         <blockquote
-          :key="placeData.reviews[current].text"
+          :key="reviews[current].text"
           class="transition-all duration-500 absolute w-full px-8"
         >
           <div class="flex justify-between mb-4">
             <div class="flex me-2">
               <Avatar
-                :username="placeData.reviews[current].author_name"
+                :username="reviews[current].author_name"
                 shape="circle"
                 size="48"
                 class="me-4"
@@ -23,12 +23,12 @@
                 <div
                   class="inline-block title-font font-medium text-gray-200 mb-1"
                 >
-                  {{ capitalize(placeData.reviews[current].author_name) }}
+                  {{ capitalize(reviews[current].author_name) }}
                 </div>
                 <StarRating
                   :show-rating="true"
                   :fixed-points="1"
-                  :rating="placeData.reviews[current].rating"
+                  :rating="reviews[current].rating"
                   :increment="0.5"
                   :read-only="true"
                   :star-size="18"
@@ -40,7 +40,7 @@
             </div>
           </div>
           <p class="mb-4 text-gray-100 text-lg">
-            {{ placeData.reviews[current].text }}
+            {{ reviews[current].text }}
           </p>
         </blockquote>
       </transition>
@@ -82,9 +82,7 @@
         class="text-green group"
       >
         {{ $t('page.index.reviews.viewAll') }}
-        <span v-if="placeData && placeData.user_ratings_total > 5">{{
-          placeData.user_ratings_total + ' '
-        }}</span
+        <span v-if="userRatingsTotal > 5">{{ userRatingsTotal + ' ' }}</span
         >{{ $t('page.index.reviews.onGoogle') }}
         <ArrowRightIcon
           class="
@@ -99,6 +97,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import { ArrowRightIcon } from 'vue-tabler-icons'
 import { startCase, toLower } from 'lodash'
 import QuateIcon from '~/static/img/quate.svg?inline'
@@ -108,17 +107,12 @@ export default {
     ArrowRightIcon,
     QuateIcon,
   },
-  props: {
-    placeData: {
-      type: Object,
-      default: null, // this.$t('reviews')
-    },
-  },
   data() {
     return {
       current: 0,
     }
   },
+  computed: mapGetters(['reviews', 'userRatingsTotal']),
   mounted() {
     setInterval(this.cycleReviews, 6000)
   },
@@ -129,7 +123,7 @@ export default {
     // eslint-disable-next-line object-shorthand
     cycleReviews: function () {
       this.current++
-      if (this.current === this.placeData.reviews?.length) {
+      if (this.current === this.reviews.length) {
         this.current = 0
       }
     },

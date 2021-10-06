@@ -1,7 +1,7 @@
 export const state = () => ({
   scrolled: 0,
   isMobileNavOpen: false,
-  placeData: null,
+  reviews: null,
   rating: null,
   userRatingsTotal: null,
 })
@@ -14,7 +14,11 @@ export const mutations = {
     state.isMobileNavOpen = !state.isMobileNavOpen
   },
   SET_PLACE_DATA(state, placeData) {
-    state.placeData = placeData
+    state.reviews = placeData.reviews.filter((review) => {
+      return review.rating >= 4
+    })
+    state.rating = placeData.rating
+    state.userRatingsTotal = placeData.user_ratings_total
   },
 }
 // Actions
@@ -53,5 +57,7 @@ export const actions = {
 // Getters
 export const getters = {
   isMobileNavOpen: (state) => state.isMobileNavOpen,
-  placeData: (state) => state.placeData,
+  reviews: (state) => state.reviews,
+  rating: (state) => state.rating,
+  userRatingsTotal: (state) => state.userRatingsTotal,
 }
