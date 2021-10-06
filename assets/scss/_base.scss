@@ -15,7 +15,8 @@ select {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-green;
 }
 
-header .nav-link.nuxt-link-exact-active {
+.nav-link.nuxt-link-exact-active,
+.mobile-nav-link.nuxt-link-exact-active {
   @apply text-green;
 }
 
