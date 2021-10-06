@@ -114,5 +114,57 @@
       "action": "יידע אותנו",
       "email": "mailto:info@sushinbagels.com?subject=!מצאתי קישור שבור&body=היי,%0D%0A%0D%0Aמצאתי קישור שבור באתר שלך. הדף היה אמור להיות ב sushinbagels.com"
     }
+  },
+  "seo": {
+    "global": {
+      "keywords": "סושי, בייגל, רעב, אוכל, דגים, טרי, משלוח, ירושלים, רוממה, כשר, מהדרין, עידה החרדית, טעים, סושי מהדרין, סושי עידה החרדית"
+    },
+    "index": {
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "הבית שלך לסושי ובייגלים הכי טעימים ברוממה, ירושלים חתח ההשגחה של עידה החרדית"
+        }
+      ]
+    },
+    "menu": {
+      "title": "התפריט שלנו",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "תעיינו בתפריט הטעים והצבעוני שלנו עם מגוון רולים שונים מדהימים"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "גלריה",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "בואו ותראו תמונות מדהימות של הסושי שלנו ויצירתו "
+        }
+      ]
+    },
+    "story": {
+      "title": "הסיפור שלנו",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "הטיול שלנו לוקח אותנו לצד השני של העולם וחזור, תקראו עוד לגלות הסיפור המלא"
+        }
+      ]
+    },
+    "contact": {
+      "title": "צור קשר",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "רוצים להזמין או לשאול, דברו איתנו"
+        }
+      ]
+    },
+    "error": {
+      "title": "עמוד לא נמצא"
+    }
   }
 }

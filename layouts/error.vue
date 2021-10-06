@@ -1,7 +1,10 @@
 <template>
   <main>
-    <Hero img="/img/sushi-4.jpg"
-      ><h1 class="pt-16 text-white text-8xl">404</h1></Hero
+    <Hero img="/img/hero-bg-error.jpg"
+      ><h1 v-if="error.statusCode === 404" class="pt-16 text-white text-8xl">
+        404
+      </h1>
+      <h1 v-else>Uh oh</h1></Hero
     >
     <div class="relative z-20">
       <section class="container text-center mb-24">
@@ -25,7 +28,6 @@
           </i18n>
         </div>
         <div v-else>
-          <h3 class="font-bold text-2xl mb-6">Uh oh</h3>
           <p>An error occurred</p>
         </div>
       </section>

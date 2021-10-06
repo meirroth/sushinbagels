@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero img="/img/sushi-1.jpg" :title="$t('page.story.title')" />
+    <Hero img="/img/hero-bg-story.jpg" :title="$t('page.story.title')" />
     <div class="relative z-20 bg-gradient-to-t from-black via-black">
       <div class="container space-y-20">
         <section
@@ -12,7 +12,7 @@
             {{ $t('page.story.ourGoalIs') }}
           </p>
           <!-- <Statically
-            src="/img/sushi-1.jpg"
+            src="/img/hero-bg-story.jpg"
             width="432"
             loading="lazy"
             class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:ms-10"
@@ -23,7 +23,7 @@
           class="flex flex-col-reverse lg:flex-row justify-between"
         >
           <!-- <Statically
-            src="/img/sushi-2.jpg"
+            src="/img/hero-bg-home.jpg"
             width="432"
             loading="lazy"
             class="w-full lg:w-1/4 h-auto mt-10 lg:mt-0 lg:me-10"
@@ -36,7 +36,7 @@
       </div>
       <!-- <div class="w-full h-96 xl:max-h-650 xl:h-screen relative mt-20">
         <Statically
-          src="/img/outside-shop.jpg"
+          src="/img/hero-bg-contact.jpg"
           width="1536"
           loading="lazy"
           class="absolute inset-0 object-cover w-full h-full"
@@ -49,9 +49,12 @@
 <script>
 export default {
   head() {
-    return {
-      title: this.$t('page.story.title'),
-    }
+    return this.$createSeo('story', [
+      {
+        name: 'og:image',
+        content: '/img/hero-bg-story.jpg',
+      },
+    ])
   },
 }
 </script>

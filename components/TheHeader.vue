@@ -30,6 +30,7 @@
                     class="nav-link font-medium group"
                     >{{ $t('nav.orderNow') }}
                     <ExternalLinkIcon
+                      aria-label="External link"
                       size="16"
                       class="
                         group-hover:opacity-80
@@ -38,7 +39,9 @@
                         inline
                         absolute
                         -right-5
+                        rtl:right-auto rtl:-left-5 rtl:-scale-x-1
                         h-full
+                        pointer-events-none
                       "
                   /></a>
                 </li>

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero img="/img/sushi-4.jpg" :title="$t('page.contact.title')" />
+    <Hero img="/img/hero-bg-contact.jpg" :title="$t('page.contact.title')" />
     <div class="relative z-20">
       <section class="container flex lg:flex-nowrap flex-wrap">
         <div
@@ -171,9 +171,12 @@
 <script>
 export default {
   head() {
-    return {
-      title: this.$t('page.contact.title'),
-    }
+    return this.$createSeo('contact', [
+      {
+        name: 'og:image',
+        content: '/img/hero-bg-contact.jpg',
+      },
+    ])
   },
 }
 </script>

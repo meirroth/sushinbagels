@@ -1,4 +1,7 @@
 const isProd = process.env.NODE_ENV === 'production'
+// const isDev = !isProd
+const baseUrl = process.env.BASE_URL || 'https://sushinbagels.com'
+
 export default {
   server: {
     host: '0.0.0.0', // default: localhost
@@ -15,36 +18,88 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: (titleChunk) => {
-      // If undefined or blank then we don't need the hyphen
-      return titleChunk ? `${titleChunk} - SushiNBagels` : 'SushiNBagels'
-    },
-    meta: [
-      isProd ? {} : { name: 'robots', content: 'noindex' },
-      {
-        rel: 'dns-prefetch',
-        href: 'https://cdn.statically.io/',
-      },
-      {
-        rel: 'preconnect',
-        href: 'https://cdn.statically.io/',
-        crossorigin: '',
-      },
-      isProd
-        ? {
+    titleTemplate: (c) => (c ? `${c} - SushiNBagels` : 'SushiNBagels'),
+    meta: isProd
+      ? [
+          {
+            hid: 'prefetch-statically',
+            rel: 'dns-prefetch',
+            href: 'https://cdn.statically.io/',
+          },
+          {
+            hid: 'preconnect-statically',
+            rel: 'preconnect',
+            href: 'https://cdn.statically.io/',
+            crossorigin: '',
+          },
+          {
+            hid: 'prefetch-umami',
             rel: 'dns-prefetch',
             href: 'https://umami.meir.io/',
-          }
-        : {},
-      isProd
-        ? {
+          },
+          {
+            hid: 'preconnect-umami',
             rel: 'preconnect',
             href: 'https://umami.meir.io/',
             crossorigin: '',
-          }
-        : {},
-    ],
+          },
+        ]
+      : [{ hid: 'noindex', name: 'robots', content: 'noindex' }],
+
+    // https://vue-meta.nuxtjs.org/api/#dangerouslydisablesanitizersbytagid
+    __dangerouslyDisableSanitizersByTagID: {
+      schema: ['innerHTML'],
+    },
     script: [
+      {
+        hid: 'schema',
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          '@context': 'http://schema.org/',
+          '@type': 'Restaurant',
+          '@id': 'https://sushinbagels.com/',
+          name: 'SushiNBagels',
+          image: 'https://sushinbagels.com/img/hero-bg-contact.jpg',
+          logo: 'https://sushinbagels.com/img/logo.jpg',
+          email: 'info@sushinbagels.com',
+          telephone: '+972 2-544-3111',
+          url: 'https://sushinbagels.com/',
+          menu: 'https://sushinbagels.com/menu',
+          acceptsReservations: 'true',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Yirmiyahu St 68',
+            addressLocality: 'Jerusalem',
+            addressRegion: 'Israel',
+            addressCountry: 'Israel',
+          },
+          openingHoursSpecification: [
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday'],
+              opens: '11:00',
+              closes: '22:00',
+            },
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Thursday'],
+              opens: '11:00',
+              closes: '23:00',
+            },
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Saturday'],
+              opens: '22:30',
+              closes: '00:30',
+            },
+          ],
+          sameAs: [
+            'https://www.facebook.com/sushinbagels/',
+            'https://www.instagram.com/sushinbagels/',
+          ],
+        }),
+      },
+    ].concat(
       isProd
         ? {
             hid: 'umami',
@@ -54,8 +109,8 @@ export default {
             'data-website-id': '3a64289e-7ed6-4b39-b1ff-cce4f2687481',
             'data-domains': 'sushinbagels.com',
           }
-        : {},
-    ],
+        : []
+    ),
     bodyAttrs: {
       class: 'min-h-screen text-white leading-relaxed antialiased',
     },
@@ -67,11 +122,12 @@ export default {
   // Tailwind CSS configuration
   tailwindcss: {
     cssPath: '~/assets/scss/tailwind.scss',
-    // exposeConfig: !isProd,
+    // exposeConfig: isDev,
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/vue-prototype-extensions.js',
     { src: '~/plugins/lightgallery.client.js', mode: 'client' },
     { src: '~/plugins/flipbook.client.js', mode: 'client' },
   ],
@@ -105,14 +161,20 @@ export default {
         meta: {
           name: 'SushiNBagels',
           author: 'Meir Roth',
-          description: 'Beyond Sushi',
           theme_color: '#92c020',
+          ogSiteName: 'SushiNBagels',
+          ogHost: `${baseUrl}/`,
+          ogImage: {
+            path: 'img/hero-bg-home.jpg',
+          },
+          twitterCard: 'summary',
           viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
         },
         manifest: {
           name: 'SushiNBagels',
           // short_name: 'SushiNBagels',
-          description: 'Beyond Sushi',
+          description:
+            'Your home for the tastiest sushi & Bagels in romema Jerusalem under the hashgocha of the Eidah Hachareidis',
           start_url: '/?pwa=1',
         },
       },
@@ -161,17 +223,16 @@ export default {
       // Sitemap https://sitemap.nuxtjs.org/
       '@nuxtjs/sitemap',
       {
-        hostname: 'https://sushinbagels.com',
+        hostname: baseUrl,
         i18n: true,
       },
     ],
   ],
 
   env: {
+    baseUrl,
     NETLIFY: process.env.NETLIFY,
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
-    // PLACES_API: process.env.PLACES_API,
-    // PLACES_API_KEY: process.env.PLACES_API_KEY,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
