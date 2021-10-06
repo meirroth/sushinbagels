@@ -31,7 +31,7 @@
           width="1536"
           alt=""
           class="absolute inset-0 w-full h-full object-cover filter z-0"
-          :class="full ? 'blur-sm' : 'blur'"
+          :class="{ blur: !full }"
         />
       </div>
       <div

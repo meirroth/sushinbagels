@@ -1,9 +1,9 @@
 <template>
   <main>
     <Hero :full="true" img="/img/hero-bg-home-alt.jpg">
-      <nuxt-link class="btn mt-20" :to="localePath('menu')">
+      <!-- <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
-      </nuxt-link>
+      </nuxt-link> -->
     </Hero>
     <div class="relative z-20 bg-gradient-to-t from-black via-black space-y-24">
       <section id="story">
