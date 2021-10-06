@@ -18,7 +18,6 @@
       :style="{
         opacity: imageOpacity,
       }"
-      aria-hidden="true"
     >
       <div
         class="h-full transition-transform ease-out duration-fast"
@@ -29,9 +28,9 @@
         <Statically
           :src="img"
           width="1536"
-          alt=""
+          aria-hidden="true"
           class="absolute inset-0 w-full h-full object-cover filter z-0"
-          :class="{ blur: !full }"
+          :class="full ? 'blur-sm' : 'blur'"
         />
       </div>
       <div

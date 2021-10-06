@@ -120,10 +120,11 @@
       "keywords": "Sushi, Bagels, healthy, food, fish, tasty, hungry, fresh, delivery, Jerusalem, romema, kosher, eidah hachareidis"
     },
     "index": {
+      "title": "The tastiest sushi & bagels in Jerusalem",
       "meta": [
         {
           "name": ["description", "og:description"],
-          "content": "Your home for the tastiest sushi & Bagels in romema Jerusalem under the hashgocha of the Eidah Hachareidis"
+          "content": "Your home for the tastiest sushi & Bagels in romema Jerusalem under the hashgocha of the Eidah Hachareidis. All of our food is created fresh and tasty to give you the perfect meal or snack."
         }
       ]
     },
@@ -132,7 +133,7 @@
       "meta": [
         {
           "name": ["description", "og:description"],
-          "content": "Explore our colorful and tasty menu with all different amazing types of rolls and delicacies"
+          "content": "Explore our colorful and tasty menu with all different amazing types of rolls and delicacies. We have on our menu all different types of sushi and different price range."
         }
       ]
     },
@@ -141,7 +142,7 @@
       "meta": [
         {
           "name": ["description", "og:description"],
-          "content": "Check out our amazing photos of our own sushi and its creation"
+          "content": "Check out our amazing photos of our own sushi and its creation. We try to take as many pictures of our delicious sushi and update all the time."
         }
       ]
     },
@@ -150,7 +151,7 @@
       "meta": [
         {
           "name": ["description", "og:description"],
-          "content": "Our journey takes us around the world and back, read more to find out"
+          "content": "Our journey takes us around the world and back. The journey to creating sushi under the bedatz is s long and interesting one. Read more to find out."
         }
       ]
     },
@@ -159,7 +160,7 @@
       "meta": [
         {
           "name": ["description", "og:description"],
-          "content": "Want to order or find out more, get in touch"
+          "content": "Want to find out more about our sushi, make a large order or want to find out about working with us, just get in touch."
         }
       ]
     }

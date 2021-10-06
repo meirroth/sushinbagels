@@ -1,36 +1,32 @@
 <template>
   <main>
-    <Hero :full="true" img="/img/hero-bg-home-alt.jpg">
+    <Hero
+      :full="true"
+      img="/img/storefront.jpg"
+      title="The tastiest sushi & bagels in Jerusalem"
+    >
+      <div class="pb-20"></div>
       <!-- <nuxt-link class="btn mt-20" :to="localePath('menu')">
         {{ $t('page.index.hero.cta') }}
       </nuxt-link> -->
     </Hero>
     <div class="relative z-20 bg-gradient-to-t from-black via-black space-y-24">
       <section id="story">
-        <div
-          class="
-            container
-            flex flex-col-reverse
-            lg:flex-row lg:items-center lg:space-y-0
-          "
-        >
-          <div class="w-full lg:w-5/12 pe-0 lg:pe-16 text-center lg:text-start">
-            <h2 class="mb-10">{{ $t('page.index.story.title') }}</h2>
-            <p class="text-lg">
-              {{ $t('page.index.story.body') }}
-            </p>
-            <nuxt-link class="mt-10 btn" :to="localePath('story')">
-              {{ $t('page.index.story.cta') }}
-            </nuxt-link>
-          </div>
-          <div class="w-full lg:w-7/12 mb-8 lg:mb-0">
-            <Statically
-              src="/img/404A7916-removebg-s.png"
-              width="1024"
-              alt="Sushi plater"
-              class="object-contain w-full h-full"
-            />
-          </div>
+        <div class="container text-center relative -mt-60">
+          <Statically
+            src="/img/sushi-roll-2.png"
+            width="1280"
+            hight="298"
+            alt="Sushi roll"
+            class="pb-24 w-full max-w-screen-xl mx-auto"
+          />
+          <h2 class="mb-10">{{ $t('page.index.story.title') }}</h2>
+          <p class="text-lg max-w-screen-md mx-auto">
+            {{ $t('page.index.story.body') }}
+          </p>
+          <nuxt-link class="mt-10 btn" :to="localePath('story')">
+            {{ $t('page.index.story.cta') }}
+          </nuxt-link>
         </div>
       </section>
       <section id="services">
@@ -74,7 +70,8 @@
             <div class="w-full lg:w-1/2 flex justify-center">
               <Statically
                 src="/img/tabit-mockup.png"
-                width="460"
+                width="468"
+                hight="850"
                 loading="lazy"
                 alt="Ordering app"
                 class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"
@@ -84,8 +81,8 @@
               class="
                 w-full
                 lg:w-1/2
-                pe-0
-                lg:pe-10
+                ps-0
+                lg:ps-10
                 text-center
                 lg:text-start
                 py-10
@@ -115,8 +112,9 @@
           </div>
           <Statically
             src="/img/sushi-banner-bg.jpg"
+            width="1331"
+            height="1007"
             loading="lazy"
-            width="1024"
             class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
           />
         </div>
@@ -132,7 +130,8 @@
         </div>
         <Statically
           src="/img/sushi-hand.png"
-          width="1024"
+          width="768"
+          height="621"
           loading="lazy"
           alt=""
           class="
@@ -156,7 +155,7 @@
 export default {
   head() {
     return {
-      title: null,
+      titleTemplate: (c) => (c ? `SushiNBagels - ${c}` : 'SushiNBagels'),
       ...this.$createSeo('index', [
         {
           name: 'og:image',

@@ -1,5 +1,4 @@
 const isProd = process.env.NODE_ENV === 'production'
-// const isDev = !isProd
 const baseUrl = process.env.BASE_URL || 'https://sushinbagels.com'
 
 export default {
@@ -7,16 +6,19 @@ export default {
     host: '0.0.0.0', // default: localhost
   },
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  // ssr: true,
-
-  // Target: https://go.nuxtjs.dev/config-target
+  // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  // Env (https://nuxtjs.org/api/configuration-env/)
+  env: {
+    baseUrl,
+    NETLIFY: process.env.NETLIFY,
+    CONTEXT: process.env.CONTEXT,
+    URL: process.env.URL,
+    DEPLOY_URL: process.env.DEPLOY_URL,
+  },
+
+  // Global page headers: (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: (c) => (c ? `${c} - SushiNBagels` : 'SushiNBagels'),
     meta: isProd
@@ -117,127 +119,124 @@ export default {
     },
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  // Auto import components: (https://go.nuxtjs.dev/config-components)
+  components: true,
+
+  // Loading Progress Bar (https://nuxtjs.org/docs/features/loading/)
+  loading: { color: '#92C020', throttle: 400 },
+
+  // Global CSS: (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/scss/main.scss'],
 
-  // Tailwind CSS configuration
+  // Tailwind CSS configuration (https://tailwindcss.nuxtjs.org)
   tailwindcss: {
     cssPath: '~/assets/scss/tailwind.scss',
-    // exposeConfig: isDev,
   },
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  // Plugins to run before rendering page: (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~/plugins/vue-prototype-extensions.js',
+    { src: '~/plugins/vue-prototype-extensions.js' },
     { src: '~/plugins/lightgallery.client.js', mode: 'client' },
     { src: '~/plugins/flipbook.client.js', mode: 'client' },
   ],
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  // Modules for dev and build (recommended): (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxtjs/tailwindcss',
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    [
-      // Google fonts https://google-fonts.nuxtjs.org/setup
-      '@nuxtjs/google-fonts',
-      {
-        download: true,
-        outputDir: '~',
-        fontsDir: 'static/fonts',
-        stylePath: 'assets/scss/_fonts.scss',
-        fontsPath: '/fonts',
-        display: 'swap',
-        families: {
-          Heebo: [400, 500, 600, 700],
-          Kalam: [400, 700],
-        },
-      },
-    ],
-    ['@nuxtjs/svg'],
-    [
-      // Nuxt PWA https://pwa.nuxtjs.org/icon
-      '@nuxtjs/pwa',
-      {
-        meta: {
-          name: 'SushiNBagels',
-          author: 'Meir Roth',
-          theme_color: '#92c020',
-          ogSiteName: 'SushiNBagels',
-          ogHost: `${baseUrl}/`,
-          ogImage: {
-            path: 'img/hero-bg-home.jpg',
-          },
-          twitterCard: 'summary',
-          viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-        },
-        manifest: {
-          name: 'SushiNBagels',
-          // short_name: 'SushiNBagels',
-          description:
-            'Your home for the tastiest sushi & Bagels in romema Jerusalem under the hashgocha of the Eidah Hachareidis',
-          start_url: '/?pwa=1',
-        },
-      },
-    ],
+    // '@nuxtjs/eslint-module',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/svg',
+    '@nuxtjs/pwa',
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    [
-      // i18n https://i18n.nuxtjs.org
-      '@nuxtjs/i18n',
-      {
-        seo: false,
-        lazy: true,
-        langDir: 'lang/',
-        defaultLocale: 'en',
-        locales: [
-          {
-            code: 'en',
-            iso: 'en-US',
-            name: 'English',
-            dir: 'ltr',
-            file: 'en.json',
-          },
-          {
-            code: 'he',
-            iso: 'he-IL',
-            name: 'עברית',
-            dir: 'rtl',
-            file: 'he.json',
-          },
-        ],
-        vueI18n: {
-          fallbackLocale: 'en',
-        },
-        baseUrl: 'https://sushinbagels.com',
-      },
-    ],
-    [
-      '@nuxtjs/axios',
-      {
-        baseURL: '/',
-      },
-    ],
-    [
-      // Sitemap https://sitemap.nuxtjs.org/
-      '@nuxtjs/sitemap',
-      {
-        hostname: baseUrl,
-        i18n: true,
-      },
-    ],
-  ],
+  // Modules: (https://go.nuxtjs.dev/config-modules)
+  modules: ['@nuxtjs/i18n', '@nuxtjs/axios', '@nuxtjs/sitemap'],
 
-  env: {
-    baseUrl,
-    NETLIFY: process.env.NETLIFY,
-    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
+  // Google fonts (https://google-fonts.nuxtjs.org/options/)
+  googleFonts: {
+    download: true,
+    outputDir: '~',
+    fontsDir: 'static/fonts',
+    stylePath: 'assets/scss/_fonts.scss',
+    fontsPath: '/fonts',
+    display: 'swap',
+    families: {
+      Heebo: [400, 500, 600, 700],
+      Kalam: [400, 700],
+    },
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  // Nuxt PWA (https://pwa.nuxtjs.org/)
+  pwa: {
+    meta: {
+      name: 'SushiNBagels',
+      author: 'Meir Roth',
+      theme_color: '#92c020',
+      ogSiteName: 'SushiNBagels',
+      ogHost: `${baseUrl}/`,
+      ogImage: {
+        path: 'img/hero-bg-home.jpg',
+      },
+      twitterCard: 'summary',
+      viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
+    },
+    manifest: {
+      name: 'SushiNBagels',
+      short_name: 'SushiNBagels',
+      description:
+        'Your home for the tastiest sushi & Bagels in romema Jerusalem under the hashgocha of the Eidah Hachareidis',
+      start_url: '/?pwa=1',
+    },
+  },
+
+  // i18n (https://i18n.nuxtjs.org)
+  i18n: {
+    seo: false,
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+        dir: 'ltr',
+        file: 'en.json',
+      },
+      {
+        code: 'he',
+        iso: 'he-IL',
+        name: 'עברית',
+        dir: 'rtl',
+        file: 'he.json',
+      },
+    ],
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+    baseUrl,
+  },
+
+  // Axios (https://axios.nuxtjs.org/)
+  axios: {
+    baseURL: '/',
+  },
+
+  // Sitemap (https://sitemap.nuxtjs.org/)
+  sitemap: {
+    hostname: baseUrl,
+    i18n: true,
+  },
+
+  // Build Configuration: (https://go.nuxtjs.dev/config-build)
   build: {
+    // https://www.voorhoede.nl/en/blog/10x-faster-nuxt-builds-on-netlify/#optimise-html-minification
+    html: {
+      minify: {
+        minifyCSS: false,
+        minifyJS: false,
+      },
+    },
     postcss: {
       order: 'presetEnvAndCssnanoLast',
       plugins: {
@@ -260,13 +259,10 @@ export default {
     },
   },
 
-  // https://nuxtjs.org/docs/directory-structure/nuxt-config/#generate
+  // For 404 page to work on Netlify (https://nuxtjs.org/docs/directory-structure/nuxt-config/#generate)
   generate: {
     fallback: true,
   },
-
-  // https://nuxtjs.org/docs/2.x/features/loading
-  loading: { color: '#92C020', throttle: 400 },
 
   telemetry: false,
 }

@@ -2,7 +2,14 @@
   <footer class="pb-12 pt-24">
     <div class="container">
       <nav
-        class="flex flex-wrap text-center lg:text-start space-y-4 lg:space-y-0"
+        class="
+          flex flex-wrap
+          text-center
+          lg:text-start
+          space-y-4
+          lg:space-y-0
+          pb-12
+        "
       >
         <div class="w-full lg:w-2/5">
           <div class="flex justify-center lg:justify-start mb-6">
@@ -130,15 +137,17 @@
           </ul>
         </div>
       </nav>
-      <div class="pt-10 text-sm text-gray-400 text-center ltr">
-        <p>© {{ year }} SushiNBagel a product of David Ehrentreu</p>
-        <p class="pt-4">
+      <div class="text-sm text-gray-400 text-center ltr">
+        <p class="pb-6">
+          © {{ year }} SushiNBagel a product of David Ehrentreu
+        </p>
+        <p>
           {{ $t('footer.createdWith') }}
           <span class="sr-only">{{ $t('footer.love') }}</span>
           <HeartIcon
             size="16"
             class="text-green inline-block"
-            :aria-hidden="true"
+            aria-hidden="true"
           />
           {{ $t('footer.by') }}
           <a

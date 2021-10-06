@@ -14,14 +14,14 @@ const StaticallyPath = ({
   const allParams = params.length ? params.join() : ''
 
   if (process.env.NETLIFY) {
-    srcURL = `https://cdn.statically.io/img/${
-      process.env.DEPLOY_PRIME_URL.replace(/^https?:\/\//, '').split('/')[0]
-    }/`
+    const baseUrl =
+      process.env.CONTEXT === 'production'
+        ? process.env.URL
+        : process.env.DEPLOY_URL
 
-    srcURL = srcURL.replace(
-      'main--sushinbagels.netlify.app',
-      'sushinbagels.com'
-    )
+    srcURL = `https://cdn.statically.io/img/${
+      baseUrl.replace(/^https?:\/\//, '').split('/')[0]
+    }/`
 
     if (allParams !== '') {
       srcURL += `${allParams}`
