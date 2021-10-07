@@ -7,8 +7,15 @@ const StaticallyPath = ({
 }) => {
   let srcURL = ''
   const params = []
-  width && params.push(`w=${width}`)
-  height && params.push(`h=${height}`)
+  // Use either width or height, whichever is greater
+  width && height
+    ? width >= height
+      ? params.push(`w=${width}`)
+      : params.push(`h=${height}`)
+    : width
+    ? params.push(`w=${width}`)
+    : height && params.push(`h=${height}`)
+
   format && params.push(`f=${format}`)
   quality !== 85 && params.push(`q=${quality}`)
   const allParams = params.length ? params.join() : ''
