@@ -14,10 +14,11 @@ textarea,
 select {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-green;
 }
-
-.nav-link.nuxt-link-exact-active,
-.mobile-nav-link.nuxt-link-exact-active {
-  @apply text-green;
+.nuxt-link-exact-active:not(.lang-switcher) {
+  &.nav-link,
+  &.mobile-nav-link {
+    @apply text-green;
+  }
 }
 
 .btn {
