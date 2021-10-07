@@ -1,24 +1,23 @@
 <template>
   <main>
-    <Hero
-      :full="true"
-      img="/img/storefront.jpg"
-      :title="$t('page.index.title')"
-    >
-      <div class="pb-20"></div>
-      <!-- <nuxt-link class="btn mt-20" :to="localePath('menu')">
-        {{ $t('page.index.hero.cta') }}
-      </nuxt-link> -->
-    </Hero>
+    <Hero :full="true" img="/img/storefront.jpg" />
     <div class="relative z-20 bg-gradient-to-t from-black via-black space-y-24">
       <section id="story">
-        <div class="container text-center relative -mt-60">
+        <div class="container relative text-center">
           <Statically
             src="/img/sushi-roll-2.png"
             width="1280"
             height="298"
             alt="Sushi roll"
-            class="pb-24 w-full max-w-screen-xl mx-auto"
+            class="
+              absolute
+              left-1/2
+              bottom-full
+              -translate-x-1/2
+              pb-24
+              w-full
+              max-w-screen-xl
+            "
           />
           <h2 class="mb-10">{{ $t('page.index.story.title') }}</h2>
           <p class="text-lg max-w-screen-md mx-auto">

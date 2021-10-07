@@ -48,7 +48,6 @@
       "title": "Gallery"
     },
     "index": {
-      "title": "The tastiest sushi & bagels in Jerusalem",
       "hero": {
         "body": "",
         "cta": "Explore our menu",
@@ -115,10 +114,10 @@
   },
   "seo": {
     "global": {
-      "keywords": "Sushi, Bagels, healthy, food, fish, tasty, hungry, fresh, delivery, Jerusalem, romema, kosher, eidah hachareidis"
+      "keywords": "Sushi and Bagels, tasty sushi, fresh sushi, bagels in Jerusalem, sushi in Jerusalem, sushi in romema, kosher sushi, eidah hachareidis, delivery, hungry, healthy, food, fish, SushiNBagels"
     },
     "index": {
-      "title": "The tastiest sushi & bagels in Jerusalem",
+      "title": "The tastiest Sushi & Bagels in Jerusalem!",
       "meta": [
         {
           "name": ["description", "og:description"],
