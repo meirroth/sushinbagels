@@ -42,9 +42,9 @@
           </ul>
         </div>
         <div class="w-full lg:w-1/5">
-          <h5 class="font-bold text-base mt-2 mb-6">
+          <h4 class="font-bold text-base mt-2 mb-6">
             {{ $t('footer.cravingSushi') }}
-          </h5>
+          </h4>
           <ul>
             <li class="mb-4 text-sm">
               <nuxt-link class="link" :to="localePath('menu')">
@@ -68,9 +68,9 @@
           </ul>
         </div>
         <div class="w-full lg:w-1/5">
-          <h5 class="font-bold text-base mt-2 mb-6">
+          <h4 class="font-bold text-base mt-2 mb-6">
             {{ $t('footer.information') }}
-          </h5>
+          </h4>
           <ul>
             <li class="mb-4 text-sm">
               <nuxt-link class="link" :to="localePath('gallery')">
@@ -90,9 +90,9 @@
           </ul>
         </div>
         <div class="w-full lg:w-1/5">
-          <h5 class="font-bold text-base mt-2 mb-6">
+          <h4 class="font-bold text-base mt-2 mb-6">
             {{ $t('footer.stayConnected') }}
-          </h5>
+          </h4>
           <ul class="flex flex-row justify-center lg:justify-start lg:flex-col">
             <li class="lg:mb-4 text-sm">
               <a class="link" href="https://www.facebook.com/sushinbagels/"

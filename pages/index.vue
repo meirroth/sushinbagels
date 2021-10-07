@@ -114,6 +114,7 @@
             width="1331"
             height="1007"
             loading="lazy"
+            alt="Sushi rolls"
             class="absolute inset-0 z-0 object-cover w-full h-full opacity-40"
           />
         </div>
@@ -132,7 +133,7 @@
           width="768"
           height="621"
           loading="lazy"
-          alt=""
+          alt="Hand holding sushi"
           class="
             absolute
             end-0
