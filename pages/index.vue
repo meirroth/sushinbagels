@@ -1,6 +1,8 @@
 <template>
   <main>
-    <Hero :full="true" img="/img/storefront.jpg" />
+    <Hero :full="true" img="/img/storefront.jpg"
+      ><h1 class="sr-only">{{ $t('seo.index.title') }}</h1></Hero
+    >
     <div class="relative z-20 bg-gradient-to-t from-black via-black space-y-24">
       <section id="story">
         <div class="container relative text-center">
@@ -8,7 +10,7 @@
             src="/img/sushi-roll-2.png"
             width="1280"
             height="298"
-            alt="Sushi roll"
+            alt="Sushi rolls"
             class="
               absolute
               left-1/2
@@ -40,6 +42,7 @@
                       $t(`page.index.services.body[${i - 1}].icon`) +
                       '?data')
                   "
+                  alt=""
                   aria-hidden="true"
                   class="absolute object-contain w-full h-full select-none"
                 />

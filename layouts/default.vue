@@ -8,7 +8,7 @@
       :is-open="isMobileNavOpen"
       @closeMobileNav="toggleMobileNav()"
     />
-    <Nuxt id="main" tab-index="-1" aria-label="Main Content" />
+    <Nuxt id="main" tabindex="-1" aria-label="Main Content" />
     <TheFooter />
   </div>
 </template>

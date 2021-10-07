@@ -2,7 +2,6 @@
   <div
     v-show="isVisible"
     ref="navDialog"
-    aria-label="Dialog"
     class="container lg:hidden fixed inset-0 overflow-y-auto z-30"
   >
     <transition
@@ -17,7 +16,6 @@
     >
       <div
         v-show="isOpen"
-        aria-label="DialogOverlay"
         class="fixed inset-0 bg-black bg-opacity-70"
         @click="$emit('closeMobileNav')"
       />
@@ -44,7 +42,7 @@
         "
       >
         <header class="flex items-center justify-between p-4">
-          <h2 aria-label="DialogTitle" class="sr-only">Site Menu</h2>
+          <span class="sr-only">Site Menu</span>
           <button
             class="ml-auto group"
             title="Close menu"
