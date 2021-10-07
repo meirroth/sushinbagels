@@ -18,7 +18,8 @@
         <div class="max-w-8xl mx-auto">
           <div class="flex items-center justify-between ltr lg:dir">
             <nuxt-link class="flex items-center" :to="localePath('index')">
-              <Logo alt="SushiNBagels" class="h-8" />
+              <Logo aria-hidden="true" class="h-8" />
+              <span class="sr-only">SushiNBagels</span>
             </nuxt-link>
             <nav class="hidden lg:block" aria-label="Site Navigation">
               <ul class="flex">

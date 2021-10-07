@@ -12,6 +12,9 @@ module.exports = {
   plugins: [],
   // add your custom rules here
   rules: {
-    'vue/no-v-html': 'warn',
+    'vue/no-v-html': 'error',
+    'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },
 }

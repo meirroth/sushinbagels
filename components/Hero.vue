@@ -18,7 +18,6 @@
       :style="{
         opacity: imageOpacity,
       }"
-      aria-hidden="true"
     >
       <div
         class="h-full transition-transform ease-out duration-fast"

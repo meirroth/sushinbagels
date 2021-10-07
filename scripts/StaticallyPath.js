@@ -7,21 +7,28 @@ const StaticallyPath = ({
 }) => {
   let srcURL = ''
   const params = []
-  width && params.push(`w=${width}`)
-  height && params.push(`h=${height}`)
+  // Use either width or height, whichever is greater
+  width && height
+    ? width >= height
+      ? params.push(`w=${width}`)
+      : params.push(`h=${height}`)
+    : width
+    ? params.push(`w=${width}`)
+    : height && params.push(`h=${height}`)
+
   format && params.push(`f=${format}`)
   quality !== 85 && params.push(`q=${quality}`)
   const allParams = params.length ? params.join() : ''
 
   if (process.env.NETLIFY) {
-    srcURL = `https://cdn.statically.io/img/${
-      process.env.DEPLOY_PRIME_URL.replace(/^https?:\/\//, '').split('/')[0]
-    }/`
+    const baseUrl =
+      process.env.CONTEXT === 'production'
+        ? process.env.URL
+        : process.env.DEPLOY_URL
 
-    srcURL = srcURL.replace(
-      'main--sushinbagels.netlify.app',
-      'sushinbagels.com'
-    )
+    srcURL = `https://cdn.statically.io/img/${
+      baseUrl.replace(/^https?:\/\//, '').split('/')[0]
+    }/`
 
     if (allParams !== '') {
       srcURL += `${allParams}`

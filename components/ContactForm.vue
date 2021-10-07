@@ -164,8 +164,8 @@
         Something went wrong.<br /><a
           v-if="mailto !== ''"
           :href="mailto"
-          class="link underline"
           target="_blank"
+          class="link underline"
           >Click here to send this message via email</a
         >
       </p>

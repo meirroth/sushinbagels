@@ -29,14 +29,14 @@
               >
                 <a
                   href="/pdf/digital-menu-1.1.pdf"
-                  download="SushiNBagels-Menu"
                   target="_blank"
-                  class="p-1 rounded hover:bg-gray-600 transition-colors"
+                  download="SushiNBagels-Menu"
                   role="button"
                   title="Download PDF"
                   aria-label="Download PDF"
                   aria-haspopup="false"
                   aria-disabled="false"
+                  class="p-1 rounded hover:bg-gray-600 transition-colors"
                 >
                   <DownloadIcon aria-hidden="true" />
                 </a>

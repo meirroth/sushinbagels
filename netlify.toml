@@ -6,7 +6,14 @@
   command = '''
     sed -i "s|PLACES_API_KEY|$PLACES_API_KEY|g" netlify.toml && \
     npm run generate'''
-  environment = { NODE_VERSION = "13" }
+
+# Skip Optional Dependencies
+# Turn Off Logging
+# https://dev.to/lukeocodes/make-nuxt-js-go-brrrrrrrr-30-minute-to-1-minute-builds-on-netlify-f6e
+[build.environment]
+  NODE_VERSION = "13"
+  NPM_FLAGS = "--no-optional"
+  CI = "1"
 
 [[redirects]]
   from = "/api/places*"

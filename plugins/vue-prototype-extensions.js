@@ -7,14 +7,16 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
   return Object.entries(seo[slug]).reduce((acc, [key, actualValue]) => {
     const defaultMetaArray = [
       {
-        name: 'keywords',
-        content: seo.global.keywords,
-      },
-      {
         name: 'og:title',
         content: seo[slug].title
-          ? `${seo[slug].title} - SushiNBagels`
+          ? slug === 'index'
+            ? `SushiNBagels - ${seo[slug].title}`
+            : `${seo[slug].title} - SushiNBagels`
           : 'SushiNBagels',
+      },
+      {
+        name: 'keywords',
+        content: seo.global.keywords,
       },
       {
         name: 'og:url',

@@ -1,5 +1,5 @@
 <template>
-  <img :src="path" />
+  <img :src="path" :width="width" :height="height" class="select-none" />
 </template>
 <script>
 import StaticallyPath from '~/scripts/StaticallyPath'
