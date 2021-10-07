@@ -22,32 +22,34 @@ export default {
   head: {
     titleTemplate: (c) => (c ? `${c} - SushiNBagels` : 'SushiNBagels'),
     meta: isProd
+      ? []
+      : [{ hid: 'noindex', name: 'robots', content: 'noindex' }],
+    link: isProd
       ? [
           {
             hid: 'prefetch-statically',
             rel: 'dns-prefetch',
-            href: 'https://cdn.statically.io/',
+            href: 'https://cdn.statically.io',
           },
           {
             hid: 'preconnect-statically',
             rel: 'preconnect',
-            href: 'https://cdn.statically.io/',
+            href: 'https://cdn.statically.io',
             crossorigin: '',
           },
           {
             hid: 'prefetch-umami',
             rel: 'dns-prefetch',
-            href: 'https://umami.meir.io/',
+            href: 'https://umami.meir.io',
           },
-          {
-            hid: 'preconnect-umami',
-            rel: 'preconnect',
-            href: 'https://umami.meir.io/',
-            crossorigin: '',
-          },
+          // {
+          //   hid: 'preconnect-umami',
+          //   rel: 'preconnect',
+          //   href: 'https://umami.meir.io',
+          //   crossorigin: '',
+          // },
         ]
-      : [{ hid: 'noindex', name: 'robots', content: 'noindex' }],
-
+      : [],
     // https://vue-meta.nuxtjs.org/api/#dangerouslydisablesanitizersbytagid
     __dangerouslyDisableSanitizersByTagID: {
       schema: ['innerHTML'],
