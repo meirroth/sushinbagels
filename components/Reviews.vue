@@ -62,7 +62,7 @@
       </div>
     </div>
     <QuateIcon
-      alt="Quate"
+      aria-hidden="true"
       class="
         absolute
         block
@@ -123,9 +123,7 @@ export default {
     // eslint-disable-next-line object-shorthand
     cycleReviews: function () {
       this.current++
-      if (this.current === this.reviews.length) {
-        this.current = 0
-      }
+      this.reviews && this.current === this.reviews.length && (this.current = 0)
     },
     capitalize(text) {
       return startCase(toLower(text))

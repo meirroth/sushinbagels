@@ -35,16 +35,16 @@
             <div v-for="i in 4" :key="i" class="p-6 w-full sm:w-1/2 xl:w-1/4">
               <div class="relative w-1/3 mx-auto mb-6 pb-1/3">
                 <img
-                  class="absolute object-contain w-full h-full"
                   :src="
                     require('~/static/img/' +
                       $t(`page.index.services.body[${i - 1}].icon`) +
                       '?data')
                   "
-                  :alt="$t(`page.index.services.body[${i - 1}].title`)"
+                  aria-hidden="true"
+                  class="absolute object-contain w-full h-full select-none"
                 />
               </div>
-              <h3 class="my-6">
+              <h3 class="my-6 text-lg">
                 {{ $t(`page.index.services.body[${i - 1}].title`) }}
               </h3>
               <p class="text-sm">

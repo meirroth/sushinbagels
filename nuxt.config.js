@@ -257,6 +257,15 @@ export default {
           : false, // disable cssnano when not in production
       },
     },
+    // Automatically remove console statements from production build https://stackoverflow.com/a/64409635
+    terser: {
+      // https://github.com/terser/terser#compress-options
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
   },
 
   // For 404 page to work on Netlify (https://nuxtjs.org/docs/directory-structure/nuxt-config/#generate)

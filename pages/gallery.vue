@@ -25,6 +25,7 @@
               :src="image.thumb"
               width="437"
               height="291"
+              alt=""
               :loading="i > 9 ? 'lazy' : null"
               class="absolute object-cover w-full h-full"
             />

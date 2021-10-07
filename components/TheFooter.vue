@@ -14,30 +14,35 @@
         <div class="w-full lg:w-2/5">
           <div class="flex justify-center lg:justify-start mb-6">
             <nuxt-link :to="localePath('index')">
-              <Logo alt="SushiNBagels" class="h-8" />
+              <Logo aria-hidden="true" class="h-8" />
+              <span class="sr-only">SushiNBagels</span>
             </nuxt-link>
           </div>
           <ul>
             <li class="mb-4 text-sm">
-              <MailIcon size="20" class="inline-block me-1" /><a
-                class="link"
-                href="mailto:info&#64;sushinbagels&com"
+              <MailIcon
+                size="20"
+                aria-label="Email:"
+                class="inline-block me-1"
+              /><a class="link" href="mailto:info&#64;sushinbagels&com"
                 >info&#64;sushinbagels.com</a
               >
             </li>
             <li class="mb-4 text-sm">
-              <MapPinIcon size="20" class="inline-block me-1" /><nuxt-link
-                class="link"
-                :to="localePath('contact')"
+              <MapPinIcon
+                size="20"
+                aria-label="Store address:"
+                class="inline-block me-1"
+              /><nuxt-link class="link" :to="localePath('contact')"
                 >Yirmiyahu 68</nuxt-link
               >
             </li>
             <li class="text-sm">
-              <PhoneIcon size="20" class="inline-block me-1" /><a
-                class="link"
-                href="tel:+97225443111"
-                >02-544-3111</a
-              >
+              <PhoneIcon
+                size="20"
+                aria-label="Phone #:"
+                class="inline-block me-1"
+              /><a class="link" href="tel:+97225443111">02-544-3111</a>
             </li>
           </ul>
         </div>
@@ -53,10 +58,10 @@
             </li>
             <li class="mb-4 text-sm">
               <a
-                class="link"
                 href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
                 target="_blank"
                 rel="noopener nofollow"
+                class="link"
                 >{{ $t('nav.orderNow') }}</a
               >
             </li>
@@ -95,12 +100,15 @@
           </h4>
           <ul class="flex flex-row justify-center lg:justify-start lg:flex-col">
             <li class="lg:mb-4 text-sm">
-              <a class="link" href="https://www.facebook.com/sushinbagels/"
+              <a
+                href="https://www.facebook.com/sushinbagels/ "
+                target="_blank"
+                rel="noopener nofollow"
+                class="link"
                 ><BrandFacebookIcon
                   size="20"
+                  aria-hidden="true"
                   class="inline-block lg:me-1 lg:text-white"
-                  target="_blank"
-                  rel="noopener nofollow"
                 /><span class="hidden lg:inline-block">{{
                   $t('footer.facebook')
                 }}</span></a
@@ -108,12 +116,13 @@
             </li>
             <li class="lg:mb-4 mx-6 lg:mx-0 text-sm">
               <a
-                class="link"
                 href="https://www.instagram.com/sushinbagels/"
                 target="_blank"
                 rel="noopener nofollow"
+                class="link"
                 ><BrandInstagramIcon
                   size="20"
+                  aria-hidden="true"
                   class="inline-block lg:me-1 lg:text-white"
                 /><span class="hidden lg:inline-block">{{
                   $t('footer.instagram')
@@ -122,12 +131,13 @@
             </li>
             <li class="text-sm">
               <a
-                class="link"
                 href="https://wa.me/+97225443111?text=היי"
                 target="_blank"
                 rel="noopener nofollow"
+                class="link"
                 ><BrandWhatsappIcon
                   size="20"
+                  aria-hidden="true"
                   class="inline-block lg:me-1 lg:text-white"
                 /><span class="hidden lg:inline-block">{{
                   $t('footer.whatsapp')
@@ -146,8 +156,8 @@
           <span class="sr-only">{{ $t('footer.love') }}</span>
           <HeartIcon
             size="16"
-            class="text-green inline-block"
             aria-hidden="true"
+            class="text-green inline-block"
           />
           {{ $t('footer.by') }}
           <a

@@ -28,7 +28,7 @@
         <Statically
           :src="img"
           width="1536"
-          aria-hidden="true"
+          alt=""
           class="absolute inset-0 w-full h-full object-cover filter z-0"
           :class="full ? 'blur-sm' : 'blur'"
         />
