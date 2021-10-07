@@ -35,7 +35,6 @@ export default {
             hid: 'preconnect-statically',
             rel: 'preconnect',
             href: 'https://cdn.statically.io',
-            crossorigin: '',
           },
           {
             hid: 'prefetch-umami',
@@ -46,7 +45,6 @@ export default {
           //   hid: 'preconnect-umami',
           //   rel: 'preconnect',
           //   href: 'https://umami.meir.io',
-          //   crossorigin: '',
           // },
         ]
       : [],
