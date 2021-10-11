@@ -99,8 +99,9 @@
 <script>
 import { mapGetters } from 'vuex'
 import { ArrowRightIcon } from 'vue-tabler-icons'
-import { startCase, toLower } from 'lodash'
 import QuateIcon from '~/static/img/quate.svg?inline'
+const startCase = require('lodash/startCase')
+const toLower = require('lodash/toLower')
 export default {
   name: 'Reviews',
   components: {

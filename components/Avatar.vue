@@ -3,7 +3,7 @@
     :src="src"
     :width="size"
     :height="size"
-    :alt="username"
+    :alt="alt"
     loading="lazy"
     aria-hidden="true"
     :class="inline ? 'inline-block' : 'block'"
@@ -40,6 +40,10 @@ export default {
     initials: {
       type: String,
       default: null,
+    },
+    alt: {
+      type: String,
+      default: '',
     },
     inline: {
       type: Boolean,

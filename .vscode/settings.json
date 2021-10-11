@@ -1,7 +1,16 @@
 {
+  "eslint.validate": ["javascript", "vue"],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "css.validate": true,
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
+  "vetur.validation.template": true,
   "vetur.completion.tagCasing": "initial",
   "tailwindCSS.emmetCompletions": true,
   "i18n-ally.localesPaths": ["lang"],

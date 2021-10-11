@@ -8,9 +8,8 @@
         <div class="container relative text-center">
           <Statically
             src="/img/sushi-roll-2.png"
-            width="1280"
             height="298"
-            alt="Sushi rolls"
+            width="1280"
             class="
               absolute
               left-1/2
@@ -72,8 +71,6 @@
             <div class="w-full lg:w-1/2 flex justify-center">
               <Statically
                 src="/img/tabit-mockup.png"
-                width="468"
-                height="850"
                 loading="lazy"
                 alt="Ordering app"
                 class="max-h-450 lg:max-h-850 -mt-20 lg:-my-28 w-auto"

@@ -21,9 +21,9 @@ export default {
   // Global page headers: (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: (c) => (c ? `${c} - SushiNBagels` : 'SushiNBagels'),
-    meta: isProd
-      ? []
-      : [{ hid: 'noindex', name: 'robots', content: 'noindex' }],
+    meta: [{ name: 'format-detection', content: 'telephone=no' }].concat(
+      isProd ? [] : { hid: 'noindex', name: 'robots', content: 'noindex' }
+    ),
     link: isProd
       ? [
           {
@@ -41,11 +41,11 @@ export default {
             rel: 'dns-prefetch',
             href: 'https://umami.meir.io',
           },
-          // {
-          //   hid: 'preconnect-umami',
-          //   rel: 'preconnect',
-          //   href: 'https://umami.meir.io',
-          // },
+          {
+            hid: 'preconnect-umami',
+            rel: 'preconnect',
+            href: 'https://umami.meir.io',
+          },
         ]
       : [],
     // https://vue-meta.nuxtjs.org/api/#dangerouslydisablesanitizersbytagid
@@ -123,7 +123,7 @@ export default {
   components: true,
 
   // Loading Progress Bar (https://nuxtjs.org/docs/features/loading/)
-  loading: { color: '#92C020', throttle: 400 },
+  loading: false,
 
   // Global CSS: (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/scss/main.scss'],
