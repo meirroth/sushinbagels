@@ -28,7 +28,7 @@
                 "
               >
                 <a
-                  href="/pdf/digital-menu-1.1.pdf"
+                  href="/pdf/digital-menu-1.2.pdf"
                   target="_blank"
                   download="SushiNBagels-Menu"
                   role="button"
