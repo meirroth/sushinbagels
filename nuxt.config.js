@@ -126,12 +126,7 @@ export default {
   loading: false,
 
   // Global CSS: (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/scss/main.scss'],
-
-  // Tailwind CSS configuration (https://tailwindcss.nuxtjs.org)
-  tailwindcss: {
-    cssPath: '~/assets/scss/tailwind.scss',
-  },
+  css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page: (https://go.nuxtjs.dev/config-plugins)
   plugins: [
@@ -142,7 +137,7 @@ export default {
 
   // Modules for dev and build (recommended): (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    '@nuxtjs/tailwindcss',
+    '@nuxt/postcss8',
     // '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/svg',
@@ -157,7 +152,7 @@ export default {
     download: true,
     outputDir: '~',
     fontsDir: 'static/fonts',
-    stylePath: 'assets/scss/_fonts.scss',
+    stylePath: 'assets/css/_fonts.css',
     fontsPath: '/fonts',
     display: 'swap',
     families: {
@@ -240,9 +235,11 @@ export default {
     postcss: {
       order: 'presetEnvAndCssnanoLast',
       plugins: {
+        'postcss-import': {},
+        'tailwindcss/nesting': {},
         tailwindcss: {},
-        autoprefixer: {},
         'postcss-focus-visible': {},
+        autoprefixer: {},
         cssnano: isProd
           ? {
               preset: [
