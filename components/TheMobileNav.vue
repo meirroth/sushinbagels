@@ -30,16 +30,7 @@
     >
       <div
         v-show="isOpen"
-        class="
-          z-40
-          relative
-          my-6
-          rounded-xl
-          bg-gray-800
-          shadow-xl
-          transition-all
-          transform
-        "
+        class="z-40 relative my-6 rounded-xl bg-gray-800 shadow-xl transition-all"
       >
         <header class="flex items-center justify-between p-4">
           <span class="sr-only">Site Menu</span>
@@ -51,12 +42,7 @@
           >
             <XIcon
               size="30"
-              class="
-                text-gray-200
-                group-hover:text-green
-                transition-colors
-                ease-in-out
-              "
+              class="text-gray-200 group-hover:text-green transition-colors ease-in-out"
               aria-hidden="true"
             />
           </button>
@@ -135,7 +121,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .mobile-nav-link {
   @apply block py-3 px-8 hover:bg-gray-700 text-2xl font-semibold transition-colors ease-in-out;
 }

@@ -10,21 +10,13 @@
             src="/img/sushi-roll-2.png"
             height="298"
             width="1280"
-            class="
-              absolute
-              left-1/2
-              bottom-full
-              -translate-x-1/2
-              pb-24
-              w-full
-              max-w-screen-xl
-            "
+            class="absolute left-1/2 bottom-full -translate-x-1/2 pb-24 w-full max-w-screen-xl"
           />
           <h2 class="mb-10">{{ $t('page.index.story.title') }}</h2>
           <p class="text-lg max-w-screen-md mx-auto">
             {{ $t('page.index.story.body') }}
           </p>
-          <nuxt-link class="mt-10 btn" :to="localePath('story')">
+          <nuxt-link class="mt-10 btn inline-block" :to="localePath('story')">
             {{ $t('page.index.story.cta') }}
           </nuxt-link>
         </div>
@@ -59,14 +51,7 @@
       <section id="order" class="relative">
         <div class="mt-32 lg:my-40">
           <div
-            class="
-              container
-              flex flex-col
-              space-y-6
-              lg:flex-row lg:items-center lg:space-y-0
-              relative
-              z-10
-            "
+            class="container flex flex-col space-y-6 lg:flex-row lg:items-center lg:space-y-0 relative z-10"
           >
             <div class="w-full lg:w-1/2 flex justify-center">
               <Statically
@@ -77,15 +62,7 @@
               />
             </div>
             <div
-              class="
-                w-full
-                lg:w-1/2
-                ps-0
-                lg:ps-10
-                text-center
-                lg:text-start
-                py-10
-              "
+              class="w-full lg:w-1/2 ps-0 lg:ps-10 text-center lg:text-start py-10"
             >
               <h2 class="mb-10">{{ $t('page.index.order.title') }}</h2>
               <div
@@ -94,7 +71,7 @@
                 <a
                   href="/app.html"
                   target="_blank"
-                  class="btn-alt mt-10 mx-2.5"
+                  class="btn-alt inline-block mt-10 mx-2.5"
                 >
                   {{ $t('page.index.order.cta[0]') }}
                 </a>
@@ -102,7 +79,7 @@
                   href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
                   target="_blank"
                   rel="noopener nofollow"
-                  class="btn mt-10 mx-2.5"
+                  class="btn inline-block mt-10 mx-2.5"
                 >
                   {{ $t('page.index.order.cta[1]') }}
                 </a>
@@ -134,17 +111,7 @@
           height="621"
           loading="lazy"
           alt="Hand holding sushi"
-          class="
-            absolute
-            end-0
-            top-10
-            xl:top-auto xl:bottom-0
-            z-0
-            w-9/12
-            lg:w-1/2
-            max-w-3xl
-            rtl:-scale-x-1
-          "
+          class="absolute end-0 top-10 xl:top-auto xl:bottom-0 z-0 w-9/12 lg:w-1/2 max-w-3xl rtl:-scale-x-1"
         />
       </section>
     </div>

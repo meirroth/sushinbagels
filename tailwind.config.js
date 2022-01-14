@@ -8,18 +8,13 @@ const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  mode: 'jit',
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './components/**/*.{vue,js}',
-      './layouts/**/*.vue',
-      './pages/**/*.vue',
-      './plugins/**/*.{js,ts}',
-      './nuxt.config.{js,ts}',
-    ],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+  ],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -31,7 +26,7 @@ module.exports = {
         DEFAULT: '#92C020',
       },
       white: colors.white,
-      gray: colors.trueGray,
+      gray: colors.neutral,
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
@@ -60,9 +55,6 @@ module.exports = {
     extend: {
       fontSize: {
         0: 0,
-      },
-      boxShadow: {
-        white: '0px 10px 40px rgba(255, 255, 255, 0.4);',
       },
       spacing: {
         '1/3': '33.333333%',

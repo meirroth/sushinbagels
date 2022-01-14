@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="#main" class="skip-link" @click="skipToContent()">
+    <a href="#main" class="skip-link btn-alt" @click="skipToContent()">
       Skip to content
     </a>
     <TheHeader :scrolled="scrolled" @openMobileNav="toggleMobileNav()" />
@@ -62,10 +62,8 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
+<style scoped>
 .skip-link {
-  @apply block fixed z-30 inset-x-0 w-max mx-auto py-2 px-4 -translate-y-20;
-  @apply bg-green text-black font-bold rounded-full shadow-lg opacity-0;
-  @apply focus:opacity-100 focus:translate-y-4;
+  @apply block fixed w-max z-30 inset-x-0 mx-auto opacity-0 focus:opacity-100 -translate-y-20  focus:translate-y-4 transition;
 }
 </style>
