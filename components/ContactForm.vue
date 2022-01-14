@@ -22,23 +22,7 @@
       type="text"
       required
       name="name"
-      class="
-        w-full
-        bg-gray-800
-        rounded
-        border border-gray-700
-        focus:ring-2 focus:ring-green
-        text-base
-        outline-none
-        text-gray-100
-        mb-4
-        py-1
-        px-3
-        leading-8
-        transition-colors
-        duration-200
-        ease-in-out
-      "
+      class="w-full bg-gray-800 rounded border border-gray-700 focus:ring-2 focus:ring-green text-base outline-none text-gray-100 mb-4 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     />
     <label for="email" class="leading-7 text-sm text-gray-400">{{
       $t('page.contact.email')
@@ -49,23 +33,7 @@
       type="email"
       required
       name="email"
-      class="
-        w-full
-        bg-gray-800
-        rounded
-        border border-gray-700
-        focus:ring-2 focus:ring-green
-        text-base
-        outline-none
-        text-gray-100
-        mb-4
-        py-1
-        px-3
-        leading-8
-        transition-colors
-        duration-200
-        ease-in-out
-      "
+      class="w-full bg-gray-800 rounded border border-gray-700 focus:ring-2 focus:ring-green text-base outline-none text-gray-100 mb-4 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     />
     <label for="phone" class="leading-7 text-sm text-gray-400"
       >{{ $t('page.contact.phone') }}
@@ -76,23 +44,7 @@
       v-model="form.phone"
       type="phone"
       name="phone"
-      class="
-        w-full
-        bg-gray-800
-        rounded
-        border border-gray-700
-        focus:ring-2 focus:ring-green
-        text-base
-        outline-none
-        text-gray-100
-        mb-4
-        py-1
-        px-3
-        leading-8
-        transition-colors
-        duration-200
-        ease-in-out
-      "
+      class="w-full bg-gray-800 rounded border border-gray-700 focus:ring-2 focus:ring-green text-base outline-none text-gray-100 mb-4 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     />
     <label for="message" class="leading-7 text-sm text-gray-400">{{
       $t('page.contact.message')
@@ -102,49 +54,18 @@
       v-model="form.message"
       required
       name="message"
-      class="
-        w-full
-        bg-gray-800
-        rounded
-        border border-gray-700
-        focus:ring-2 focus:ring-green
-        text-base
-        outline-none
-        text-gray-100
-        mb-6
-        py-1
-        px-3
-        flex-grow
-        min-h-32
-        resize-none
-        leading-6
-        transition-colors
-        duration-200
-        ease-in-out
-      "
+      class="w-full bg-gray-800 rounded border border-gray-700 focus:ring-2 focus:ring-green text-base outline-none text-gray-100 mb-6 py-1 px-3 grow min-h-32 resize-none leading-6 transition-colors duration-200 ease-in-out"
     ></textarea>
     <button
       type="submit"
-      class="
-        text-black
-        bg-gray-300
-        font-bold
-        border-0
-        py-2
-        px-6
-        hover:bg-gray-200
-        rounded
-        text-lg
-        w-full
-        disabled:opacity-80 disabled:pointer-events-none
-      "
+      class="text-black bg-gray-300 font-bold border-0 py-2 px-6 hover:bg-gray-200 rounded text-lg w-full disabled:opacity-80 disabled:pointer-events-none"
       :disabled="formStatus === 'sending' ? true : null"
     >
       <span v-if="formStatus === 'sending'">Sending message...</span>
       <span v-else>{{ $t('page.contact.submit') }}</span>
     </button>
   </form>
-  <div v-else class="rounded bg-gray-800 text-gray-100 flex-grow p-10">
+  <div v-else class="rounded bg-gray-800 text-gray-100 grow p-10">
     <div v-if="formStatus === 'sending'" class="text-center h-full">
       <span class="spinner"></span>
       <span>Sending message...</span>

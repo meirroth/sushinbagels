@@ -48,7 +48,7 @@
     <div v-else class="w-full px-8">
       <div class="mb-4">
         <div class="flex mb-4">
-          <div class="skeleton-bone w-12 h-12 flex-shrink-0 me-4"></div>
+          <div class="skeleton-bone w-12 h-12 shrink-0 me-4"></div>
           <div class="flex flex-col justify-around w-full">
             <div class="skeleton-bone w-1/5 h-2"></div>
             <div class="skeleton-bone w-1/6 h-2"></div>
@@ -63,16 +63,7 @@
     </div>
     <QuateIcon
       aria-hidden="true"
-      class="
-        absolute
-        block
-        w-8
-        h-8
-        top-8
-        right-8
-        text-green
-        rtl:-scale-x-1 rtl:left-8 rtl:right-auto
-      "
+      class="absolute block w-8 h-8 top-8 right-8 text-green rtl:-scale-x-1 rtl:left-8 rtl:right-auto"
     />
     <div class="absolute bottom-8 inset-x-8 text-end">
       <a
@@ -85,12 +76,7 @@
         <span v-if="userRatingsTotal > 5">{{ userRatingsTotal + ' ' }}</span
         >{{ $t('page.index.reviews.onGoogle') }}
         <ArrowRightIcon
-          class="
-            inline-block
-            rtl:-scale-x-1
-            group-hover:-me-2 group-hover:ms-2
-            transition-all
-          "
+          class="inline-block rtl:-scale-x-1 group-hover:-me-2 group-hover:ms-2 transition-all"
           aria-hidden="true"
       /></a>
     </div>

@@ -1,10 +1,22 @@
 html {
   @apply bg-black min-h-screen;
-  // min-height: -webkit-fill-available;
 }
 
 main {
   @apply focus:outline-none;
+}
+
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* Chrome, Safari, Edge, Opera */
+input.number-appearance-none::-webkit-outer-spin-button,
+input.number-appearance-none::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'].number-appearance-none {
+  -moz-appearance: textfield;
 }
 
 a,
@@ -22,10 +34,10 @@ select {
 }
 
 .btn {
-  @apply inline-block py-2 px-6 font-bold text-black border-white hover:text-white text-lg bg-white hover:bg-transparent border-2 rounded-full shadow-white transition-colors ease-out;
+  @apply py-2 px-6 font-bold text-black border-white hover:text-white text-lg bg-white hover:bg-transparent border-2 rounded-full shadow-2xl shadow-white/50 transition-colors ease-out;
 }
 .btn-alt {
-  @apply inline-block py-2 px-6 font-bold text-black border-green hover:text-green text-lg bg-green hover:bg-transparent border-2 rounded-full shadow-white transition-colors ease-out;
+  @apply py-2 px-6 font-bold text-black border-green hover:text-green text-lg bg-green hover:bg-transparent border-2 rounded-full shadow-2xl shadow-green/50 transition-colors ease-out;
 }
 .nav-link {
   @apply relative transition-colors;

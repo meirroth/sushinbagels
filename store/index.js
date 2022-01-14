@@ -29,9 +29,10 @@ export const actions = {
   async loadPlaceData({ commit }) {
     await this.$axios
       .get(
-        process.env.NODE_ENV === 'production'
-          ? `/api/places&language=${this.$i18n.locale}`
-          : `/api/places-${this.$i18n.locale}.json`,
+        // process.env.NODE_ENV === 'production'
+        //   ? `/api/places&language=${this.$i18n.locale}`
+        //   :
+        `/api/places-${this.$i18n.locale}.json`,
         {
           headers: {
             'content-type': 'application/json; charset=UTF-8',

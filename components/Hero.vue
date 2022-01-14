@@ -5,16 +5,7 @@
     :class="full ? 'hero-full' : 'h-96'"
   >
     <figure
-      class="
-        absolute
-        inset-0
-        w-full
-        h-full
-        overflow-hidden
-        transition-opacity
-        ease-out
-        duration-fast
-      "
+      class="absolute inset-0 w-full h-full overflow-hidden transition-opacity ease-out duration-fast"
       :style="{
         opacity: imageOpacity,
       }"
@@ -29,7 +20,7 @@
           :src="img"
           width="1536"
           alt=""
-          class="absolute inset-0 w-full h-full object-cover filter z-0"
+          class="absolute inset-0 w-full h-full object-cover z-0"
           :class="full ? 'blur-sm' : 'blur'"
         />
       </div>
@@ -118,7 +109,7 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
+<style scoped>
 .hero-full {
   height: 40rem;
 }
