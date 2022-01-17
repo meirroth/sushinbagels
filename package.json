@@ -40,7 +40,7 @@
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.8",
     "tailwindcss-dir": "^4.0.0",
-    "tailwindcss-rtl": "^0.7.3",
+    "tailwindcss-rtl": "^0.8.0",
     "vue-tabler-icons": "^1.12.1"
   }
 }
