@@ -3,20 +3,20 @@ import Vue from 'vue'
 
 // What a monster :O
 Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
-  const seo = this.$i18n.messages[this.$i18n.locale].seo
-  return Object.entries(seo[slug]).reduce((acc, [key, actualValue]) => {
+  const seo = this.$t('seo')
+  return Object.entries(seo).reduce((acc, [key, actualValue]) => {
     const defaultMetaArray = [
       {
         name: 'og:title',
-        content: seo[slug].title
+        content: seo.title
           ? slug === 'index'
-            ? `SushiNBagels - ${seo[slug].title}`
-            : `${seo[slug].title} - SushiNBagels`
+            ? `SushiNBagels - ${seo.title}`
+            : `${seo.title} - SushiNBagels`
           : 'SushiNBagels',
       },
       {
         name: 'keywords',
-        content: seo.global.keywords,
+        content: this.$t('seo.keywords'),
       },
       {
         name: 'og:url',

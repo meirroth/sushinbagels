@@ -15,13 +15,13 @@
           class="px-8 mb-8 mx-auto"
         /> -->
           <h3 class="font-bold text-2xl mb-6">
-            {{ $t('page.error.subTitle') }}
+            {{ $t('subTitle') }}
           </h3>
           <i18n path="page.error.body" tag="p">
             <template #action>
-              <a :href="$t('page.error.email') + currentURL" class="link"
+              <a :href="$t('email') + currentURL" class="link"
                 ><MailIcon size="20" aria-hidden="true" class="inline-block" />
-                {{ $t('page.error.action') }}</a
+                {{ $t('action') }}</a
               >
             </template>
             <template #br><br /></template>
@@ -37,13 +37,17 @@
 
 <script>
 import { MailIcon } from 'vue-tabler-icons'
+import translations from '~/lang/error'
 export default {
+  i18n: {
+    messages: translations,
+  },
   components: { MailIcon },
   layout: 'default',
   props: { error: { type: Object, default: null } },
   head() {
     return {
-      title: this.$t('page.error.title'),
+      title: this.$t('title'),
     }
   },
   computed: {

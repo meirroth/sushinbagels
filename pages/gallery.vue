@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Hero img="/img/hero-bg-gallery.jpg" :title="$t('page.gallery.title')" />
+    <Hero img="/img/hero-bg-gallery.jpg" :title="$t('title')" />
     <div class="relative z-20 container">
       <section>
         <!-- masonry-grid md:masonry-2-col lg:masonry-3-col -->
@@ -37,8 +37,12 @@
 </template>
 
 <script>
+import translations from '~/lang/gallery'
 import StaticallyPath from '~/scripts/StaticallyPath'
 export default {
+  i18n: {
+    messages: translations,
+  },
   data() {
     return {
       images: [],

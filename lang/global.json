@@ -1,0 +1,156 @@
+{
+  "en": {
+    "info": {
+      "name": "SushiNBagels",
+      "email": "",
+      "phone": "",
+      "address": "",
+      "addressFull": "",
+      "copyright": "",
+      "links": {
+        "order": "",
+        "facebook": "",
+        "instagram": "",
+        "whatsapp": ""
+      }
+    },
+    "seo": {
+      "keywords": "Sushi and Bagels, tasty sushi, fresh sushi, bagels in Jerusalem, sushi in Jerusalem, sushi in romema, kosher sushi, eidah hachareidis, delivery, hungry, healthy, food, fish, SushiNBagels",
+      "menu": {
+        "title": "Our Menu",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "Explore our colorful and tasty menu with all different amazing types of rolls and delicacies. We have on our menu all different types of sushi and different price range."
+          }
+        ]
+      },
+      "gallery": {
+        "title": "Gallery",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "Check out our amazing photos of our own sushi and its creation. We try to take as many pictures of our delicious sushi and update all the time."
+          }
+        ]
+      },
+      "story": {
+        "title": "Our Story",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "Our journey takes us around the world and back. The journey to creating sushi under the bedatz is s long and interesting one. Read more to find out."
+          }
+        ]
+      },
+      "contact": {
+        "title": "Contact Us",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "Want to find out more about our sushi, make a large order or want to find out about working with us, just get in touch."
+          }
+        ]
+      }
+    },
+    "nav": {
+      "contact": "Contact",
+      "gallery": "Gallery",
+      "home": "Homepage",
+      "orderNow": "Order Now",
+      "ourMenu": "Our Menu",
+      "ourStory": "Our Story"
+    },
+    "footer": {
+      "createdWith": "Created with",
+      "love": "love",
+      "by": "by",
+      "MeirRoth": "Meir Roth",
+      "allRightsReserved": "All rights reserved",
+      "cravingSushi": "Craving Sushi",
+      "facebook": "Facebook",
+      "findUs": "Find Us",
+      "information": "Information",
+      "instagram": "Instagram",
+      "stayConnected": "Stay Connected",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "he": {
+    "info": {
+      "name": "SushiNBagels",
+      "email": "",
+      "phone": "",
+      "address": "",
+      "addressFull": "",
+      "copyright": "",
+      "links": {
+        "order": "",
+        "facebook": "",
+        "instagram": "",
+        "whatsapp": ""
+      }
+    },
+    "seo": {
+      "keywords": "סושי אנד בייגל, סושי בייגל, סושי מהדרין, סושי עידה החרדית, ירושלים, רוממה, כשר, מהדרין, עידה החרדית, בייגלים, סושי, רעב, אוכל, דגים, טרי, משלוח, טעים",
+      "menu": {
+        "title": "התפריט שלנו",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "תעיינו בתפריט הטעים והצבעוני שלנו עם מגוון רולים שונים מדהימים. יש לנו בתפריט שלנו מגוון גדול של רולים במחירים שונים."
+          }
+        ]
+      },
+      "gallery": {
+        "title": "גלריה",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "בואו ותראו תמונות מדהימות של הסושי שלנו ויצירתו. אנחנו משתדלים לצלם תמיד הסושי שלנו ולעדכן באתר כל הזמן."
+          }
+        ]
+      },
+      "story": {
+        "title": "הסיפור שלנו",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "הטיול שלנו לוקח אותנו לצד השני של העולם וחזור. המשימה לייצר סושי תחת השגחת הבדץ היה ארוך ומנעיין. תקראו עוד לגלות הסיפור המלא"
+          }
+        ]
+      },
+      "contact": {
+        "title": "צור קשר",
+        "meta": [
+          {
+            "name": ["description", "og:description"],
+            "content": "רוצים לדעת יותר על הסושי שלנו, מעוניינים בהזמנה גדולה, או רוצים לדעת על שת\"פ איתנו, צרו קשר אתנו"
+          }
+        ]
+      }
+    },
+    "nav": {
+      "contact": "צור קשר",
+      "gallery": "גלריה",
+      "home": "דף הבית",
+      "orderNow": "הזמן עכשיו",
+      "ourMenu": "תפריט",
+      "ourStory": "הסיפור שלנו"
+    },
+    "footer": {
+      "createdWith": "Created with",
+      "love": "love",
+      "by": "by",
+      "MeirRoth": "Meir Roth",
+      "allRightsReserved": "All rights reserved",
+      "cravingSushi": "השתוקקות לסושי",
+      "facebook": "פייסבוק",
+      "findUs": "מצא אותנו",
+      "information": "מידע",
+      "instagram": "אינסטגרם",
+      "stayConnected": "הישארו מחוברים",
+      "whatsapp": "וואטסאפ"
+    }
+  }
+}

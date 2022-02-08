@@ -1,0 +1,32 @@
+{
+  "en": {
+    "seo": {
+      "title": "Gallery",
+      "meta": [
+        {
+          "name": [
+            "description",
+            "og:description"
+          ],
+          "content": "Check out our amazing photos of our own sushi and its creation. We try to take as many pictures of our delicious sushi and update all the time."
+        }
+      ]
+    },
+    "title": "Gallery"
+  },
+  "he": {
+    "seo": {
+      "title": "גלריה",
+      "meta": [
+        {
+          "name": [
+            "description",
+            "og:description"
+          ],
+          "content": "בואו ותראו תמונות מדהימות של הסושי שלנו ויצירתו. אנחנו משתדלים לצלם תמיד הסושי שלנו ולעדכן באתר כל הזמן."
+        }
+      ]
+    },
+    "title": "גלריה"
+  }
+}

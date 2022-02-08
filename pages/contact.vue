@@ -1,48 +1,33 @@
 <template>
   <main>
-    <Hero img="/img/hero-bg-contact.jpg" :title="$t('page.contact.title')" />
+    <Hero img="/img/hero-bg-contact.jpg" :title="$t('title')" />
     <div class="relative z-20">
       <section class="container flex lg:flex-nowrap flex-wrap">
         <div
-          class="
-            relative
-            flex
-            items-end
-            justify-start
-            w-full
-            lg:w-2/3
-            p-10
-            lg:me-10
-            overflow-hidden
-            rounded-lg
-            bg-gray-900
-          "
+          class="relative flex items-end justify-start w-full lg:w-2/3 p-10 lg:me-10 overflow-hidden rounded-lg bg-gray-900"
         >
           <Statically
             src="/img/location-map.jpg"
             width="1536"
-            :alt="$t('page.contact.mapAlt')"
+            :alt="$t('mapAlt')"
             class="absolute inset-0 z-0 object-cover w-full h-full"
           />
           <div class="relative w-auto mt-80 py-6 rounded shadow-md bg-gray-900">
             <div class="px-6 mb-6">
-              <h4 class="mb-2 text-sm">{{ $t('page.contact.hours') }}</h4>
-              <p class="text-base">
-                {{ $t('page.contact.hours1') }}<br />
-                {{ $t('page.contact.hours2') }}<br />
-                {{ $t('page.contact.hours3') }}
-              </p>
+              <h4 class="mb-2 text-sm">{{ $t('hours') }}</h4>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <p class="text-base" v-html="$md.render($t('hoursInfo'))"></p>
             </div>
             <div class="w-full lg:w-auto flex flex-wrap">
               <div class="w-full lg:w-auto px-6 mb-6 xl:mb-0">
                 <div class="mb-5">
-                  <h4 class="mb-2 text-sm">{{ $t('page.contact.email') }}</h4>
+                  <h4 class="mb-2 text-sm">{{ $t('email') }}</h4>
                   <a href="mailto:info@sushinbagels.com" class="link text-base"
                     >info@sushinbagels.com</a
                   >
                 </div>
                 <div>
-                  <h4 class="mb-2 text-sm">{{ $t('page.contact.phone') }}</h4>
+                  <h4 class="mb-2 text-sm">{{ $t('phone') }}</h4>
                   <a href="tel:+97225443111" class="link text-base"
                     >02-544-3111</a
                   >
@@ -50,14 +35,14 @@
               </div>
               <div class="w-full lg:w-auto px-6">
                 <div class="mb-5">
-                  <h4 class="mb-2 text-sm">{{ $t('page.contact.address') }}</h4>
+                  <h4 class="mb-2 text-sm">{{ $t('address') }}</h4>
                   <p class="text-base">
-                    {{ $t('page.contact.yermiyahuStreet') }}
+                    {{ $t('addressInfo') }}
                   </p>
                 </div>
                 <div>
                   <h4 class="mb-2 text-sm">
-                    {{ $t('page.contact.directions') }}
+                    {{ $t('directions') }}
                   </h4>
                   <div class="ltr flex">
                     <a
@@ -81,7 +66,7 @@
                           fill="currentColor"
                         />
                       </svg>
-                      {{ $t('page.contact.waze') }}</a
+                      {{ $t('waze') }}</a
                     >
                     <a
                       href="https://www.google.com/maps/dir/?api=1&destination=SushiNBagels,+Yirmiyahu+St+68,+Jerusalem"
@@ -126,7 +111,7 @@
                         </defs>
                       </svg>
                       <span class="whitespace-nowrap">{{
-                        $t('page.contact.googleMaps')
+                        $t('googleMaps')
                       }}</span></a
                     >
                     <!-- <a href="#" class="text-center"
@@ -144,7 +129,7 @@
                           fill="#EF6234"
                         />
                       </svg>
-                      {{ $t('page.contact.moovit') }}
+                      {{ $t('moovit') }}
                     </a> -->
                   </div>
                 </div>
@@ -154,10 +139,10 @@
         </div>
         <div class="flex flex-col w-full lg:w-1/3 mt-10 lg:mt-0">
           <h3 class="text-xl mb-4">
-            {{ $t('page.contact.formTitle') }}
+            {{ $t('formTitle') }}
           </h3>
           <p class="text-sm mb-10">
-            {{ $t('page.contact.formDesc') }}
+            {{ $t('formDesc') }}
           </p>
           <client-only>
             <ContactForm />
@@ -169,7 +154,11 @@
 </template>
 
 <script>
+import translations from '~/lang/contact'
 export default {
+  i18n: {
+    messages: translations,
+  },
   head() {
     return this.$createSeo('contact', [
       {

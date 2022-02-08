@@ -16,3 +16,278 @@ search: false
 # # https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
 # local_backend: true
 
+i18n:
+  structure: single_file
+  locales: [en, he]
+  default_locale: en
+collections:
+  - label: Pages
+    name: pages
+    i18n: true
+    files:
+      - label: Homepage
+        name: index
+        file: 'lang/index.json'
+        extension: json
+        format: json
+        i18n: true
+        editor:
+          preview: false
+        fields:
+          - label: Story
+            name: story
+            widget: object
+            collapsed: false
+            i18n: true
+            fields:
+              - label: Section title
+                name: title
+                widget: string
+                i18n: true
+              - label: Body
+                name: body
+                widget: text
+                i18n: true
+              - label: Call to action
+                name: cta
+                widget: string
+                i18n: true
+          - label: Services
+            name: services
+            widget: object
+            collapsed: false
+            i18n: true
+            fields:
+              - label: Section title
+                name: title
+                widget: string
+                required: false
+                i18n: true
+              - label: Show section title
+                name: showTitle
+                widget: 'select'
+                options: ['hide', 'show']
+                i18n: duplicate
+              - label: Services
+                name: body
+                widget: list
+                min: 4
+                max: 4
+                collapsed: false
+                i18n: true
+                fields:
+                  - label: Icon
+                    name: icon
+                    widget: hidden
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Description
+                    name: desc
+                    widget: text
+          - label: Order
+            name: order
+            widget: object
+            collapsed: false
+            i18n: true
+            fields:
+              - label: Section title
+                name: title
+                widget: string
+                i18n: true
+              - label: Call to actions
+                name: cta
+                widget: object
+                collapsed: false
+                i18n: true
+                fields:
+                  - label: Order online
+                    name: online
+                    widget: string
+                    i18n: true
+                  - label: Download app
+                    name: app
+                    widget: string
+                    i18n: true
+          - label: Reviews
+            name: reviews
+            widget: object
+            collapsed: false
+            i18n: true
+            fields:
+              - label: Section title
+                name: title
+                widget: string
+                i18n: true
+              - label: View all...
+                name: viewAll
+                widget: string
+                i18n: true
+              - label: ...reviews on Google
+                name: onGoogle
+                widget: string
+                i18n: true
+      - label: Menu
+        name: menu
+        file: 'lang/menu.json'
+        extension: json
+        format: json
+        i18n: true
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+      - label: Gallery
+        name: gallery
+        file: 'lang/gallery.json'
+        extension: json
+        format: json
+        i18n: true
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+      - label: Story
+        name: story
+        file: 'lang/story.json'
+        extension: json
+        format: json
+        i18n: true
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - {
+              label: Body,
+              name: body,
+              widget: markdown,
+              sanitize_preview: true,
+              i18n: true,
+            }
+      - label: Contact
+        name: contact
+        file: 'lang/contact.json'
+        extension: json
+        format: json
+        i18n: true
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Form title, name: formTitle, widget: string, i18n: true }
+          - {
+              label: Form description,
+              name: formDesc,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Name field, name: nameField, widget: string, i18n: true }
+          - { label: Email field, name: emailField, widget: string, i18n: true }
+          - { label: Phone field, name: phoneField, widget: string, i18n: true }
+          - {
+              label: Optional tag,
+              name: optionalTag,
+              widget: string,
+              i18n: true,
+            }
+          - {
+              label: Message field,
+              name: messageField,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Submit button, name: submit, widget: string, i18n: true }
+          - {
+              label: Sending message,
+              name: sending,
+              widget: string,
+              i18n: true,
+            }
+          - {
+              label: Success message title,
+              name: successTitle,
+              widget: string,
+              i18n: true,
+            }
+          - {
+              label: Success message,
+              name: successMessage,
+              widget: text,
+              i18n: true,
+            }
+          - {
+              label: Error message title,
+              name: errorTitle,
+              widget: string,
+              i18n: true,
+            }
+          - {
+              label: Error message,
+              name: errorMessage,
+              widget: string,
+              i18n: true,
+            }
+          - {
+              label: Send via email,
+              name: sendViaEmail,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Hours, name: hours, widget: string, i18n: true }
+          - { label: Hours info, name: hoursInfo, widget: text, i18n: true }
+          - { label: Email, name: email, widget: string, i18n: true }
+          - { label: Address, name: address, widget: string, i18n: true }
+          - {
+              label: Address info,
+              name: addressInfo,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Phone, name: phone, widget: string, i18n: true }
+          - { label: Directions, name: directions, widget: string, i18n: true }
+          - { label: Waze, name: waze, widget: string, i18n: true }
+          - { label: Google Maps, name: googleMaps, widget: string, i18n: true }
+  - label: Global
+    name: global
+    description: Global website translations and settings
+    i18n: true
+    files:
+      - label: Navigation
+        name: navigation
+        file: 'lang/global.json'
+        extension: json
+        format: json
+        i18n: true
+        editor:
+          preview: false
+        fields:
+          - label: Navigation items
+            name: nav
+            widget: object
+            collapsed: false
+            i18n: true
+            fields:
+              - label: Homepage
+                name: home
+                widget: string
+                i18n: true
+              - label: Order Now
+                name: orderNow
+                widget: string
+                i18n: true
+              - label: Our Menu
+                name: ourMenu
+                widget: string
+                i18n: true
+              - label: Gallery
+                name: gallery
+                widget: string
+                i18n: true
+              - label: Our Story
+                name: ourStory
+                widget: string
+                i18n: true
+              - label: Contact
+                name: contact
+                widget: string
+                i18n: true

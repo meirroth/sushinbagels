@@ -1,0 +1,110 @@
+{
+  "en": {
+    "seo": {
+      "title": "The tastiest Sushi & Bagels in Jerusalem!",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "Your home for the tastiest sushi & Bagels in romema Jerusalem under the hashgocha of the Eidah Hachareidis. All of our food is created fresh and tasty to give you the perfect meal or snack."
+        }
+      ]
+    },
+    "order": {
+      "title": "Simple Way To Order Your Food",
+      "cta": {
+        "app": "Download our app",
+        "online": "Order online now"
+      }
+    },
+    "services": {
+      "title": "Our Awesome Services",
+      "showTitle": "hide",
+      "body": [
+        {
+          "desc": "We only use the freshest and highest quality ingredients.",
+          "icon": "quality.svg",
+          "title": "Quality Food"
+        },
+        {
+          "desc": "Months of research was done to discover the best ingredients and combinations to ensure all our food is super tasty.",
+          "icon": "tasty.svg",
+          "title": "Super Tasty"
+        },
+        {
+          "desc": "Your positive experience is our number one priority. We will do everything we can to make sure that you enjoy your visit and our food.",
+          "icon": "delivery.svg",
+          "title": "Customer Service"
+        },
+        {
+          "desc": "To ensure that everyone can get in on the fun, we chose the number one kashrut in the world, with no compromise in the taste or quality.",
+          "icon": "kashrut.svg",
+          "title": "Kashrut"
+        }
+      ]
+    },
+    "story": {
+      "body": "A story taking us to Japan and back. A blend of the freshest & tastiest ingredients with the strictest level of kashrut. Find out more about our amazing sushi!",
+      "cta": "Explore our story",
+      "title": "Our Amazing Journey"
+    },
+    "reviews": {
+      "title": "What Our Sushi Loving Customers Say About Us",
+      "viewAll": "View all",
+      "onGoogle": "reviews on Google"
+    }
+  },
+  "he": {
+    "seo": {
+      "title": "סושי ובייגלים הכי טעימים בירושלים!",
+      "meta": [
+        {
+          "name": ["description", "og:description"],
+          "content": "הבית שלך לסושי ובייגלים הכי טעימים ברוממה, ירושלים חתח ההשגחה של עידה החרדית. כל האוכל שלנו מיוצר טרי ובמיוחד בשבילך."
+        }
+      ]
+    },
+    "order": {
+      "title": "דרך פשוטה להזמין את האוכל שלך",
+      "cta": {
+        "app": "הורד את האפליקציה",
+        "online": "הזמן אונליין עכשיו"
+      }
+    },
+    "services": {
+      "title": "השירותים המדהימים שלנו",
+      "showTitle": "hide",
+      "body": [
+        {
+          "desc": "אנו משתמשים רק במרכיבים הטריים והאיכותיים ביותר.",
+          "icon": "quality.svg",
+          "title": "אוכל איכותי"
+        },
+        {
+          "desc": "חודשים של מחקר נעשה כדי לגלות את המרכיבים הטובים ביותר ושילובים כדי להבטיח את כל האוכל שלנו הוא סופר טעים.",
+          "icon": "tasty.svg",
+          "title": "סופר טעים"
+        },
+        {
+          "desc": "החוויה החיובית שלך היא בראש סדר העדיפויות שלנו. נעשה כל שביכולתנו כדי לוודא שתיהנו מהביקור שלכם ומהאוכל שלנו.",
+          "icon": "delivery.svg",
+          "title": "שירות לקוחות"
+        },
+        {
+          "desc": "כדי להבטיח שכולם יוכלו להיכנס לכיף, בחרנו את הכשרות מספר אחת בעולם, ללא פשרות בטעם או באיכות.",
+          "icon": "kashrut.svg",
+          "title": "כַּשְׁרוּת"
+        }
+      ]
+    },
+    "story": {
+      "body": "סיפור שלוקח אותנו ליפן ובחזרה. תערובת של המרכיבים הטריים והטעמים ביותר עם רמת הכשרות המחמירה ביותר. למידע נוסף על הסושי המדהים שלנו!",
+      "cta": "הסיפור שלנו",
+      "title": "המסע המדהים שלנו"
+    },
+    "reviews": {
+      "title": "מה הלקוחות האוהבים שלנו בסושי אומרים עלינו",
+      "viewAll": "הצג",
+      "onGoogle": "ביקורות ב- Google"
+    }
+  }
+}

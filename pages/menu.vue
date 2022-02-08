@@ -1,6 +1,6 @@
 <template>
   <main class="overflow-hidden">
-    <Hero img="/img/hero-bg-menu.jpg" :title="$t('page.menu.title')" />
+    <Hero img="/img/hero-bg-menu.jpg" :title="$t('title')" />
     <div class="z-20">
       <section class="min-h-screen">
         <client-only>
@@ -117,8 +117,12 @@ import {
   MinusIcon,
   DownloadIcon,
 } from 'vue-tabler-icons'
+import translations from '~/lang/menu'
 import StaticallyPath from '~/scripts/StaticallyPath'
 export default {
+  i18n: {
+    messages: translations,
+  },
   components: {
     ChevronLeftIcon,
     ChevronRightIcon,
