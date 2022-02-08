@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  repo: meirroth/sushinbagels
+  branch: cms # Branch to update (optional; defaults to master)
+
+publish_mode: editorial_workflow
+
+media_folder: static/img
+public_folder: /img
+
+display_url: https://sushinbagels.com
+logo_url: /img/logo.png
+
+search: false
+
+# https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+
