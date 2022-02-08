@@ -13,6 +13,6 @@ logo_url: /img/logo.png
 
 search: false
 
-# https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
-local_backend: true
+# # https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+# local_backend: true
 
