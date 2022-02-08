@@ -21,10 +21,6 @@
   status = 200
 
 [[redirects]]
-  from = "/admin"
-  to = "/admin/"
-
-[[redirects]]
   from = "/en*"
   to = "/:splat"
 [[redirects]]
