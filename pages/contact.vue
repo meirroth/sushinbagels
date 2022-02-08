@@ -15,8 +15,9 @@
           <div class="relative w-auto mt-80 py-6 rounded shadow-md bg-gray-900">
             <div class="px-6 mb-6">
               <h4 class="mb-2 text-sm">{{ $t('hours') }}</h4>
-              <!-- eslint-disable-next-line vue/no-v-html -->
-              <p class="text-base" v-html="$md.render($t('hoursInfo'))"></p>
+              <i18n path="hoursInfo" tag="p" class="text-base">
+                <template #br><br /></template>
+              </i18n>
             </div>
             <div class="w-full lg:w-auto flex flex-wrap">
               <div class="w-full lg:w-auto px-6 mb-6 xl:mb-0">
@@ -153,12 +154,10 @@
   </main>
 </template>
 
+<i18n src="~/lang/contact"></i18n>
+
 <script>
-import translations from '~/lang/contact'
 export default {
-  i18n: {
-    messages: translations,
-  },
   head() {
     return this.$createSeo('contact', [
       {

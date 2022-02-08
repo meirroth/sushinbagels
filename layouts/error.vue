@@ -17,7 +17,7 @@
           <h3 class="font-bold text-2xl mb-6">
             {{ $t('subTitle') }}
           </h3>
-          <i18n path="page.error.body" tag="p">
+          <i18n path="body" tag="p">
             <template #action>
               <a :href="$t('email') + currentURL" class="link"
                 ><MailIcon size="20" aria-hidden="true" class="inline-block" />

@@ -16,7 +16,7 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
       },
       {
         name: 'keywords',
-        content: this.$t('seo.keywords'),
+        content: seo.keywords,
       },
       {
         name: 'og:url',

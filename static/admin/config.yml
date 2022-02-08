@@ -3,7 +3,7 @@ backend:
   repo: meirroth/sushinbagels
   branch: cms # Branch to update (optional; defaults to master)
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
@@ -212,7 +212,7 @@ collections:
           - {
               label: Success message,
               name: successMessage,
-              widget: text,
+              widget: string,
               i18n: true,
             }
           - {
@@ -234,7 +234,13 @@ collections:
               i18n: true,
             }
           - { label: Hours, name: hours, widget: string, i18n: true }
-          - { label: Hours info, name: hoursInfo, widget: text, i18n: true }
+          - {
+              label: Hours info,
+              name: hoursInfo,
+              widget: text,
+              i18n: true,
+              hint: 'Use {br} for new line.',
+            }
           - { label: Email, name: email, widget: string, i18n: true }
           - { label: Address, name: address, widget: string, i18n: true }
           - {
@@ -247,6 +253,33 @@ collections:
           - { label: Directions, name: directions, widget: string, i18n: true }
           - { label: Waze, name: waze, widget: string, i18n: true }
           - { label: Google Maps, name: googleMaps, widget: string, i18n: true }
+      - label: '404'
+        name: 404Page
+        file: 'lang/error.json'
+        extension: json
+        format: json
+        i18n: true
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Sub Title, name: subTitle, widget: string, i18n: true }
+          - {
+              label: Body,
+              name: body,
+              widget: text,
+              i18n: true,
+              hint: '{action} will be replaced with the link text, which is set separately. Use {br} for new line.',
+              pattern: ['{action}', 'Must contain {action}'],
+            }
+          - { label: Action, name: action, widget: string, i18n: true }
+          - {
+              label: Email,
+              name: email,
+              widget: string,
+              i18n: true,
+              pattern: ['^mailto', 'Must start with mailto:'],
+            }
   - label: Global
     name: global
     description: Global website translations and settings

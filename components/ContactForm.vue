@@ -76,8 +76,7 @@
         {{ $parent.$t('successTitle') }}
       </p>
       <p class="text-base">
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <span v-html="$md.render($parent.$t('successMessage'))"></span>
+        <span>{{ $parent.$t('successMessage') }}</span>
       </p>
     </div>
     <div v-else class="text-center h-full">
@@ -86,8 +85,7 @@
         {{ $parent.$t('errorTitle') }}
       </p>
       <p class="text-base">
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <span v-html="$md.render($parent.$t('errorMessage'))"></span>
+        <span>{{ $parent.$t('errorMessage') }}</span>
         <a
           v-if="mailto !== ''"
           :href="mailto"

@@ -7,12 +7,11 @@
     </div>
   </main>
 </template>
+
+<i18n src="~/lang/story"></i18n>
+
 <script>
-import translations from '~/lang/story'
 export default {
-  i18n: {
-    messages: translations,
-  },
   head() {
     return this.$createSeo('story', [
       {
@@ -20,9 +19,6 @@ export default {
         content: '/img/hero-bg-story.jpg',
       },
     ])
-  },
-  mounted() {
-    console.log(this.$t('seo'))
   },
 }
 </script>

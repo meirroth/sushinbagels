@@ -1,7 +1,7 @@
 {
   "en": {
     "addressInfo": "Yirmiyahu St 68, Jerusalem, Israel",
-    "successMessage": "Your message has been submitted.\nWe will get back to you as soon as possible.",
+    "successMessage": "Your message has been submitted. We will get back to you as soon as possible.",
     "phoneField": "Phone",
     "mapAlt": "Store location map",
     "phone": "Phone",
@@ -23,7 +23,7 @@
     "optionalTag": "(Optional)",
     "sending": "Sending message...",
     "email": "Email",
-    "hoursInfo": "Sun - Wed 11am–10pm\nThursday 11am–11pm\nSaturday Night approx. 2 hours after nightfall – 00:30",
+    "hoursInfo": "Sun - Wed 11am–10pm{br}\nThursday 11am–11pm{br}\nSaturday Night approx. 2 hours after nightfall – 00:30",
     "seo": {
       "title": "Contact Us",
       "meta": [
@@ -41,13 +41,13 @@
   },
   "he": {
     "addressInfo": "רחוב ירמיהו 68, ירושלים, ישראל",
-    "successMessage": "הודעתך נשלחה.\nאנו נחזור אליך בהקדם האפשרי.",
+    "successMessage": "הודעתך נשלחה. אנו נחזור אליך בהקדם האפשרי.",
     "phoneField": "טלפון",
     "mapAlt": "Store location map",
     "phone": "טלפון",
     "nameField": "שם",
     "hours": "שעות",
-    "googleMaps": "מפות ‪Google‬‏",
+    "googleMaps": "מפות Google",
     "errorTitle": "אוי לא!",
     "messageField": "הודעה",
     "directions": "הוראות הגעה",
@@ -63,7 +63,7 @@
     "optionalTag": "(אופציונאלי)",
     "sending": "שולח הודעה...",
     "email": "דוא\"ל",
-    "hoursInfo": "ראשון - רביעי 11:00–22:00\nחמישי 11:00–23:00\nמוצאי שבת כ. שעתיים לאחר צאת הכוכבים - 00:30",
+    "hoursInfo": "ראשון - רביעי 11:00–22:00{br}\nחמישי 11:00–23:00{br}\nמוצאי שבת כ. שעתיים לאחר צאת הכוכבים - 00:30",
     "seo": {
       "title": "צור קשר",
       "meta": [

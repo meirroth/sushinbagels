@@ -9,17 +9,7 @@
             v-for="(image, i) in images"
             :key="image.src"
             :href="image.src"
-            class="
-              relative
-              w-full
-              pb-2/3
-              inline
-              text-0
-              lg:hover:scale-105
-              transition-transform
-              rounded
-              overflow-hidden
-            "
+            class="relative w-full pb-2/3 inline text-0 lg:hover:scale-105 transition-transform rounded overflow-hidden"
           >
             <Statically
               :src="image.thumb"
@@ -36,13 +26,11 @@
   </main>
 </template>
 
+<i18n src="~/lang/gallery"></i18n>
+
 <script>
-import translations from '~/lang/gallery'
 import StaticallyPath from '~/scripts/StaticallyPath'
 export default {
-  i18n: {
-    messages: translations,
-  },
   data() {
     return {
       images: [],

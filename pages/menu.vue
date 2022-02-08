@@ -16,16 +16,7 @@
               class="fixed inset-x-0 bottom-4 flex justify-center z-20 ltr"
             >
               <div
-                class="
-                  flex
-                  items-center
-                  bg-gray-800 bg-opacity-80
-                  hover:bg-opacity-100
-                  p-2
-                  rounded
-                  transition-colors
-                  space-x-2
-                "
+                class="flex items-center bg-gray-800 bg-opacity-80 hover:bg-opacity-100 p-2 rounded transition-colors space-x-2"
               >
                 <a
                   href="/pdf/digital-menu-1.2.pdf"
@@ -109,6 +100,8 @@
   </main>
 </template>
 
+<i18n src="~/lang/menu"></i18n>
+
 <script>
 import {
   ChevronLeftIcon,
@@ -117,12 +110,8 @@ import {
   MinusIcon,
   DownloadIcon,
 } from 'vue-tabler-icons'
-import translations from '~/lang/menu'
 import StaticallyPath from '~/scripts/StaticallyPath'
 export default {
-  i18n: {
-    messages: translations,
-  },
   components: {
     ChevronLeftIcon,
     ChevronRightIcon,

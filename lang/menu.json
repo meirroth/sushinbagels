@@ -4,10 +4,7 @@
       "title": "Our Menu",
       "meta": [
         {
-          "name": [
-            "description",
-            "og:description"
-          ],
+          "name": ["description", "og:description"],
           "content": "Explore our colorful and tasty menu with all different amazing types of rolls and delicacies. We have on our menu all different types of sushi and different price range."
         }
       ]
@@ -19,10 +16,7 @@
       "title": "התפריט שלנו",
       "meta": [
         {
-          "name": [
-            "description",
-            "og:description"
-          ],
+          "name": ["description", "og:description"],
           "content": "תעיינו בתפריט הטעים והצבעוני שלנו עם מגוון רולים שונים מדהימים. יש לנו בתפריט שלנו מגוון גדול של רולים במחירים שונים."
         }
       ]
