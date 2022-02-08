@@ -1,13 +1,14 @@
 backend:
   name: git-gateway
   repo: meirroth/sushinbagels
-  branch: cms # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
 
 # publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
 
+site_url: https://sushinbagels.com
 display_url: https://sushinbagels.com
 logo_url: /img/logo.png
 
