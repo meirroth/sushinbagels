@@ -120,10 +120,12 @@
   </main>
 </template>
 
-<i18n src="~/lang/index"></i18n>
-
 <script>
+import translations from '~/lang/index'
 export default {
+  i18n: {
+    messages: translations,
+  },
   head() {
     return {
       titleTemplate: (c) => (c ? `SushiNBagels - ${c}` : 'SushiNBagels'),

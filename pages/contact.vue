@@ -154,10 +154,12 @@
   </main>
 </template>
 
-<i18n src="~/lang/contact"></i18n>
-
 <script>
+import translations from '~/lang/contact'
 export default {
+  i18n: {
+    messages: translations,
+  },
   head() {
     return this.$createSeo('contact', [
       {

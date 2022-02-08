@@ -100,8 +100,6 @@
   </main>
 </template>
 
-<i18n src="~/lang/menu"></i18n>
-
 <script>
 import {
   ChevronLeftIcon,
@@ -110,8 +108,12 @@ import {
   MinusIcon,
   DownloadIcon,
 } from 'vue-tabler-icons'
+import translations from '~/lang/menu'
 import StaticallyPath from '~/scripts/StaticallyPath'
 export default {
+  i18n: {
+    messages: translations,
+  },
   components: {
     ChevronLeftIcon,
     ChevronRightIcon,
