@@ -1,0 +1,34 @@
+{
+  "en": {
+    "seo": {
+      "title": "Our Story",
+      "meta": [
+        {
+          "name": [
+            "description",
+            "og:description"
+          ],
+          "content": "Our journey takes us around the world and back. The journey to creating sushi under the bedatz is s long and interesting one. Read more to find out."
+        }
+      ]
+    },
+    "title": "Our Story",
+    "body": "**Our goal** was to create the freshest & tastiest sushi with the strictest kashrut requirements. We chose the most stringent kashrus ‘Eidah Hacharedit’ from Jerusalem and started our journey to create amazing sushi le’mehadrin.\n\n**Our journey** took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut."
+  },
+  "he": {
+    "seo": {
+      "title": "הסיפור שלנו",
+      "meta": [
+        {
+          "name": [
+            "description",
+            "og:description"
+          ],
+          "content": "הטיול שלנו לוקח אותנו לצד השני של העולם וחזור. המשימה לייצר סושי תחת השגחת הבדץ היה ארוך ומנעיין. תקראו עוד לגלות הסיפור המלא"
+        }
+      ]
+    },
+    "title": "הסיפור שלנו",
+    "body": "**Our goal** was to create the freshest & tastiest sushi with the strictest kashrut requirements. We chose the most stringent kashrus ‘Eidah Hacharedit’ from Jerusalem and started our journey to create amazing sushi le’mehadrin.\n\n**Our journey** took us from Fukoako to Shizouka in Japan to create our very own Nori. The next challenge on our journey was creating our own rice vinegar & other important staple ingredients to make sushi. After months of research and tests we finally launched in late 2020 and have rapidly become famous for our tasty fresh sushi with the best kashrut."
+  }
+}

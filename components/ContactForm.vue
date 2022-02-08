@@ -14,7 +14,7 @@
       /></label>
     </p>
     <label for="name" class="leading-7 text-sm text-gray-400">{{
-      $t('page.contact.name')
+      $parent.$t('nameField')
     }}</label>
     <input
       id="name"
@@ -25,7 +25,7 @@
       class="w-full bg-gray-800 rounded border border-gray-700 focus:ring-2 focus:ring-green text-base outline-none text-gray-100 mb-4 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     />
     <label for="email" class="leading-7 text-sm text-gray-400">{{
-      $t('page.contact.email')
+      $parent.$t('emailField')
     }}</label>
     <input
       id="email"
@@ -36,8 +36,8 @@
       class="w-full bg-gray-800 rounded border border-gray-700 focus:ring-2 focus:ring-green text-base outline-none text-gray-100 mb-4 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     />
     <label for="phone" class="leading-7 text-sm text-gray-400"
-      >{{ $t('page.contact.phone') }}
-      <span>{{ $t('page.contact.optional') }}</span></label
+      >{{ $parent.$t('phoneField') }}
+      <span>{{ $parent.$t('optionalTag') }}</span></label
     >
     <input
       id="phone"
@@ -47,7 +47,7 @@
       class="w-full bg-gray-800 rounded border border-gray-700 focus:ring-2 focus:ring-green text-base outline-none text-gray-100 mb-4 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     />
     <label for="message" class="leading-7 text-sm text-gray-400">{{
-      $t('page.contact.message')
+      $parent.$t('messageField')
     }}</label>
     <textarea
       id="message"
@@ -61,33 +61,37 @@
       class="text-black bg-gray-300 font-bold border-0 py-2 px-6 hover:bg-gray-200 rounded text-lg w-full disabled:opacity-80 disabled:pointer-events-none"
       :disabled="formStatus === 'sending' ? true : null"
     >
-      <span v-if="formStatus === 'sending'">Sending message...</span>
-      <span v-else>{{ $t('page.contact.submit') }}</span>
+      <span v-if="formStatus === 'sending'">{{ $parent.$t('sending') }}</span>
+      <span v-else>{{ $parent.$t('submit') }}</span>
     </button>
   </form>
   <div v-else class="rounded bg-gray-800 text-gray-100 grow p-10">
     <div v-if="formStatus === 'sending'" class="text-center h-full">
       <span class="spinner"></span>
-      <span>Sending message...</span>
+      <span>{{ $parent.$t('sending') }}</span>
     </div>
     <div v-else-if="formStatus === 'success'" class="text-center h-full">
       <ThumbUpIcon size="60" aria-hidden="true" class="mx-auto mb-10" />
-      <p class="mb-6 text-2xl font-serif font-bold">Thank You!</p>
+      <p class="mb-6 text-2xl font-serif font-bold">
+        {{ $parent.$t('successTitle') }}
+      </p>
       <p class="text-base">
-        Your message has been submitted.<br />We will get back to you as soon as
-        possible.
+        <span>{{ $parent.$t('successMessage') }}</span>
       </p>
     </div>
     <div v-else class="text-center h-full">
       <MoodSadIcon size="60" aria-hidden="true" class="mx-auto mb-10" />
-      <p class="mb-6 text-2xl font-serif font-bold">Oh no!</p>
+      <p class="mb-6 text-2xl font-serif font-bold">
+        {{ $parent.$t('errorTitle') }}
+      </p>
       <p class="text-base">
-        Something went wrong.<br /><a
+        <span>{{ $parent.$t('errorMessage') }}</span>
+        <a
           v-if="mailto !== ''"
           :href="mailto"
           target="_blank"
           class="link underline"
-          >Click here to send this message via email</a
+          >{{ $parent.$t('sendViaEmail') }}</a
         >
       </p>
     </div>

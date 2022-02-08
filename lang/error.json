@@ -1,0 +1,16 @@
+{
+  "en": {
+    "title": "Page not found",
+    "subTitle": "Well, this is embarrassing...",
+    "body": "Looks like the page you're looking for isn't here. Could be our fault, could be yours.{br}If you found a broken link somewhere, please {action} so we can fix it!",
+    "action": "let us know",
+    "email": "mailto:info@sushinbagels.com?subject=I found a broken link!&body=Hi,%0D%0A%0D%0AI found a broken link on your site. The page was supposed to be at sushinbagels.com"
+  },
+  "he": {
+    "title": "עמוד לא נמצא",
+    "subTitle": "טוב, זה מביך...",
+    "body": "נראה שהדף שאתה מחפש לא כאן. יכול להיות אשמתנו, יכול להיות שלך.{br}אם מצאת קישור שבור איפשהו, אנא {action} כדי שנוכל לתקן את זה!",
+    "action": "יידע אותנו",
+    "email": "mailto:info@sushinbagels.com?subject=!מצאתי קישור שבור&body=היי,%0D%0A%0D%0Aמצאתי קישור שבור באתר שלך. הדף היה אמור להיות ב sushinbagels.com"
+  }
+}

@@ -1,3 +1,4 @@
+import globalTranslations from './lang/global.json'
 const isProd = process.env.NODE_ENV === 'production'
 const baseUrl = process.env.BASE_URL || 'https://sushinbagels.com'
 
@@ -142,6 +143,7 @@ export default {
     '@nuxtjs/google-fonts',
     '@nuxtjs/svg',
     '@nuxtjs/pwa',
+    '@nuxtjs/markdownit',
   ],
 
   // Modules: (https://go.nuxtjs.dev/config-modules)
@@ -184,11 +186,24 @@ export default {
     },
   },
 
+  // Markdownit (https://github.com/nuxt-community/markdownit-module)
+  // See (https://github.com/markdown-it/markdown-it)
+  markdownit: {
+    // runtime: true,
+    html: false, // Enable HTML tags in source
+    xhtmlOut: true, // Use '/' to close single tags (<br />).
+    // This is only for full CommonMark compatibility.
+    breaks: true, // Convert '\n' in paragraphs into <br>
+    // langPrefix: 'language-', // CSS language prefix for fenced blocks. Can be
+    // useful for external highlighters.
+    linkify: true, // Autoconvert URL-like text to links
+  },
+
   // i18n (https://i18n.nuxtjs.org)
   i18n: {
     seo: false,
-    lazy: true,
-    langDir: 'lang/',
+    // lazy: true,
+    // langDir: 'lang/',
     defaultLocale: 'en',
     locales: [
       {
@@ -196,19 +211,21 @@ export default {
         iso: 'en-US',
         name: 'English',
         dir: 'ltr',
-        file: 'en.json',
+        // file: 'en.json',
       },
       {
         code: 'he',
         iso: 'he-IL',
         name: 'עברית',
         dir: 'rtl',
-        file: 'he.json',
+        // file: 'he.json',
       },
     ],
     vueI18n: {
       fallbackLocale: 'en',
+      messages: globalTranslations,
     },
+    vueI18nLoader: true,
     baseUrl,
   },
 

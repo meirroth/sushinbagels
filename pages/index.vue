@@ -1,7 +1,7 @@
 <template>
   <main>
     <Hero :full="true" img="/img/storefront.jpg"
-      ><h1 class="sr-only">{{ $t('seo.index.title') }}</h1></Hero
+      ><h1 class="sr-only">{{ $t('seo.title') }}</h1></Hero
     >
     <div class="relative z-20 bg-gradient-to-t from-black via-black space-y-24">
       <section id="story">
@@ -12,25 +12,27 @@
             width="1280"
             class="absolute left-1/2 bottom-full -translate-x-1/2 pb-24 w-full max-w-screen-xl"
           />
-          <h2 class="mb-10">{{ $t('page.index.story.title') }}</h2>
+          <h2 class="mb-10">{{ $t('story.title') }}</h2>
           <p class="text-lg max-w-screen-md mx-auto">
-            {{ $t('page.index.story.body') }}
+            {{ $t('story.body') }}
           </p>
           <nuxt-link class="mt-10 btn inline-block" :to="localePath('story')">
-            {{ $t('page.index.story.cta') }}
+            {{ $t('story.cta') }}
           </nuxt-link>
         </div>
       </section>
       <section id="services">
         <div class="container text-center">
-          <!-- <h2 class="mb-10">{{ $t('page.index.services.title') }}</h2> -->
+          <h2 v-if="$t('services.showTitle') == 'show'" class="mb-10">
+            {{ $t('services.title') }}
+          </h2>
           <div class="flex flex-row flex-wrap justify-center -mx-6">
             <div v-for="i in 4" :key="i" class="p-6 w-full sm:w-1/2 xl:w-1/4">
               <div class="relative w-1/3 mx-auto mb-6 pb-1/3">
                 <img
                   :src="
                     require('~/static/img/' +
-                      $t(`page.index.services.body[${i - 1}].icon`) +
+                      $t(`services.body[${i - 1}].icon`) +
                       '?data')
                   "
                   alt=""
@@ -39,10 +41,10 @@
                 />
               </div>
               <h3 class="my-6 text-lg">
-                {{ $t(`page.index.services.body[${i - 1}].title`) }}
+                {{ $t(`services.body[${i - 1}].title`) }}
               </h3>
               <p class="text-sm">
-                {{ $t(`page.index.services.body[${i - 1}].desc`) }}
+                {{ $t(`services.body[${i - 1}].desc`) }}
               </p>
             </div>
           </div>
@@ -64,7 +66,7 @@
             <div
               class="w-full lg:w-1/2 ps-0 lg:ps-10 text-center lg:text-start py-10"
             >
-              <h2 class="mb-10">{{ $t('page.index.order.title') }}</h2>
+              <h2 class="mb-10">{{ $t('order.title') }}</h2>
               <div
                 class="flex flex-wrap justify-center lg:justify-start -mx-2.5"
               >
@@ -73,7 +75,7 @@
                   target="_blank"
                   class="btn-alt inline-block mt-10 mx-2.5"
                 >
-                  {{ $t('page.index.order.cta[0]') }}
+                  {{ $t('order.cta.app') }}
                 </a>
                 <a
                   href="https://www.tabitorder.com/?siteName=sushinbagel#/start"
@@ -81,7 +83,7 @@
                   rel="noopener nofollow"
                   class="btn inline-block mt-10 mx-2.5"
                 >
-                  {{ $t('page.index.order.cta[1]') }}
+                  {{ $t('order.cta.online') }}
                 </a>
               </div>
             </div>
@@ -100,7 +102,7 @@
         <div class="container">
           <div class="flex flex-col w-full lg:w-1/2 relative z-10">
             <h2 class="text-center lg:text-start mb-10">
-              {{ $t('page.index.reviews.title') }}
+              {{ $t('reviews.title') }}
             </h2>
             <Reviews class="lg:max-w-md mt-60 lg:mt-10" />
           </div>
@@ -119,7 +121,11 @@
 </template>
 
 <script>
+import translations from '~/lang/index'
 export default {
+  i18n: {
+    messages: translations,
+  },
   head() {
     return {
       titleTemplate: (c) => (c ? `SushiNBagels - ${c}` : 'SushiNBagels'),
@@ -129,6 +135,9 @@ export default {
           content: '/img/hero-bg-home.jpg',
         },
       ]),
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
     }
   },
   mounted() {

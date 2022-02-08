@@ -1,0 +1,82 @@
+{
+  "en": {
+    "addressInfo": "Yirmiyahu St 68, Jerusalem, Israel",
+    "successMessage": "Your message has been submitted. We will get back to you as soon as possible.",
+    "phoneField": "Phone",
+    "mapAlt": "Store location map",
+    "phone": "Phone",
+    "nameField": "Name",
+    "hours": "Hours",
+    "googleMaps": "Google Maps",
+    "errorTitle": "Oh no!",
+    "messageField": "Message",
+    "directions": "Directions",
+    "moovit": "Moovit",
+    "address": "Address",
+    "formTitle": "Send us a message",
+    "successTitle": "Thank you!",
+    "formDesc": "Need additional information or have a question or comment? Please feel free to leave a message, And our beloved team will answer you as soon as possible",
+    "waze": "Waze",
+    "sendViaEmail": "Click here to send this message via email",
+    "submit": "Submit",
+    "title": "Contact Us",
+    "optionalTag": "(Optional)",
+    "sending": "Sending message...",
+    "email": "Email",
+    "hoursInfo": "Sun - Wed 11am–10pm{br}\nThursday 11am–11pm{br}\nSaturday Night approx. 2 hours after nightfall – 00:30",
+    "seo": {
+      "title": "Contact Us",
+      "meta": [
+        {
+          "name": [
+            "description",
+            "og:description"
+          ],
+          "content": "Want to find out more about our sushi, make a large order or want to find out about working with us, just get in touch."
+        }
+      ]
+    },
+    "emailField": "Email",
+    "errorMessage": "Something went wrong."
+  },
+  "he": {
+    "addressInfo": "רחוב ירמיהו 68, ירושלים, ישראל",
+    "successMessage": "הודעתך נשלחה. אנו נחזור אליך בהקדם האפשרי.",
+    "phoneField": "טלפון",
+    "mapAlt": "Store location map",
+    "phone": "טלפון",
+    "nameField": "שם",
+    "hours": "שעות",
+    "googleMaps": "מפות Google",
+    "errorTitle": "אוי לא!",
+    "messageField": "הודעה",
+    "directions": "הוראות הגעה",
+    "moovit": "Moovit",
+    "address": "כתובת",
+    "formTitle": "שלח לנו הודעה",
+    "successTitle": "תודה!",
+    "formDesc": "זקוקים למידע נוסף או שיש לכם שאלה או הערה? אנא אל תהסס להשאיר הודעה, והצוות האהוב שלנו יענה לך בהקדם האפשרי",
+    "waze": "Waze",
+    "sendViaEmail": "לחץ כאן כדי לשלוח הודעה זו בדוא\"ל",
+    "submit": "שלח",
+    "title": "צור קשר",
+    "optionalTag": "(אופציונאלי)",
+    "sending": "שולח הודעה...",
+    "email": "דוא\"ל",
+    "hoursInfo": "ראשון - רביעי 11:00–22:00{br}\nחמישי 11:00–23:00{br}\nמוצאי שבת כ. שעתיים לאחר צאת הכוכבים - 00:30",
+    "seo": {
+      "title": "צור קשר",
+      "meta": [
+        {
+          "name": [
+            "description",
+            "og:description"
+          ],
+          "content": "רוצים לדעת יותר על הסושי שלנו, מעוניינים בהזמנה גדולה, או רוצים לדעת על שת\"פ איתנו, צרו קשר אתנו"
+        }
+      ]
+    },
+    "emailField": "דוא\"ל",
+    "errorMessage": "משהו השתבש."
+  }
+}

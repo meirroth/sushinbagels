@@ -72,9 +72,9 @@
         rel="noopener noreferrer"
         class="text-green group"
       >
-        {{ $t('page.index.reviews.viewAll') }}
+        {{ $parent.$t('reviews.viewAll') }}
         <span v-if="userRatingsTotal > 5">{{ userRatingsTotal + ' ' }}</span
-        >{{ $t('page.index.reviews.onGoogle') }}
+        >{{ $parent.$t('reviews.onGoogle') }}
         <ArrowRightIcon
           class="inline-block rtl:-scale-x-1 group-hover:-me-2 group-hover:ms-2 transition-all"
           aria-hidden="true"
