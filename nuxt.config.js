@@ -81,20 +81,20 @@ export default {
             {
               '@type': 'OpeningHoursSpecification',
               dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday'],
-              opens: '11:00',
+              opens: '9:00',
               closes: '22:00',
             },
             {
               '@type': 'OpeningHoursSpecification',
               dayOfWeek: ['Thursday'],
-              opens: '11:00',
+              opens: '9:00',
               closes: '23:00',
             },
             {
               '@type': 'OpeningHoursSpecification',
               dayOfWeek: ['Saturday'],
               opens: '22:30',
-              closes: '00:30',
+              closes: '00:00',
             },
           ],
           sameAs: [
