@@ -135,9 +135,6 @@ export default {
           content: '/img/hero-bg-home.jpg',
         },
       ]),
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
-      ],
     }
   },
   mounted() {
