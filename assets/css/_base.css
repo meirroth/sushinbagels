@@ -24,7 +24,7 @@ button,
 input,
 textarea,
 select {
-  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-green;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green;
 }
 .nuxt-link-exact-active:not(.lang-switcher) {
   &.nav-link,
