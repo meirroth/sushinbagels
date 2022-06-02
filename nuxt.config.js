@@ -27,16 +27,16 @@ export default {
     ),
     link: isProd
       ? [
-          {
-            hid: 'prefetch-statically',
-            rel: 'dns-prefetch',
-            href: 'https://cdn.statically.io',
-          },
-          {
-            hid: 'preconnect-statically',
-            rel: 'preconnect',
-            href: 'https://cdn.statically.io',
-          },
+          // {
+          //   hid: 'prefetch-statically',
+          //   rel: 'dns-prefetch',
+          //   href: 'https://cdn.statically.io',
+          // },
+          // {
+          //   hid: 'preconnect-statically',
+          //   rel: 'preconnect',
+          //   href: 'https://cdn.statically.io',
+          // },
           {
             hid: 'prefetch-umami',
             rel: 'dns-prefetch',
