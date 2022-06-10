@@ -19,9 +19,9 @@
                 class="flex items-center bg-gray-800 bg-opacity-80 hover:bg-opacity-100 p-2 rounded transition-colors space-x-2"
               >
                 <a
-                  href="/pdf/digital-menu-1.2.pdf"
+                  href="/pdf/Menu-April-2022-compressed.pdf"
                   target="_blank"
-                  download="SushiNBagels-Menu"
+                  download="SushiNBagels-Menu-April-2022-compressed"
                   role="button"
                   title="Download PDF"
                   aria-label="Download PDF"
