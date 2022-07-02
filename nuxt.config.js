@@ -151,12 +151,10 @@ export default {
 
   // Google fonts (https://google-fonts.nuxtjs.org/options/)
   googleFonts: {
-    download: true,
     outputDir: '~',
     fontsDir: 'static/fonts',
     stylePath: 'assets/css/_fonts.css',
     fontsPath: '/fonts',
-    display: 'swap',
     families: {
       Heebo: [400, 500, 600, 700],
       Kalam: [400, 700],
