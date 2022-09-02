@@ -40,12 +40,12 @@ export default {
           {
             hid: 'prefetch-umami',
             rel: 'dns-prefetch',
-            href: 'https://umami.meir.io',
+            href: 'https://by.meir.io',
           },
           {
             hid: 'preconnect-umami',
             rel: 'preconnect',
-            href: 'https://umami.meir.io',
+            href: 'https://by.meir.io',
           },
         ]
       : [],
@@ -109,7 +109,7 @@ export default {
             hid: 'umami',
             async: true,
             defer: true,
-            src: 'https://umami.meir.io/t.js',
+            src: 'https://by.meir.io/t.js',
             'data-website-id': '3a64289e-7ed6-4b39-b1ff-cce4f2687481',
             'data-domains': 'sushinbagels.com',
           }
