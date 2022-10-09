@@ -30,7 +30,7 @@
     "@nuxtjs/google-fonts": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.4.0",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.12",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
