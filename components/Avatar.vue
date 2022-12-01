@@ -12,6 +12,8 @@
 </template>
 
 <script>
+const AVATAR_CDN = 'https://avatar.mrweb.workers.dev/'
+
 const getInitials = (username) => {
   const parts = username.split(/[ -]/)
   let initials = ''
@@ -69,7 +71,7 @@ export default {
       const shape =
         this.shape || this.shape !== 'square' ? `shape=${this.shape},` : ''
       const size = `s=${this.size}`
-      return `https://cdn.statically.io/avatar/${shape}${size}/${this.userInitials}`
+      return `${AVATAR_CDN}${shape}${size}/${this.userInitials}`
     },
   },
 }
