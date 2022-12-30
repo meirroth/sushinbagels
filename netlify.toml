@@ -52,6 +52,10 @@
   from = "/he/collections*"
   to = "/he/menu"
 
+[[redirects]]
+  from = "/admin$"
+  to = "/admin/"
+
 [[headers]]
   for = "/*"
   [headers.values]
