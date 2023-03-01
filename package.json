@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "^9.8.0",
     "fibers": "^5.0.3",
     "postcss": "^8.4.21",
-    "postcss-focus-visible": "^6.0.4",
+    "postcss-focus-visible": "^8.0.2",
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.3",
     "tailwindcss": "^3.1.7",
